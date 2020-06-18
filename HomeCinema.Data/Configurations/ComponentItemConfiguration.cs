@@ -12,6 +12,7 @@ namespace HomeCinema.Data.Configurations
     {
         public ComponentItemConfiguration()
         {
+            Property(p => p.ComponentID).IsRequired();
             Property(p => p.Code).IsRequired().IsMaxLength();
             Property(p => p.Name).IsRequired().IsMaxLength();
             HasMany(p => p.ArticleItems).WithRequired().HasForeignKey(s => s.ComponentItemID);

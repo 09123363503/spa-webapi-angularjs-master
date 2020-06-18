@@ -11,9 +11,9 @@ namespace HomeCinema.Web.Models
         public string Code { get; set; }
         public string Name { get; set; }
         public string ViewName { get; set; }
-        public float Unit1 { get; set; }
-        public float Unit2 { get; set; }
-        public float Unit3 { get; set; }
+        public int Unit1 { get; set; }
+        public int Unit2 { get; set; }
+        public int Unit3 { get; set; }
         public int PurchaseAccID { get; set; }
         public int SalesAccID { get; set; }
         public int InventoryAccID { get; set; }

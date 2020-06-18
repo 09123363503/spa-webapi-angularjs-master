@@ -20,9 +20,9 @@ namespace HomeCinema.Entities
         public string Code { get; set; }
         public string Name { get; set; }
         public string ViewName { get; set; }
-        public float Unit1ID { get; set; }
-        public float Unit2ID { get; set; }
-        public float Unit3ID { get; set; }
+        public int Unit1ID { get; set; }
+        public int Unit2ID { get; set; }
+        public int Unit3ID { get; set; }
         public int PurchaseAccID { get; set; }
         public int SalesAccID { get; set; }
         public int InventoryAccID { get; set; }

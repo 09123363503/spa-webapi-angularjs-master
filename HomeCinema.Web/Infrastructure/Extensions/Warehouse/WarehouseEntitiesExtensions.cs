@@ -62,5 +62,17 @@ namespace HomeCinema.Web.Infrastructure.Extensions.Warehouse
             component.EditionDateTime = componentVM.EditionDateTime;
             component.DeleteDateTime = componentVM.DeleteDateTime;
         }
+        public static void UpdateComponentItem(this ComponentItem componentItem, ComponentItemViewModel componentItemVM)
+        {
+            componentItem.ComponentID = componentItemVM.ComponentID;
+            componentItem.Code = componentItemVM.Code;
+            componentItem.Name = componentItemVM.Name;
+            componentItem.RegisterID = componentItemVM.RegisterID;
+            componentItem.EditionID = componentItemVM.EditionID;
+            componentItem.DeleteID = componentItemVM.DeleteID;
+            componentItem.RegisterDatetime = componentItemVM.RegisterDatetime;
+            componentItem.EditionDateTime = componentItemVM.EditionDateTime;
+            componentItem.DeleteDateTime = componentItemVM.DeleteDateTime;
+        }
     }
 }

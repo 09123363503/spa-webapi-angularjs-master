@@ -64,10 +64,13 @@ namespace HomeCinema.Data
             modelBuilder.Configurations.Add(new ComponentItemConfiguration());
             modelBuilder.Configurations.Add(new MainArticleComponentConfiguration());
 
-            modelBuilder.Entity<Article>().Property(p => p.PurchaseAccID).HasColumnAnnotation("0", true);
-            modelBuilder.Entity<Article>().Property(p => p.SaleAccID).HasColumnAnnotation("0", true);
-            modelBuilder.Entity<Article>().Property(p => p.InventoryAccID).HasColumnAnnotation("0", true);
-            //base.OnModelCreating(modelBuilder);
+            #region Relation Constraint
+            modelBuilder.Entity<Component>().HasMany(p => p.MainArticleComponents)
+                .WithRequired().HasForeignKey(p => p.ComponentID).WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<MainArticle>().HasMany(p => p.MainArticleComponents)
+                .WithRequired().HasForeignKey(p => p.MainAricleID).WillCascadeOnDelete(false);
+            #endregion Relation Constraint
         }
         #endregion Model Builder
     }

@@ -225,6 +225,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\ComponentController.cs" />
+    <Compile Include="Controllers\ComponentItemController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
@@ -314,6 +315,7 @@
   <ItemGroup>
     <Folder Include="Content\images\movies\" />
     <Folder Include="Views\Article\" />
+    <Folder Include="Views\ComponentItem\" />
     <Folder Include="Views\Copmponent\" />
     <Folder Include="Views\MainArticles\" />
     <Folder Include="Views\MainArticle\" />
