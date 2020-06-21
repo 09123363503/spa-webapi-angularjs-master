@@ -57,7 +57,7 @@ namespace HomeCinema.Services
 
             if (existingUser != null)
             {
-                throw new Exception("Username is already in use");
+                throw new Exception("این نام کاربری در حال استفاده می باشد");
             }
 
             var passwordSalt = _encryptionService.CreateSalt();
