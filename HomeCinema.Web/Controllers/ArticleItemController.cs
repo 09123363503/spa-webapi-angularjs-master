@@ -20,29 +20,29 @@ using HomeCinema.Data.Extensions;
 namespace HomeCinema.Web.Controllers
 {
     [Authorize(Roles = "Admin")]
-    [RoutePrefix("api/articles")]
-    public class ArticleController : ApiControllerBase
+    [RoutePrefix("api/articleitems")]
+    public class ArticleItemController : ApiControllerBase
     {
-        private readonly IEntityBaseRepository<Article> _articlesRepository;
+        private readonly IEntityBaseRepository<ArticleItem> _articleItemsRepository;
 
-        public ArticleController(IEntityBaseRepository<Article> articlesRepository,
+        public ArticleItemController(IEntityBaseRepository<ArticleItem> articleItemsRepository,
             IEntityBaseRepository<Error> _errorsRepository, IUnitOfWork _unitOfWork)
             : base(_errorsRepository, _unitOfWork)
         {
-            _articlesRepository = articlesRepository;
+            _articleItemsRepository = articleItemsRepository;
         }
 
-        [Route("articles/{id:int}")]
+        [Route("articleitems/{id:int}")]
         public HttpResponseMessage Get(HttpRequestMessage request, int id)
         {
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
-                var article = _articlesRepository.GetSingle(id);
+                var articleItem = _articleItemsRepository.GetSingle(id);
 
-                ArticleViewModel articleVM = Mapper.Map<Article, ArticleViewModel>(article);
+                ArticleItemViewModel articleItemVM = Mapper.Map<ArticleItem, ArticleItemViewModel>(articleItem);
 
-                response = request.CreateResponse<ArticleViewModel>(HttpStatusCode.OK, articleVM);
+                response = request.CreateResponse<ArticleItemViewModel>(HttpStatusCode.OK, articleItemVM);
 
                 return response;
             });
@@ -58,13 +58,13 @@ namespace HomeCinema.Web.Controllers
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
-                List<Article> articles = null;
+                List<ArticleItem> articleItems = null;
                 int totalArticles = new int();
 
                 if (!string.IsNullOrEmpty(filter))
                 {
-                    articles = _articlesRepository
-                        .FindBy(m => m.Name.ToLower()
+                    articleItems = _articleItemsRepository
+                        .FindBy(m => m.ComponentItemID.ToLower()
                         .Contains(filter.ToLower().Trim()))
                         .OrderBy(m => m.ID)
                         .Skip(currentPage * currentPageSize)
@@ -99,66 +99,6 @@ namespace HomeCinema.Web.Controllers
                 };
 
                 response = request.CreateResponse<PaginationSet<ArticleViewModel>>(HttpStatusCode.OK, pagedSet);
-
-                return response;
-            });
-        }
-
-        [HttpPost]
-        [Route("add")]
-        public HttpResponseMessage Add(HttpRequestMessage request, ArticleViewModel article)
-        {
-            return CreateHttpResponse(request, () =>
-            {
-                HttpResponseMessage response = null;
-
-                if (!ModelState.IsValid)
-                {
-                    response = request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-                }
-                else
-                {
-                    Article newArticle = new Article();
-                    newArticle.UpdateArticle(article);
-                    _articlesRepository.Add(newArticle);
-
-                    _unitOfWork.Commit();
-
-                    // Update view model
-                    article = Mapper.Map<Article, ArticleViewModel>(newArticle);
-                    response = request.CreateResponse<ArticleViewModel>(HttpStatusCode.Created, article);
-                }
-
-                return response;
-            });
-        }
-
-        [HttpPost]
-        [Route("update")]
-        public HttpResponseMessage Update(HttpRequestMessage request, ArticleViewModel article)
-        {
-            return CreateHttpResponse(request, () =>
-            {
-                HttpResponseMessage response = null;
-
-                if (!ModelState.IsValid)
-                {
-                    response = request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-                }
-                else
-                {
-                    var articleDb = _articlesRepository.GetSingle(article.ID);
-                    if (articleDb == null)
-                        response = request.CreateErrorResponse(HttpStatusCode.NotFound, "Invalid movie.");
-                    else
-                    {
-                        articleDb.UpdateArticle(article);
-                        _articlesRepository.Edit(articleDb);
-
-                        _unitOfWork.Commit();
-                        response = request.CreateResponse<ArticleViewModel>(HttpStatusCode.OK, article);
-                    }
-                }
 
                 return response;
             });

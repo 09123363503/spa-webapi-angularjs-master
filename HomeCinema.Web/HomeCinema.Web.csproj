@@ -224,6 +224,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArticleController.cs" />
+    <Compile Include="Controllers\ArticleItemController.cs" />
     <Compile Include="Controllers\ComponentController.cs" />
     <Compile Include="Controllers\ComponentItemController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
@@ -258,6 +259,7 @@
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Mappings\ViewModelToDomainMappingProfile.cs" />
     <Compile Include="Mappings\DomainToViewModelMappingProfile.cs" />
+    <Compile Include="Models\ArticleItemViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\ComponentItemViewModel.cs" />
     <Compile Include="Models\ComponentViewModel.cs" />
@@ -314,6 +316,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\images\movies\" />
+    <Folder Include="Views\ArticleItem\" />
     <Folder Include="Views\Article\" />
     <Folder Include="Views\ComponentItem\" />
     <Folder Include="Views\Copmponent\" />
