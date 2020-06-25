@@ -59,46 +59,106 @@ namespace HomeCinema.Web.Controllers
             {
                 HttpResponseMessage response = null;
                 List<ArticleItem> articleItems = null;
-                int totalArticles = new int();
+                int totalArticleItems = new int();
 
                 if (!string.IsNullOrEmpty(filter))
                 {
                     articleItems = _articleItemsRepository
-                        .FindBy(m => m.ComponentItemID.ToLower()
+                        .FindBy(m => m.ArticleID.ToString()
                         .Contains(filter.ToLower().Trim()))
                         .OrderBy(m => m.ID)
                         .Skip(currentPage * currentPageSize)
                         .Take(currentPageSize)
                         .ToList();
 
-                    totalArticles = _articlesRepository
-                        .FindBy(m => m.Name.ToLower()
+                    totalArticleItems = _articleItemsRepository
+                        .FindBy(m => m.ArticleID.ToString()
                         .Contains(filter.ToLower().Trim()))
                         .Count();
                 }
                 else
                 {
-                    articles = _articlesRepository
+                    articleItems = _articleItemsRepository
                         .GetAll()
                         .OrderBy(m => m.ID)
                         .Skip(currentPage * currentPageSize)
                         .Take(currentPageSize)
                         .ToList();
 
-                    totalArticles = _articlesRepository.GetAll().Count();
+                    totalArticleItems = _articleItemsRepository.GetAll().Count();
                 }
 
-                IEnumerable<ArticleViewModel> articlesVM = Mapper.Map<IEnumerable<Article>, IEnumerable<ArticleViewModel>>(articles);
+                IEnumerable<ArticleItemViewModel> articleItemsVM = Mapper.Map<IEnumerable<ArticleItem>, IEnumerable<ArticleItemViewModel>>(articleItems);
 
-                PaginationSet<ArticleViewModel> pagedSet = new PaginationSet<ArticleViewModel>()
+                PaginationSet<ArticleItemViewModel> pagedSet = new PaginationSet<ArticleItemViewModel>()
                 {
                     Page = currentPage,
-                    TotalCount = totalArticles,
-                    TotalPages = (int)Math.Ceiling((decimal)totalArticles / currentPageSize),
-                    Items = articlesVM
+                    TotalCount = totalArticleItems,
+                    TotalPages = (int)Math.Ceiling((decimal)totalArticleItems / currentPageSize),
+                    Items = articleItemsVM
                 };
 
-                response = request.CreateResponse<PaginationSet<ArticleViewModel>>(HttpStatusCode.OK, pagedSet);
+                response = request.CreateResponse<PaginationSet<ArticleItemViewModel>>(HttpStatusCode.OK, pagedSet);
+
+                return response;
+            });
+        }
+
+        [HttpPost]
+        [Route("add")]
+        public HttpResponseMessage Add(HttpRequestMessage request, ArticleItemViewModel articleItem)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+
+                if (!ModelState.IsValid)
+                {
+                    response = request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    ArticleItem newArticleItem = new ArticleItem();
+                    newArticleItem.UpdateArticleItem(articleItem);
+                    _articleItemsRepository.Add(newArticleItem);
+
+                    _unitOfWork.Commit();
+
+                    // Update view model
+                    articleItem = Mapper.Map<ArticleItem, ArticleItemViewModel>(newArticleItem);
+                    response = request.CreateResponse<ArticleItemViewModel>(HttpStatusCode.Created, articleItem);
+                }
+
+                return response;
+            });
+        }
+
+        [HttpPost]
+        [Route("update")]
+        public HttpResponseMessage Update(HttpRequestMessage request, ArticleItemViewModel articleItem)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+
+                if (!ModelState.IsValid)
+                {
+                    response = request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    var articleItemDb = _articleItemsRepository.GetSingle(articleItem.ID);
+                    if (articleItemDb == null)
+                        response = request.CreateErrorResponse(HttpStatusCode.NotFound, "مورد انتخاب شده نامعتبر است");
+                    else
+                    {
+                        articleItemDb.UpdateArticleItem(articleItem);
+                        _articleItemsRepository.Edit(articleItemDb);
+
+                        _unitOfWork.Commit();
+                        response = request.CreateResponse<ArticleItemViewModel>(HttpStatusCode.OK, articleItem);
+                    }
+                }
 
                 return response;
             });
