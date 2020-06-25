@@ -231,6 +231,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\MainArticleController.cs" />
+    <Compile Include="Controllers\MainArticleComponentController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\MoviesExtendedController.cs" />
     <Compile Include="Controllers\RentalsExtendedController.cs" />
@@ -266,6 +267,7 @@
     <Compile Include="Models\GenreViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\CustomerViewModel.cs" />
+    <Compile Include="Models\MainArticleComponentViewModel.cs" />
     <Compile Include="Models\MainArticleViewModel.cs" />
     <Compile Include="Models\RegistrationViewModel.cs" />
     <Compile Include="Models\RentalViewModel.cs" />
@@ -320,6 +322,7 @@
     <Folder Include="Views\Article\" />
     <Folder Include="Views\ComponentItem\" />
     <Folder Include="Views\Copmponent\" />
+    <Folder Include="Views\MainArticleCopmponent\" />
     <Folder Include="Views\MainArticles\" />
     <Folder Include="Views\MainArticle\" />
     <Folder Include="Views\Unit\" />

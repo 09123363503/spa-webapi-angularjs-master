@@ -80,5 +80,12 @@ namespace HomeCinema.Web.Infrastructure.Extensions.Warehouse
             articleItem.ComponentItemID = articleItemVM.ComponentItemID;
             articleItem.MainArticleComponentID = articleItemVM.MainArticleComponentID;
         }
+        public static void UpdateMainArticleComponent(this MainArticleComponent mainArticleComponent, MainArticleComponentViewModel mainArticleComponentVM)
+        {
+            mainArticleComponent.MainAricleID = mainArticleComponentVM.MainAricleID;
+            mainArticleComponent.ComponentID = mainArticleComponentVM.ComponentID;
+            mainArticleComponent.Position = mainArticleComponentVM.Position;
+            mainArticleComponent.Name = mainArticleComponentVM.Name;
+        }
     }
 }
