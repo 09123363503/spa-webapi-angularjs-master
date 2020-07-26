@@ -45,12 +45,14 @@
   <ItemGroup>
     <Compile Include="Article.cs" />
     <Compile Include="ArticleItem.cs" />
+    <Compile Include="Barcode.cs" />
     <Compile Include="ComponentItem.cs" />
     <Compile Include="Component.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Error.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="IEntityBase.cs" />
+    <Compile Include="Lot.cs" />
     <Compile Include="MainArticle.cs" />
     <Compile Include="MainArticleComponent.cs" />
     <Compile Include="Movie.cs" />

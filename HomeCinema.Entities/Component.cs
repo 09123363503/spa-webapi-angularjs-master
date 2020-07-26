@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace HomeCinema.Entities
         public string Code { get; set; }
         public string Name { get; set; }
         public int Lenght { get; set; }
+        [DefaultValue(0)]
         public int RegisterID { get; set; }
         public int EditionID { get; set; }
         public int DeleteID { get; set; }
