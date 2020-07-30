@@ -20,9 +20,16 @@ namespace HomeCinema.Entities
         public bool Prodution { get; set; }
         [Required]
         public int WHKeeper { get; set; }
-
-
-
+        [DefaultValue(1)]
+        public int SumCount { get; set; }
+        [DefaultValue(0)]
+        public int SumUnitID1 { get; set; }
+        [DefaultValue(0)]
+        public decimal SumUnitValue1 { get; set; }
+        [DefaultValue(0)]
+        public int SumunitID2 { get; set; }
+        [DefaultValue(0)]
+        public decimal SumUnitValue2 { get; set; }
         [DefaultValue(0)]
         public int RegisterID { get; set; }
         [DefaultValue(0)]

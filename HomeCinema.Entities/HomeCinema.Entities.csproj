@@ -52,8 +52,10 @@
     <Compile Include="Component.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Error.cs" />
+    <Compile Include="FinancialPeriod.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="IEntityBase.cs" />
+    <Compile Include="Location.cs" />
     <Compile Include="Lot.cs" />
     <Compile Include="MainArticle.cs" />
     <Compile Include="MainArticleComponent.cs" />
@@ -65,6 +67,7 @@
     <Compile Include="Unit.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserRole.cs" />
+    <Compile Include="Warehouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="it\MockData.resources.dll" />

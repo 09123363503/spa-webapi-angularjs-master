@@ -8,17 +8,23 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class CargoDetail : IEntityBase
+    public class Warehouse : IEntityBase
     {
         public int ID { get; set; }
-        [Required]
-        public int CargoID { get; set; }
-        [Required]
-        public int BarcodeID { get; set; }
-        [DefaultValue(1)]
-        public int Count { get; set; }
         [DefaultValue(0)]
-        public int LOcationID { get; set; }
+        public int ParentID { get; set; }
+        [Required]
+        public int Code { get; set; }
+        [Required]
+        public string Name { get; set; }
+        public string AreaLocation { get; set; }
+        [Required]
+        public int WHKeeperID { get; set; }
+        [DefaultValue(0)]
+        public bool Leased { get; set; }
+        [DefaultValue(0)]
+        public bool IsGroup { get; set; }
+        public string Description { get; set; }
         [DefaultValue(0)]
         public int RegisterID { get; set; }
         [DefaultValue(0)]
