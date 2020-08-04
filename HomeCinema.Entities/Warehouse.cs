@@ -10,6 +10,11 @@ namespace HomeCinema.Entities
 {
     public class Warehouse : IEntityBase
     {
+        public Warehouse()
+        {
+            Warehouses = new List<Warehouse>();
+            Locations = new List<Location>();
+        }
         public int ID { get; set; }
         [DefaultValue(0)]
         public int ParentID { get; set; }
@@ -37,5 +42,8 @@ namespace HomeCinema.Entities
         public int DeleteID { get; set; }
         [DefaultValue(0)]
         public Int64 DeleteDateTime { get; set; }
+
+        public virtual ICollection<Warehouse> Warehouses { get; set; }
+        public virtual ICollection<Location> Locations { get; set; }
     }
 }

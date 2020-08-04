@@ -15,6 +15,7 @@ namespace HomeCinema.Entities
         public Article()
         {
             ArticleItems = new List<ArticleItem>();
+            ProductionOrderDetails = new List<ProductionOrderDetail>();
         }
         public int ID { get; set; }
         public int MainArticleID { get; set; }
@@ -29,6 +30,8 @@ namespace HomeCinema.Entities
         public Int64 RegisterDateTime { get; set; }
         public Int64 EditionDateTime { get; set; }
         public Int64 DeleteDateTime { get; set; }
+        
         public virtual ICollection<ArticleItem> ArticleItems { get; set; }
+        public virtual ICollection<ProductionOrderDetail> ProductionOrderDetails { get; set; }
     }
 }

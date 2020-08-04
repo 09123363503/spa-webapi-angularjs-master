@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="Article.cs" />
     <Compile Include="ArticleItem.cs" />
     <Compile Include="Barcode.cs" />
@@ -60,6 +61,10 @@
     <Compile Include="MainArticle.cs" />
     <Compile Include="MainArticleComponent.cs" />
     <Compile Include="Movie.cs" />
+    <Compile Include="ProductionLine.cs" />
+    <Compile Include="ProductionOrder.cs" />
+    <Compile Include="ProductionOrderDetail.cs" />
+    <Compile Include="ProductType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rental.cs" />
     <Compile Include="Role.cs" />

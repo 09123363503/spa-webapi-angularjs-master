@@ -13,6 +13,9 @@ namespace HomeCinema.Entities
         public Unit()
         {
             MainArticles = new List<MainArticle>();
+            Barcodes = new List<Barcode>();
+            Cargos = new List<Cargo>();
+            ProductionOrderDetails = new List<ProductionOrderDetail>();
         }
         public int ID { get; set; }
         [Required]
@@ -31,6 +34,10 @@ namespace HomeCinema.Entities
         public Int64 EditDateTime { get; set; }
         [DefaultValue(0)]
         public Int64 DeleteDateTime { get; set; }
+        
         public virtual ICollection<MainArticle> MainArticles { get; set; }
+        public virtual ICollection<Barcode> Barcodes { get; set; }
+        public virtual ICollection<Cargo> Cargos { get; set; }
+        public virtual ICollection<ProductionOrderDetail> ProductionOrderDetails { get; set; }
     }
 }

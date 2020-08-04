@@ -8,28 +8,19 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class FinancialPeriod : IEntityBase
+    public class ProductType : IEntityBase
     {
-        public FinancialPeriod()
+        public ProductType()
         {
             ProductionOrders = new List<ProductionOrder>();
         }
         public int ID { get; set; }
         [Required]
-        public int Number { get; set; }
+        public string Code { get; set; }
         [Required]
         public string Name { get; set; }
-        [Required]
-        public int StartDate { get; set; }
-        [Required]
-        public int EndDate { get; set; }
-        [DefaultValue(0)]
-        public bool FinanciaPeriodTransfered { get; set; }
-        [DefaultValue(0)]
-        public bool TemporaryClose { get; set; }
-        [DefaultValue(0)]
-        public bool PermanentClose { get; set; }
-
+        public string Description { get; set; }
+        
         public virtual ICollection<ProductionOrder> ProductionOrders { get; set; }
     }
 }

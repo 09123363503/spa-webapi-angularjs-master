@@ -9,6 +9,10 @@ namespace HomeCinema.Entities
 {
     public class Barcode : IEntityBase
     {
+        public Barcode()
+        {
+            CargoDetails = new List<CargoDetail>();
+        }
         public int ID { get; set; }
         [DefaultValue("1")]
         public string BarcodeString { get; set; }
@@ -42,5 +46,7 @@ namespace HomeCinema.Entities
         public int DeleteID { get; set; }
         [DefaultValue(0)]
         public Int64 DeleteDateTime { get; set; }
+
+        public virtual ICollection<CargoDetail> CargoDetails { get; set; }
     }
 }
