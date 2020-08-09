@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\AccountConfiguration.cs" />
     <Compile Include="Configurations\ArticleConfiguration.cs" />
     <Compile Include="Configurations\ArticleItemConfiguration.cs" />
     <Compile Include="Configurations\BarcodeConfiguration.cs" />
@@ -62,12 +63,16 @@
     <Compile Include="Configurations\ComponentConfiguration.cs" />
     <Compile Include="Configurations\ComponentItemConfiguration.cs" />
     <Compile Include="Configurations\EntityBaseConfiguration.cs" />
+    <Compile Include="Configurations\FinancialPeriodConfiguration.cs" />
     <Compile Include="Configurations\GenreConfiguration.cs" />
     <Compile Include="Configurations\LocationConfiguration.cs" />
     <Compile Include="Configurations\LotConfiguration.cs" />
     <Compile Include="Configurations\MainArticleComponentConfiguration.cs" />
     <Compile Include="Configurations\MainArticleConfiguration.cs" />
+    <Compile Include="Configurations\ProductionLineConfiguration.cs" />
     <Compile Include="Configurations\ProductionOrderConfiguration.cs" />
+    <Compile Include="Configurations\ProductionOrderDetailConfiguration.cs" />
+    <Compile Include="Configurations\ProductTypeConfiguration.cs" />
     <Compile Include="Configurations\RentalConfiguration.cs" />
     <Compile Include="Configurations\MovieConfiguration.cs" />
     <Compile Include="Configurations\RoleConfiguration.cs" />

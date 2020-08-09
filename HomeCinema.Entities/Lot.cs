@@ -12,6 +12,7 @@ namespace HomeCinema.Entities
         public int ID { get; set; }
         [DefaultValue(0)]
         public int ArticleID { get; set; }
+        public int AccountID { get; set; }
         public string ProducerLot { get; set; }
         [DefaultValue(0)]
         public int ProductionOrderID { get; set; }

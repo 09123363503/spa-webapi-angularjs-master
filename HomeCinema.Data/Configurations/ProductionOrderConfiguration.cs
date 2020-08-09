@@ -12,7 +12,10 @@ namespace HomeCinema.Data.Configurations
     {
         public ProductionOrderConfiguration()
         {
-
+            Property(p => p.Number).IsRequired();
+            Property(p => p.Date).IsRequired();
+            HasMany(p => p.Lots).WithRequired().HasForeignKey(s => s.ProductionOrderID);
+            HasMany(p => p.ProductionOrderDetails).WithRequired().HasForeignKey(s => s.ProductionOrederID);
         }
     }
 }

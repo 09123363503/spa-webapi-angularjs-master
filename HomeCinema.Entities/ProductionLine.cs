@@ -1,5 +1,4 @@
-﻿using MockData;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -16,6 +15,8 @@ namespace HomeCinema.Entities
             ProductionOrders = new List<ProductionOrder>();
         }
         public int ID { get; set; }
+        [Required]
+        public string Code { get; set; }
 
         public virtual ICollection<ProductionOrder> ProductionOrders { get; set; }
     }
