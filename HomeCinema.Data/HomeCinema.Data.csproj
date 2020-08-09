@@ -56,12 +56,18 @@
   <ItemGroup>
     <Compile Include="Configurations\ArticleConfiguration.cs" />
     <Compile Include="Configurations\ArticleItemConfiguration.cs" />
+    <Compile Include="Configurations\BarcodeConfiguration.cs" />
+    <Compile Include="Configurations\CargoConfiguration.cs" />
+    <Compile Include="Configurations\CargoDetailConfiguration.cs" />
     <Compile Include="Configurations\ComponentConfiguration.cs" />
     <Compile Include="Configurations\ComponentItemConfiguration.cs" />
     <Compile Include="Configurations\EntityBaseConfiguration.cs" />
     <Compile Include="Configurations\GenreConfiguration.cs" />
+    <Compile Include="Configurations\LocationConfiguration.cs" />
+    <Compile Include="Configurations\LotConfiguration.cs" />
     <Compile Include="Configurations\MainArticleComponentConfiguration.cs" />
     <Compile Include="Configurations\MainArticleConfiguration.cs" />
+    <Compile Include="Configurations\ProductionOrderConfiguration.cs" />
     <Compile Include="Configurations\RentalConfiguration.cs" />
     <Compile Include="Configurations\MovieConfiguration.cs" />
     <Compile Include="Configurations\RoleConfiguration.cs" />
@@ -70,6 +76,7 @@
     <Compile Include="Configurations\UnitConfiguration.cs" />
     <Compile Include="Configurations\UserRoleConfiguration.cs" />
     <Compile Include="Configurations\UserConfiguration.cs" />
+    <Compile Include="Configurations\WareHouseConfiguration.cs" />
     <Compile Include="Extensions\RentalExtensions.cs" />
     <Compile Include="Extensions\StockExtensions.cs" />
     <Compile Include="Extensions\CustomerExtensions.cs" />

@@ -18,7 +18,7 @@ namespace HomeCinema.Entities
         [DefaultValue(1)]
         public int Count { get; set; }
         [DefaultValue(0)]
-        public int LOcationID { get; set; }
+        public int LocationID { get; set; }
         [DefaultValue(0)]
         public int RegisterID { get; set; }
         [DefaultValue(0)]

@@ -10,6 +10,10 @@ namespace HomeCinema.Entities
 {
     public class Location : IEntityBase
     {
+        public Location()
+        {
+            CargoDetails = new List<CargoDetail>();
+        }
         public int ID { get; set; }
         [Required]
         public int WarehouseID { get; set; }
@@ -19,5 +23,7 @@ namespace HomeCinema.Entities
         public string Shelf { get; set; }
         public string Level { get; set; }
         public string Row { get; set; }
+
+        public virtual ICollection<CargoDetail> CargoDetails { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    class ArticleConfiguration : EntityBaseConfiguration<Article>
+    public class ArticleConfiguration : EntityBaseConfiguration<Article>
     {
         public ArticleConfiguration()
         {
@@ -25,6 +25,7 @@ namespace HomeCinema.Data.Configurations
             Property(p => p.EditionDateTime);
             Property(p => p.DeleteDateTime);
             HasMany(p => p.ArticleItems).WithRequired().HasForeignKey(s => s.ArticleID);
+            HasMany(p => p.ProductionOrderDetails).WithRequired().HasForeignKey(s => s.ArticleID);
         }
     }
 }

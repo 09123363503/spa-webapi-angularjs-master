@@ -36,6 +36,18 @@ namespace HomeCinema.Data
         public IDbSet<Component> ComponentSet { get; set; }
         public IDbSet<ComponentItem> ComponentItemSet { get; set; }
         public IDbSet<MainArticleComponent> MainArticleComponentSet { get; set; }
+        public IDbSet<Lot> LotSet { get; set; }
+        public IDbSet<Barcode> BarcodeSet { get; set; }
+        public IDbSet<Cargo> CargoSet { get; set; }
+        public IDbSet<CargoDetail> CargoDetailSet { get; set; }
+        public IDbSet<Location> LocationSet { get; set; }
+        public IDbSet<Warehouse> WarehoseSet { get; set; }
+        public IDbSet<ProductionOrder> ProdutionOrderSet { get; set; }
+        public IDbSet<ProductionOrderDetail> ProdutionOrderDetailSet { get; set; }
+        public IDbSet<Account> AccountSet { get; set; }
+        public IDbSet<FinancialPeriod> FinancialPeridSet { get; set; }
+        public IDbSet<ProductionLine> ProdutionLineSet { get; set; }
+        public IDbSet<ProductType> ProductTypeSet { get; set; }
         #endregion
 
         public virtual void Commit()
@@ -63,6 +75,7 @@ namespace HomeCinema.Data
             modelBuilder.Configurations.Add(new ComponentConfiguration());
             modelBuilder.Configurations.Add(new ComponentItemConfiguration());
             modelBuilder.Configurations.Add(new MainArticleComponentConfiguration());
+            //Correct this section
 
             #region Relation Constraint
             modelBuilder.Entity<Component>().HasMany(p => p.MainArticleComponents)

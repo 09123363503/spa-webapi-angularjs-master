@@ -23,7 +23,7 @@ namespace HomeCinema.Entities
         public bool Output { get; set; }
         public bool Prodution { get; set; }
         [Required]
-        public int WHKeeper { get; set; }
+        public int WHKeeperID { get; set; }
         [DefaultValue(1)]
         public int SumCount { get; set; }
         [DefaultValue(0)]
