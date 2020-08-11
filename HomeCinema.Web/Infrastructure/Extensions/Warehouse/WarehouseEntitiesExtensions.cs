@@ -44,10 +44,10 @@ namespace HomeCinema.Web.Infrastructure.Extensions.Warehouse
             unit.Code = unitVM.Code;
             unit.Name = unitVM.Name;
             unit.RegisterID = unitVM.RegisterID;
-            unit.EditionID = unitVM.EditionID;
+            unit.EditID = unitVM.EditionID;
             unit.DeleteID = unitVM.DeleteID;
             unit.RegisterDatetime = unitVM.RegisterDatetime;
-            unit.EditionDateTime = unitVM.EditionDateTime;
+            unit.EditDateTime = unitVM.EditionDateTime;
             unit.DeleteDateTime = unitVM.DeleteDateTime;
         }
         public static void UpdateComponent(this Component component, ComponentViewModel componentVM)
