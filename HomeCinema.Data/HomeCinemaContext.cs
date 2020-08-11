@@ -75,7 +75,18 @@ namespace HomeCinema.Data
             modelBuilder.Configurations.Add(new ComponentConfiguration());
             modelBuilder.Configurations.Add(new ComponentItemConfiguration());
             modelBuilder.Configurations.Add(new MainArticleComponentConfiguration());
-            //Correct this section
+            modelBuilder.Configurations.Add(new LotConfiguration());
+            modelBuilder.Configurations.Add(new BarcodeConfiguration());
+            modelBuilder.Configurations.Add(new CargoConfiguration());
+            modelBuilder.Configurations.Add(new CargoDetailConfiguration());
+            modelBuilder.Configurations.Add(new WareHouseConfiguration());
+            modelBuilder.Configurations.Add(new LocationConfiguration());
+            modelBuilder.Configurations.Add(new ProductionOrderConfiguration());
+            modelBuilder.Configurations.Add(new ProductionOrderDetailConfiguration());
+            modelBuilder.Configurations.Add(new AccountConfiguration());
+            modelBuilder.Configurations.Add(new FinancialPeriodConfiguration());
+            modelBuilder.Configurations.Add(new ProductionLineConfiguration());
+            modelBuilder.Configurations.Add(new ProductTypeConfiguration());
 
             #region Relation Constraint
             modelBuilder.Entity<Component>().HasMany(p => p.MainArticleComponents)

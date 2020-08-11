@@ -265,15 +265,26 @@
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Mappings\ViewModelToDomainMappingProfile.cs" />
     <Compile Include="Mappings\DomainToViewModelMappingProfile.cs" />
+    <Compile Include="Models\AccountViewModel.cs" />
     <Compile Include="Models\ArticleItemViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
+    <Compile Include="Models\BarcodeViewModel.cs" />
+    <Compile Include="Models\CargoDetailViewModel.cs" />
+    <Compile Include="Models\CargoViewModel.cs" />
     <Compile Include="Models\ComponentItemViewModel.cs" />
     <Compile Include="Models\ComponentViewModel.cs" />
+    <Compile Include="Models\FinancialPeriodViewModel.cs" />
     <Compile Include="Models\GenreViewModel.cs" />
+    <Compile Include="Models\LocationViewModel.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\CustomerViewModel.cs" />
+    <Compile Include="Models\LotViewModel.cs" />
     <Compile Include="Models\MainArticleComponentViewModel.cs" />
     <Compile Include="Models\MainArticleViewModel.cs" />
+    <Compile Include="Models\ProductionLineViewModel.cs" />
+    <Compile Include="Models\ProductionOrderDetailViewModel.cs" />
+    <Compile Include="Models\ProductionOrderViewModel.cs" />
+    <Compile Include="Models\ProductTypeViewModel.cs" />
     <Compile Include="Models\RegistrationViewModel.cs" />
     <Compile Include="Models\RentalViewModel.cs" />
     <Compile Include="Models\RentalHistoryViewModel.cs" />
@@ -281,6 +292,7 @@
     <Compile Include="Models\MovieViewModel.cs" />
     <Compile Include="Models\TotalRentalHistoryViewModel.cs" />
     <Compile Include="Models\UnitViewModel.cs" />
+    <Compile Include="Models\WarehouseViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
