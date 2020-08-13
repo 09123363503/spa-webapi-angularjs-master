@@ -42,5 +42,47 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructure
             barcode.DeleteID = barcodeVM.DeleteID;
             barcode.DeleteDateTime = barcodeVM.DeleteDateTime;
         }
+        public static void UpdateCargo(this Cargo cargo, CargoViewModel cargoVM)
+        {
+            cargo.Date = cargoVM.Date;
+            cargo.Number = cargoVM.Number;
+            cargo.Input = cargoVM.Input;
+            cargo.Output = cargoVM.Output;
+            cargo.Prodution = cargoVM.Prodution;
+            cargo.WHKeeperID = cargoVM.WHKeeperID;
+            cargo.SumCount = cargoVM.SumCount;
+            cargo.SumUnitID1 = cargoVM.SumUnitID1;
+            cargo.SumunitID2 = cargoVM.SumunitID2;
+            cargo.SumUnitValue1 = cargoVM.SumUnitValue1;
+            cargo.SumUnitValue2 = cargoVM.SumUnitValue2;
+            cargo.RegisterID = cargoVM.RegisterID;
+            cargo.RegisterDateTime = cargoVM.RegisterDateTime;
+            cargo.EditID = cargoVM.EditID;
+            cargo.EditDateTime = cargoVM.EditDateTime;
+            cargo.DeleteID = cargoVM.DeleteID;
+            cargo.DeleteDateTime = cargoVM.DeleteDateTime;
+        }
+        public static void UpdateCargoDetail(this CargoDetail cargoDetail, CargoDetailViewModel cargoDetailVM)
+        {
+            cargoDetail.CargoID = cargoDetailVM.CargoID;
+            cargoDetail.BarcodeID = cargoDetailVM.BarcodeID;
+            cargoDetail.Count = cargoDetailVM.Count;
+            cargoDetail.LocationID = cargoDetailVM.LocationID;
+            cargoDetail.RegisterID = cargoDetailVM.RegisterID;
+            cargoDetail.RegisterDateTime = cargoDetailVM.RegisterDateTime;
+            cargoDetail.EditID = cargoDetailVM.EditID;
+            cargoDetail.EditDateTime = cargoDetailVM.EditDateTime;
+            cargoDetail.DeleteID = cargoDetailVM.DeleteID;
+            cargoDetail.DeleteDateTime = cargoDetailVM.DeleteDateTime;
+        }
+        public static void UpdateLocation(this Location location, LocationViewModel locationVM)
+        {
+            location.WarehouseID = locationVM.WarehouseID;
+            location.Name = locationVM.Name;
+            location.Block = locationVM.Block;
+            location.Shelf = locationVM.Shelf;
+            location.Level = locationVM.Level;
+            location.Row = locationVM.Row;
+        }
     }
 }
