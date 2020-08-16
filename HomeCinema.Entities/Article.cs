@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +20,11 @@ namespace HomeCinema.Entities
             ProductionOrderDetails = new List<ProductionOrderDetail>();
         }
         public int ID { get; set; }
+        
+        [Required]
+        [MaxLength(100)]
+        public string GID { get; set; }
+        [Required]
         public int MainArticleID { get; set; }
         public int PurchaseAccID { get; set; }
         public int SaleAccID { get; set; }

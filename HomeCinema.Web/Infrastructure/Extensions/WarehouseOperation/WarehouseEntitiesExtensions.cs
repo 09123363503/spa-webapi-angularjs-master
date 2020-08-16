@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HomeCinema.Web.Infrastructure.Extensions.Warehouse
+namespace HomeCinema.Web.Infrastructure.Extensions.WarehouseOperation
 {
     public static class WarehouseEntitiesExtensions
     {

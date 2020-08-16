@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructure
+namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
 {
     public static class BarcodeStructureEntitiesExtensions
     {
@@ -83,6 +83,65 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructure
             location.Shelf = locationVM.Shelf;
             location.Level = locationVM.Level;
             location.Row = locationVM.Row;
+        }
+        public static void UpdateWarehouse(this Warehouse warehouse, WarehouseViewModel warehouseVM)
+        {
+            warehouse.ParentID = warehouseVM.ParentID;
+            warehouse.Code = warehouseVM.Code;
+            warehouse.Name = warehouseVM.Name;
+            warehouse.AreaLocation = warehouseVM.AreaLocation;
+            warehouse.WHKeeperID = warehouseVM.WHKeeperID;
+            warehouse.Leased = warehouseVM.Leased;
+            warehouse.IsGroup = warehouseVM.IsGroup;
+            warehouse.Description = warehouseVM.Description;
+            warehouse.RegisterID = warehouseVM.RegisterID;
+            warehouse.RegisterDateTime = warehouseVM.RegisterDateTime;
+            warehouse.EditID = warehouseVM.EditID;
+            warehouse.EditDateTime = warehouseVM.EditDateTime;
+            warehouse.DeleteID = warehouseVM.DeleteID;
+            warehouse.DeleteDateTime = warehouseVM.DeleteDateTime;
+        }
+        public static void UpdateProductionOrder(this ProductionOrder productionOrder, ProductionOrderViewModel productionOrderVM)
+        {
+            productionOrder.ProductionLineID = productionOrderVM.ProductionLineID;
+            productionOrder.Number = productionOrderVM.Number;
+            productionOrder.Date = productionOrderVM.Date;
+            productionOrder.ProductTypeID = productionOrderVM.ProductTypeID;
+            productionOrder.Description = productionOrderVM.Description;
+            productionOrder.StartDateTime = productionOrderVM.StartDateTime;
+            productionOrder.FinishDateTime = productionOrderVM.FinishDateTime;
+            productionOrder.State = productionOrderVM.State;
+            productionOrderVM.FinancialPeriodID = productionOrderVM.FinancialPeriodID;
+            productionOrder.ConfirmID = productionOrderVM.ConfirmID;
+            productionOrder.DeliveryDateTime = productionOrderVM.DeliveryDateTime;
+            productionOrder.RegisterID = productionOrderVM.RegisterID;
+            productionOrder.RegisterDateTime = productionOrderVM.RegisterDateTime;
+            productionOrder.EditID = productionOrderVM.EditID;
+            productionOrder.EditDateTime = productionOrderVM.EditDateTime;
+            productionOrder.DeleteID = productionOrderVM.DeleteID;
+            productionOrder.DeleteDateTime = productionOrderVM.DeleteDateTime;
+        }
+        public static void UpdateProductionOrderDetail(this ProductionOrderDetail productionOrderDetail, 
+            ProductionOrderDetailViewModel productionOrderDetailVM)
+        {
+            productionOrderDetail.ProductionOrederID = productionOrderDetailVM.ProductionOrederID;
+            productionOrderDetail.ArticleID = productionOrderDetailVM.ArticleID;
+            productionOrderDetail.UnitID1 = productionOrderDetailVM.UnitID1;
+            productionOrderDetail.UnitID2 = productionOrderDetailVM.UnitID2;
+            productionOrderDetail.UnitID3 = productionOrderDetailVM.UnitID3;
+            productionOrderDetail.UnitValue1 = productionOrderDetailVM.UnitValue1;
+            productionOrderDetail.UnitValue2 = productionOrderDetailVM.UnitValue2;
+            productionOrderDetail.UnitValue3 = productionOrderDetailVM.UnitValue3;
+        }
+        public static void UpdateProductionLine(this ProductionLine productionLine, ProductionLineViewModel productionLineVM)
+        {
+            // Work after complelte section
+        }
+        public static void UpdateProductType(this ProductType productType, ProductTypeViewModel productTypeVM)
+        {
+            productType.Code = productTypeVM.Code;
+            productType.Name = productTypeVM.Name;
+            productType.Description = productTypeVM.Description;
         }
     }
 }

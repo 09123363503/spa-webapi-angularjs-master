@@ -14,7 +14,7 @@ namespace HomeCinema.Web.Models
         public int UnitID2 { get; set; }
         public int UnitID3 { get; set; }
         public decimal UnitValue1 { get; set; }
-        public decimal UnitVlue2 { get; set; }
+        public decimal UnitValue2 { get; set; }
         public decimal UnitValue3 { get; set; }
     }
 }

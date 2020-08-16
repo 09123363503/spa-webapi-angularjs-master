@@ -253,10 +253,11 @@
     <Compile Include="Infrastructure\Core\MimeMultipart.cs" />
     <Compile Include="Infrastructure\Core\PaginationSet.cs" />
     <Compile Include="Infrastructure\Core\UploadMultipartFormProvider.cs" />
-    <Compile Include="Infrastructure\Extensions\BarcodeStructure\BarcodeStructureEntitiesExtensions.cs" />
+    <Compile Include="Infrastructure\Extensions\AccountingOperation\AccountingStructureEntitiesExtensions.cs" />
+    <Compile Include="Infrastructure\Extensions\BarcodeStructureOperation\BarcodeStructureEntitiesExtensions.cs" />
     <Compile Include="Infrastructure\Extensions\EntitiesExtensions.cs" />
     <Compile Include="Infrastructure\Extensions\RequestMessageExtensions.cs" />
-    <Compile Include="Infrastructure\Extensions\Warehouse\WarehouseEntitiesExtensions.cs" />
+    <Compile Include="Infrastructure\Extensions\WarehouseOperation\WarehouseEntitiesExtensions.cs" />
     <Compile Include="Infrastructure\MessageHandlers\HomeCinemaAuthHandler.cs" />
     <Compile Include="Infrastructure\Validators\ArticleViewModelValidator.cs" />
     <Compile Include="Infrastructure\Validators\CustomerViewModelValidator.cs" />

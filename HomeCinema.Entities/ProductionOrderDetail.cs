@@ -22,7 +22,7 @@ namespace HomeCinema.Entities
         [DefaultValue(0)]
         public decimal UnitValue1 { get; set; }
         [DefaultValue(0)]
-        public decimal UnitVlue2 { get; set; }
+        public decimal UnitValue2 { get; set; }
         [DefaultValue(0)]
         public decimal UnitValue3 { get; set; }
     }

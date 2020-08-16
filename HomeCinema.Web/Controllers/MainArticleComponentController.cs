@@ -5,7 +5,7 @@ using HomeCinema.Entities;
 using HomeCinema.Services;
 using HomeCinema.Services.Utilities;
 using HomeCinema.Web.Infrastructure.Core;
-using HomeCinema.Web.Infrastructure.Extensions.Warehouse;
+using HomeCinema.Web.Infrastructure.Extensions.WarehouseOperation;
 using HomeCinema.Web.Models;
 using System;
 using System.Collections.Generic;

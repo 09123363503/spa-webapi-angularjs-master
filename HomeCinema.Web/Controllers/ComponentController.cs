@@ -3,7 +3,7 @@ using HomeCinema.Data.Infrastructure;
 using HomeCinema.Data.Repositories;
 using HomeCinema.Entities;
 using HomeCinema.Web.Infrastructure.Core;
-using HomeCinema.Web.Infrastructure.Extensions.Warehouse;
+using HomeCinema.Web.Infrastructure.Extensions.WarehouseOperation;
 using HomeCinema.Web.Models;
 using System;
 using System.Collections.Generic;
