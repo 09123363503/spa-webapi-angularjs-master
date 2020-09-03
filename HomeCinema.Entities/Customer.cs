@@ -9,7 +9,7 @@ namespace HomeCinema.Entities
     /// <summary>
     /// HomeCinema Customer Info
     /// </summary>
-    public class Customer : IEntityBase
+    public class Customer : IEntityBaseInteger
     {
         public int ID { get; set; }
         public string FirstName { get; set; }

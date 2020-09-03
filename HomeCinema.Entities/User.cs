@@ -9,7 +9,7 @@ namespace HomeCinema.Entities
     /// <summary>
     /// HomeCinema User Account
     /// </summary>
-    public class User : IEntityBase
+    public class User : IEntityBaseInteger
     {
         public User()
         {

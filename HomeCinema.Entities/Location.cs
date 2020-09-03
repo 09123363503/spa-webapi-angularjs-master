@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class Location : IEntityBase
+    public class Location : IEntityBaseInteger
     {
         public Location()
         {
-            CargoDetails = new List<CargoDetail>();
+            Cargos = new List<Cargo>();
         }
         public int ID { get; set; }
         [Required]
@@ -24,6 +24,6 @@ namespace HomeCinema.Entities
         public string Level { get; set; }
         public string Row { get; set; }
 
-        public virtual ICollection<CargoDetail> CargoDetails { get; set; }
+        public virtual ICollection<Cargo> Cargos { get; set; }
     }
 }

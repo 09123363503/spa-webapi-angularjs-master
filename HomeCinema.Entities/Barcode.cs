@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class Barcode : IEntityBase
+    public class Barcode : IEntityBaseInteger
     {
         public Barcode()
         {
-            CargoDetails = new List<CargoDetail>();
+            Cargos = new List<Cargo>();
         }
         public int ID { get; set; }
         [DefaultValue("1")]
@@ -37,16 +37,16 @@ namespace HomeCinema.Entities
         [DefaultValue(0)]
         public int CreateUserID { get; set; }
         [DefaultValue(0)]
-        public Int64 CreateOn { get; set; }
+        public DateTimeOffset CreateOn { get; set; }
         [DefaultValue(0)]
         public int ModifyUserID { get; set; }
         [DefaultValue(0)]
-        public Int64 ModifyOn { get; set; }
+        public DateTimeOffset ModifyOn { get; set; }
         [DefaultValue(0)]
         public int DeleteUserID { get; set; }
         [DefaultValue(0)]
-        public Int64 DeleteOn { get; set; }
+        public DateTimeOffset DeleteOn { get; set; }
 
-        public virtual ICollection<CargoDetail> CargoDetails { get; set; }
+        public virtual ICollection<Cargo> Cargos { get; set; }
     }
 }

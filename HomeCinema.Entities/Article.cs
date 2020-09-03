@@ -12,12 +12,12 @@ namespace HomeCinema.Entities
     /// <summary>
     /// Accounting Article
     /// </summary>
-    public class Article : IEntityBase
+    public class Article : IEntityBaseInteger
     {
         public Article()
         {
             ArticleItems = new List<ArticleItem>();
-            ProductionOrderDetails = new List<ProductionOrderDetail>();
+            ProductionOrderItems = new List<ProductionOrderItem>();
         }
         public int ID { get; set; }
         [Required]
@@ -30,11 +30,11 @@ namespace HomeCinema.Entities
         public int CreateUserID { get; set; }
         public int ModifyUserID { get; set; }
         public int DeleteUserID { get; set; }
-        public Int64 CreateOn { get; set; }
-        public Int64 ModifyOn { get; set; }
-        public Int64 DeleteOn { get; set; }
+        public DateTimeOffset CreateOn { get; set; }
+        public DateTimeOffset ModifyOn { get; set; }
+        public DateTimeOffset DeleteOn { get; set; }
         
         public virtual ICollection<ArticleItem> ArticleItems { get; set; }
-        public virtual ICollection<ProductionOrderDetail> ProductionOrderDetails { get; set; }
+        public virtual ICollection<ProductionOrderItem> ProductionOrderItems { get; set; }
     }
 }

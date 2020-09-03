@@ -39,11 +39,10 @@ namespace HomeCinema.Data
         public IDbSet<Lot> LotSet { get; set; }
         public IDbSet<Barcode> BarcodeSet { get; set; }
         public IDbSet<Cargo> CargoSet { get; set; }
-        public IDbSet<CargoDetail> CargoDetailSet { get; set; }
         public IDbSet<Location> LocationSet { get; set; }
         public IDbSet<Warehouse> WarehoseSet { get; set; }
         public IDbSet<ProductionOrder> ProdutionOrderSet { get; set; }
-        public IDbSet<ProductionOrderDetail> ProdutionOrderDetailSet { get; set; }
+        public IDbSet<ProductionOrderItem> ProdutionOrderItemSet { get; set; }
         public IDbSet<Account> AccountSet { get; set; }
         public IDbSet<FinancialPeriod> FinancialPeridSet { get; set; }
         public IDbSet<ProductionLine> ProdutionLineSet { get; set; }
@@ -78,11 +77,11 @@ namespace HomeCinema.Data
             modelBuilder.Configurations.Add(new LotConfiguration());
             modelBuilder.Configurations.Add(new BarcodeConfiguration());
             modelBuilder.Configurations.Add(new CargoConfiguration());
-            modelBuilder.Configurations.Add(new CargoDetailConfiguration());
+            modelBuilder.Configurations.Add(new CargoConfiguration());
             modelBuilder.Configurations.Add(new WareHouseConfiguration());
             modelBuilder.Configurations.Add(new LocationConfiguration());
             modelBuilder.Configurations.Add(new ProductionOrderConfiguration());
-            modelBuilder.Configurations.Add(new ProductionOrderDetailConfiguration());
+            modelBuilder.Configurations.Add(new ProductionOrderItemConfiguration());
             modelBuilder.Configurations.Add(new AccountConfiguration());
             modelBuilder.Configurations.Add(new FinancialPeriodConfiguration());
             modelBuilder.Configurations.Add(new ProductionLineConfiguration());

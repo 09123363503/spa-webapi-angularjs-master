@@ -271,7 +271,6 @@
     <Compile Include="Models\ArticleItemViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\BarcodeViewModel.cs" />
-    <Compile Include="Models\CargoDetailViewModel.cs" />
     <Compile Include="Models\CargoViewModel.cs" />
     <Compile Include="Models\ComponentItemViewModel.cs" />
     <Compile Include="Models\ComponentViewModel.cs" />
@@ -284,7 +283,7 @@
     <Compile Include="Models\MainArticleComponentViewModel.cs" />
     <Compile Include="Models\MainArticleViewModel.cs" />
     <Compile Include="Models\ProductionLineViewModel.cs" />
-    <Compile Include="Models\ProductionOrderDetailViewModel.cs" />
+    <Compile Include="Models\ProductionOrderItemViewModel.cs" />
     <Compile Include="Models\ProductionOrderViewModel.cs" />
     <Compile Include="Models\ProductTypeViewModel.cs" />
     <Compile Include="Models\RegistrationViewModel.cs" />

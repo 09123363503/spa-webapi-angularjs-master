@@ -26,11 +26,9 @@ namespace HomeCinema.Data.Configurations
             HasMany(p => p.Barcodes).WithRequired().HasForeignKey(s => s.UnitID1);
             HasMany(p => p.Barcodes).WithRequired().HasForeignKey(s => s.UnitID2);
             HasMany(p => p.Barcodes).WithRequired().HasForeignKey(s => s.UnitID3);
-            HasMany(p => p.ProductionOrderDetails).WithRequired().HasForeignKey(s => s.UnitID1);
-            HasMany(p => p.ProductionOrderDetails).WithRequired().HasForeignKey(s => s.UnitID2);
-            HasMany(p => p.ProductionOrderDetails).WithRequired().HasForeignKey(s => s.UnitID3);
-            HasMany(p => p.Cargos).WithRequired().HasForeignKey(s => s.SumUnitID1);
-            HasMany(p => p.Cargos).WithRequired().HasForeignKey(s => s.SumunitID2);
+            HasMany(p => p.ProductionOrderItems).WithRequired().HasForeignKey(s => s.UnitID1);
+            HasMany(p => p.ProductionOrderItems).WithRequired().HasForeignKey(s => s.UnitID2);
+            HasMany(p => p.ProductionOrderItems).WithRequired().HasForeignKey(s => s.UnitID3);
         }
     }
 }

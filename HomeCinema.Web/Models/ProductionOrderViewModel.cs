@@ -14,16 +14,16 @@ namespace HomeCinema.Web.Models
         public int Date { get; set; }
         public int ProductTypeID { get; set; }
         public string Description { get; set; }
-        public Int64 StartDateTime { get; set; }
-        public Int64 FinishDateTime { get; set; }
+        public DateTimeOffset StartDateTime { get; set; }
+        public DateTimeOffset FinishDateTime { get; set; }
         public int State { get; set; }
         public int ConfirmID { get; set; }
-        public Int64 DeliveryDateTime { get; set; }
+        public DateTimeOffset DeliveryDateTime { get; set; }
         public int CreateUserID { get; set; }
-        public Int64 CreateOn { get; set; }
+        public DateTimeOffset CreateOn { get; set; }
         public int ModifyUserID { get; set; }
-        public Int64 ModifyOn { get; set; }
+        public DateTimeOffset ModifyOn { get; set; }
         public int DeleteUserID { get; set; }
-        public Int64 DeleteOn { get; set; }
+        public DateTimeOffset DeleteOn { get; set; }
     }
 }

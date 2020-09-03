@@ -12,10 +12,8 @@ namespace HomeCinema.Data.Configurations
     {
         public CargoConfiguration()
         {
-            Property(p => p.Date).IsRequired();
-            Property(p => p.Number).IsRequired();
-            Property(p => p.WHKeeperID).IsRequired();
-            HasMany(p => p.CargoDetails).WithRequired().HasForeignKey(s => s.CargoID);
+            Property(p => p.BarcodeID).IsRequired();
+            Property(p => p.LocationID).IsRequired();
         }
     }
 }

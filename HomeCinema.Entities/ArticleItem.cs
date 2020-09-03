@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class ArticleItem : IEntityBase
+    public class ArticleItem : IEntityBaseInteger
     {
         public int ID { get; set; }
         [DefaultValue(0)]

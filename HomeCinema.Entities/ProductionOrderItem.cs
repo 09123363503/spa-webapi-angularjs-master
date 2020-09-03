@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class ProductionOrderDetail : IEntityBase
+    public class ProductionOrderItem : IEntityBaseInteger
     {
         public int ID { get; set; }
         public int ProductionOrederID { get; set; }

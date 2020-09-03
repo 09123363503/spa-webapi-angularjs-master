@@ -8,45 +8,28 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class Cargo : IEntityBase
+    public class Cargo : IEntityBaseInteger
     {
-        public Cargo()
-        {
-            CargoDetails = new List<CargoDetail>();
-        }
         public int ID { get; set; }
         [Required]
-        public int Date { get; set; }
+        public int BarcodeID { get; set; }
         [Required]
-        public int Number { get; set; }
-        public bool Input { get; set; }
-        public bool Output { get; set; }
-        public bool Prodution { get; set; }
-        [Required]
-        public int WHKeeperID { get; set; }
+        public int ArticleID { get; set; }
         [DefaultValue(1)]
-        public int SumCount { get; set; }
+        public int Count { get; set; }
         [DefaultValue(0)]
-        public int SumUnitID1 { get; set; }
-        [DefaultValue(0)]
-        public decimal SumUnitValue1 { get; set; }
-        [DefaultValue(0)]
-        public int SumunitID2 { get; set; }
-        [DefaultValue(0)]
-        public decimal SumUnitValue2 { get; set; }
+        public int LocationID { get; set; }
         [DefaultValue(0)]
         public int CreateUserID { get; set; }
         [DefaultValue(0)]
-        public Int64 CreateOn { get; set; }
+        public DateTimeOffset CreateOn { get; set; }
         [DefaultValue(0)]
         public int ModifyUserID { get; set; }
         [DefaultValue(0)]
-        public Int64 ModifyOn { get; set; }
+        public DateTimeOffset ModifyOn { get; set; }
         [DefaultValue(0)]
         public int DeleteUserID { get; set; }
         [DefaultValue(0)]
-        public Int64 DeleteOn { get; set; }
-
-        public virtual ICollection<CargoDetail> CargoDetails { get; set; }
+        public DateTimeOffset DeleteOn { get; set; }
     }
 }

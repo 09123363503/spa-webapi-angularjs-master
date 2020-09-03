@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class ProductionLine : IEntityBase
+    public class ProductionLine : IEntityBaseInteger
     {
         public ProductionLine()
         {

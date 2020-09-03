@@ -8,11 +8,10 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public interface IEntityBase
+    public interface IEntityBaseInteger
     {
-        //[Key]
-        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
-        //[MaxLength(16)]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         int ID { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class Warehouse : IEntityBase
+    public class Warehouse : IEntityBaseInteger
     {
         public Warehouse()
         {
@@ -33,15 +33,15 @@ namespace HomeCinema.Entities
         [DefaultValue(0)]
         public int CreateUserID { get; set; }
         [DefaultValue(0)]
-        public Int64 CreateOn { get; set; }
+        public DateTimeOffset CreateOn { get; set; }
         [DefaultValue(0)]
         public int ModifyUserID { get; set; }
         [DefaultValue(0)]
-        public Int64 ModifyOn { get; set; }
+        public DateTimeOffset ModifyOn { get; set; }
         [DefaultValue(0)]
         public int DeleteUserID { get; set; }
         [DefaultValue(0)]
-        public Int64 DeleteOn { get; set; }
+        public DateTimeOffset DeleteOn { get; set; }
 
         public virtual ICollection<Warehouse> Warehouses { get; set; }
         public virtual ICollection<Location> Locations { get; set; }

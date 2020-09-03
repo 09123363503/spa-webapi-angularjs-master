@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HomeCinema.Web.Models
 {
-    public class ProductionOrderDetailViewModel
+    public class ProductionOrderItemViewModel
     {
         public int ID { get; set; }
         public int ProductionOrederID { get; set; }

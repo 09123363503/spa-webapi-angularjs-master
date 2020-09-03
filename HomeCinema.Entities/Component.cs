@@ -10,7 +10,7 @@ namespace HomeCinema.Entities
     /// <summary>
     /// Accounting Component
     /// </summary>
-    public class Component : IEntityBase
+    public class Component : IEntityBaseInteger
     {
         public Component()
         {
@@ -25,9 +25,9 @@ namespace HomeCinema.Entities
         public int CreateUserID { get; set; }
         public int ModifyUserID { get; set; }
         public int DeleteUserID { get; set; }
-        public Int64 CreateOn { get; set; }
-        public Int64 ModifyOn { get; set; }
-        public Int64 DeleteOn { get; set; }
+        public DateTimeOffset CreateOn { get; set; }
+        public DateTimeOffset ModifyOn { get; set; }
+        public DateTimeOffset DeleteOn { get; set; }
         public virtual ICollection<ComponentItem> ComponentItems { get; set; }
         public virtual ICollection<MainArticleComponent> MainArticleComponents { get; set; }
     }

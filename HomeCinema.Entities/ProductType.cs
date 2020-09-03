@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class ProductType : IEntityBase
+    public class ProductType : IEntityBaseInteger
     {
         public ProductType()
         {

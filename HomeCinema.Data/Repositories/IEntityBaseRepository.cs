@@ -10,7 +10,7 @@ namespace HomeCinema.Data.Repositories
 {
     //public interface IEntityBaseRepository { }
 
-    public interface IEntityBaseRepository<T>  where T : class, IEntityBase, new()
+    public interface IEntityBaseRepository<T>  where T : class, IEntityBaseInteger, new()
     {
         IQueryable<T> AllIncluding(params Expression<Func<T, object>>[] includeProperties);
         IQueryable<T> All { get; }

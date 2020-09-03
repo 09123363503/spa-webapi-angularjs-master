@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class MainArticleComponent : IEntityBase
+    public class MainArticleComponent : IEntityBaseInteger
     {
         public MainArticleComponent()
         {

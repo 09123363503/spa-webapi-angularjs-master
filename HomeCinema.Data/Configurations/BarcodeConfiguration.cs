@@ -14,7 +14,7 @@ namespace HomeCinema.Data.Configurations
         {
             Property(p => p.BarcodeString).IsRequired().IsMaxLength();
             Property(p => p.ArticleID).IsRequired();
-            HasMany(p => p.CargoDetails).WithRequired().HasForeignKey(s => s.BarcodeID);
+            HasMany(p => p.Cargos).WithRequired().HasForeignKey(s => s.BarcodeID);
         }
     }
 }

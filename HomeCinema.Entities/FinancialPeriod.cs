@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class FinancialPeriod : IEntityBase
+    public class FinancialPeriod : IEntityBaseInteger
     {
         public FinancialPeriod()
         {

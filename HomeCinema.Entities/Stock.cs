@@ -9,7 +9,7 @@ namespace HomeCinema.Entities
     /// <summary>
     /// HomeCinema Movie Stock Availability
     /// </summary>
-    public class Stock : IEntityBase
+    public class Stock : IEntityBaseInteger
     {
         public Stock()
         {

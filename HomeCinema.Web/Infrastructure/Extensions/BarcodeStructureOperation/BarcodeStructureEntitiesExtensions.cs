@@ -42,38 +42,17 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             barcode.DeleteUserID = barcodeVM.DeleteUserID;
             barcode.DeleteOn = barcodeVM.DeleteOn;
         }
-        public static void UpdateCargo(this Cargo cargo, CargoViewModel cargoVM)
+        public static void UpdateCargo(this Cargo cargoDetail, CargoViewModel cargoVM)
         {
-            cargo.Date = cargoVM.Date;
-            cargo.Number = cargoVM.Number;
-            cargo.Input = cargoVM.Input;
-            cargo.Output = cargoVM.Output;
-            cargo.Prodution = cargoVM.Prodution;
-            cargo.WHKeeperID = cargoVM.WHKeeperID;
-            cargo.SumCount = cargoVM.SumCount;
-            cargo.SumUnitID1 = cargoVM.SumUnitID1;
-            cargo.SumunitID2 = cargoVM.SumunitID2;
-            cargo.SumUnitValue1 = cargoVM.SumUnitValue1;
-            cargo.SumUnitValue2 = cargoVM.SumUnitValue2;
-            cargo.CreateUserID = cargoVM.CreateUserID;
-            cargo.CreateOn = cargoVM.CreateOn;
-            cargo.ModifyUserID = cargoVM.ModifyUserID;
-            cargo.ModifyOn = cargoVM.ModifyOn;
-            cargo.DeleteUserID = cargoVM.DeleteUserID;
-            cargo.DeleteOn = cargoVM.DeleteOn;
-        }
-        public static void UpdateCargoDetail(this CargoDetail cargoDetail, CargoDetailViewModel cargoDetailVM)
-        {
-            cargoDetail.CargoID = cargoDetailVM.CargoID;
-            cargoDetail.BarcodeID = cargoDetailVM.BarcodeID;
-            cargoDetail.Count = cargoDetailVM.Count;
-            cargoDetail.LocationID = cargoDetailVM.LocationID;
-            cargoDetail.CreateUserID = cargoDetailVM.CreateUserID;
-            cargoDetail.CreateOn = cargoDetailVM.CreateOn;
-            cargoDetail.ModifyUserID = cargoDetailVM.ModifyUserID;
-            cargoDetail.ModifyOn = cargoDetailVM.ModifyOn;
-            cargoDetail.DeleteUserID = cargoDetailVM.DeleteUserID;
-            cargoDetail.DeleteOn = cargoDetailVM.DeleteOn;
+            cargoDetail.BarcodeID = cargoVM.BarcodeID;
+            cargoDetail.Count = cargoVM.Count;
+            cargoDetail.LocationID = cargoVM.LocationID;
+            cargoDetail.CreateUserID = cargoVM.CreateUserID;
+            cargoDetail.CreateOn = cargoVM.CreateOn;
+            cargoDetail.ModifyUserID = cargoVM.ModifyUserID;
+            cargoDetail.ModifyOn = cargoVM.ModifyOn;
+            cargoDetail.DeleteUserID = cargoVM.DeleteUserID;
+            cargoDetail.DeleteOn = cargoVM.DeleteOn;
         }
         public static void UpdateLocation(this Location location, LocationViewModel locationVM)
         {
@@ -121,8 +100,8 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             productionOrder.DeleteUserID = productionOrderVM.DeleteUserID;
             productionOrder.DeleteOn = productionOrderVM.DeleteOn;
         }
-        public static void UpdateProductionOrderDetail(this ProductionOrderDetail productionOrderDetail, 
-            ProductionOrderDetailViewModel productionOrderDetailVM)
+        public static void UpdateProductionOrderDetail(this ProductionOrderItem productionOrderDetail, 
+            ProductionOrderItemViewModel productionOrderDetailVM)
         {
             productionOrderDetail.ProductionOrederID = productionOrderDetailVM.ProductionOrederID;
             productionOrderDetail.ArticleID = productionOrderDetailVM.ArticleID;

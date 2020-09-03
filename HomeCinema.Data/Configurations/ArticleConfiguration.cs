@@ -25,7 +25,7 @@ namespace HomeCinema.Data.Configurations
             Property(p => p.ModifyOn);
             Property(p => p.DeleteOn);
             HasMany(p => p.ArticleItems).WithRequired().HasForeignKey(s => s.ArticleID);
-            HasMany(p => p.ProductionOrderDetails).WithRequired().HasForeignKey(s => s.ArticleID);
+            HasMany(p => p.ProductionOrderItems).WithRequired().HasForeignKey(s => s.ArticleID);
         }
     }
 }

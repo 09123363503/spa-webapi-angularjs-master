@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class ProductionOrderDetailConfiguration : EntityBaseConfiguration<ProductionOrderDetail>
+    public class ProductionOrderItemConfiguration : EntityBaseConfiguration<ProductionOrderItem>
     {
-        public ProductionOrderDetailConfiguration()
+        public ProductionOrderItemConfiguration()
         {
             Property(p => p.ProductionOrederID).IsRequired();
             Property(p => p.ArticleID).IsRequired();

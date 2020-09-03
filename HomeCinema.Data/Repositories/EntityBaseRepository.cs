@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace HomeCinema.Data.Repositories
 {
     public class EntityBaseRepository<T> : IEntityBaseRepository<T>
-            where T : class, IEntityBase, new()
+            where T : class, IEntityBaseInteger, new()
     {
 
         private HomeCinemaContext dataContext;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class Error : IEntityBase
+    public class Error : IEntityBaseInteger
     {
         public int ID { get; set; }
         public string Message { get; set; }

@@ -14,8 +14,8 @@ namespace HomeCinema.Web.Models
         public int CreateUserID { get; set; }
         public int ModifyUserID { get; set; }
         public int DeleteUserID { get; set; }
-        public Int64 CreateOn { get; set; }
-        public Int64 ModifyOn { get; set; }
-        public Int64 DeleteOn { get; set; }
+        public DateTimeOffset CreateOn { get; set; }
+        public DateTimeOffset ModifyOn { get; set; }
+        public DateTimeOffset DeleteOn { get; set; }
     }
 }

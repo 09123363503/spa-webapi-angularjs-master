@@ -59,7 +59,6 @@
     <Compile Include="Configurations\ArticleItemConfiguration.cs" />
     <Compile Include="Configurations\BarcodeConfiguration.cs" />
     <Compile Include="Configurations\CargoConfiguration.cs" />
-    <Compile Include="Configurations\CargoDetailConfiguration.cs" />
     <Compile Include="Configurations\ComponentConfiguration.cs" />
     <Compile Include="Configurations\ComponentItemConfiguration.cs" />
     <Compile Include="Configurations\EntityBaseConfiguration.cs" />
@@ -71,7 +70,7 @@
     <Compile Include="Configurations\MainArticleConfiguration.cs" />
     <Compile Include="Configurations\ProductionLineConfiguration.cs" />
     <Compile Include="Configurations\ProductionOrderConfiguration.cs" />
-    <Compile Include="Configurations\ProductionOrderDetailConfiguration.cs" />
+    <Compile Include="Configurations\ProductionOrderItemConfiguration.cs" />
     <Compile Include="Configurations\ProductTypeConfiguration.cs" />
     <Compile Include="Configurations\RentalConfiguration.cs" />
     <Compile Include="Configurations\MovieConfiguration.cs" />

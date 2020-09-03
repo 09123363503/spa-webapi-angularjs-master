@@ -9,7 +9,7 @@ namespace HomeCinema.Entities
     /// <summary>
     /// HomeCinema Movie Genre
     /// </summary>
-    public class Genre : IEntityBase
+    public class Genre : IEntityBaseInteger
     {
         public Genre()
         {

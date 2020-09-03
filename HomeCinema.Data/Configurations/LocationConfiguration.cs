@@ -14,7 +14,7 @@ namespace HomeCinema.Data.Configurations
         {
             Property(p => p.WarehouseID).IsRequired();
             Property(p => p.Name).IsRequired();
-            HasMany(p => p.CargoDetails).WithRequired().HasForeignKey(s => s.LocationID);
+            HasMany(p => p.Cargos).WithRequired().HasForeignKey(s => s.LocationID);
         }
     }
 }

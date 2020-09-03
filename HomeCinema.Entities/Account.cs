@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class Account : IEntityBase
+    public class Account : IEntityBaseInteger
     {
         public Account()
         {
