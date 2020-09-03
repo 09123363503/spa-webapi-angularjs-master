@@ -16,12 +16,12 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             lot.ProductionOrderID = lotVM.ProductionOrderID;
             lot.OwnerID = lotVM.OwnerID;
             lot.Grade = lotVM.Grade;
-            lot.RegisterID = lotVM.RegisterID;
-            lot.RegisterDateTime = lotVM.RegisterDateTime;
-            lot.EditID = lotVM.EditID;
-            lot.EditDateTime = lotVM.EditDateTime;
-            lot.DeleteID = lotVM.DeleteID;
-            lot.DeleteDatetime = lotVM.DeleteDatetime;
+            lot.CreateUserID = lotVM.CreateUserID;
+            lot.CreateOn = lotVM.CreateOn;
+            lot.ModifyUserID = lotVM.ModifyUserID;
+            lot.ModifyOn = lotVM.ModifyOn;
+            lot.DeleteUserID = lotVM.DeleteUserID;
+            lot.DeleteOn = lotVM.DeleteOn;
         }
         public static void UpdateBarcode(this Barcode barcode, BarcodeViewModel barcodeVM)
         {
@@ -35,12 +35,12 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             barcode.UnitValue2 = barcodeVM.UnitValue2;
             barcode.UnitValue3 = barcodeVM.UnitValue3;
             barcode.Count = barcodeVM.Count;
-            barcode.RegisterID = barcodeVM.RegisterID;
-            barcode.RegisterDateTime = barcodeVM.RegisterDateTime;
-            barcode.EditID = barcodeVM.EditID;
-            barcode.EditDateTime = barcodeVM.EditDateTime;
-            barcode.DeleteID = barcodeVM.DeleteID;
-            barcode.DeleteDateTime = barcodeVM.DeleteDateTime;
+            barcode.CreateUserID = barcodeVM.CreateUserID;
+            barcode.CreateOn = barcodeVM.CreateOn;
+            barcode.ModifyUserID = barcodeVM.ModifyUserID;
+            barcode.ModifyOn = barcodeVM.ModifyOn;
+            barcode.DeleteUserID = barcodeVM.DeleteUserID;
+            barcode.DeleteOn = barcodeVM.DeleteOn;
         }
         public static void UpdateCargo(this Cargo cargo, CargoViewModel cargoVM)
         {
@@ -55,12 +55,12 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             cargo.SumunitID2 = cargoVM.SumunitID2;
             cargo.SumUnitValue1 = cargoVM.SumUnitValue1;
             cargo.SumUnitValue2 = cargoVM.SumUnitValue2;
-            cargo.RegisterID = cargoVM.RegisterID;
-            cargo.RegisterDateTime = cargoVM.RegisterDateTime;
-            cargo.EditID = cargoVM.EditID;
-            cargo.EditDateTime = cargoVM.EditDateTime;
-            cargo.DeleteID = cargoVM.DeleteID;
-            cargo.DeleteDateTime = cargoVM.DeleteDateTime;
+            cargo.CreateUserID = cargoVM.CreateUserID;
+            cargo.CreateOn = cargoVM.CreateOn;
+            cargo.ModifyUserID = cargoVM.ModifyUserID;
+            cargo.ModifyOn = cargoVM.ModifyOn;
+            cargo.DeleteUserID = cargoVM.DeleteUserID;
+            cargo.DeleteOn = cargoVM.DeleteOn;
         }
         public static void UpdateCargoDetail(this CargoDetail cargoDetail, CargoDetailViewModel cargoDetailVM)
         {
@@ -68,12 +68,12 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             cargoDetail.BarcodeID = cargoDetailVM.BarcodeID;
             cargoDetail.Count = cargoDetailVM.Count;
             cargoDetail.LocationID = cargoDetailVM.LocationID;
-            cargoDetail.RegisterID = cargoDetailVM.RegisterID;
-            cargoDetail.RegisterDateTime = cargoDetailVM.RegisterDateTime;
-            cargoDetail.EditID = cargoDetailVM.EditID;
-            cargoDetail.EditDateTime = cargoDetailVM.EditDateTime;
-            cargoDetail.DeleteID = cargoDetailVM.DeleteID;
-            cargoDetail.DeleteDateTime = cargoDetailVM.DeleteDateTime;
+            cargoDetail.CreateUserID = cargoDetailVM.CreateUserID;
+            cargoDetail.CreateOn = cargoDetailVM.CreateOn;
+            cargoDetail.ModifyUserID = cargoDetailVM.ModifyUserID;
+            cargoDetail.ModifyOn = cargoDetailVM.ModifyOn;
+            cargoDetail.DeleteUserID = cargoDetailVM.DeleteUserID;
+            cargoDetail.DeleteOn = cargoDetailVM.DeleteOn;
         }
         public static void UpdateLocation(this Location location, LocationViewModel locationVM)
         {
@@ -94,12 +94,12 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             warehouse.Leased = warehouseVM.Leased;
             warehouse.IsGroup = warehouseVM.IsGroup;
             warehouse.Description = warehouseVM.Description;
-            warehouse.RegisterID = warehouseVM.RegisterID;
-            warehouse.RegisterDateTime = warehouseVM.RegisterDateTime;
-            warehouse.EditID = warehouseVM.EditID;
-            warehouse.EditDateTime = warehouseVM.EditDateTime;
-            warehouse.DeleteID = warehouseVM.DeleteID;
-            warehouse.DeleteDateTime = warehouseVM.DeleteDateTime;
+            warehouse.CreateUserID = warehouseVM.CreateUserID;
+            warehouse.CreateOn = warehouseVM.CreateOn;
+            warehouse.ModifyUserID = warehouseVM.ModifyUserID;
+            warehouse.ModifyOn = warehouseVM.ModifyOn;
+            warehouse.DeleteUserID = warehouseVM.DeleteUserID;
+            warehouse.DeleteOn = warehouseVM.DeleteOn;
         }
         public static void UpdateProductionOrder(this ProductionOrder productionOrder, ProductionOrderViewModel productionOrderVM)
         {
@@ -114,12 +114,12 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             productionOrderVM.FinancialPeriodID = productionOrderVM.FinancialPeriodID;
             productionOrder.ConfirmID = productionOrderVM.ConfirmID;
             productionOrder.DeliveryDateTime = productionOrderVM.DeliveryDateTime;
-            productionOrder.RegisterID = productionOrderVM.RegisterID;
-            productionOrder.RegisterDateTime = productionOrderVM.RegisterDateTime;
-            productionOrder.EditID = productionOrderVM.EditID;
-            productionOrder.EditDateTime = productionOrderVM.EditDateTime;
-            productionOrder.DeleteID = productionOrderVM.DeleteID;
-            productionOrder.DeleteDateTime = productionOrderVM.DeleteDateTime;
+            productionOrder.CreateUserID = productionOrderVM.CreateUserID;
+            productionOrder.CreateOn = productionOrderVM.CreateOn;
+            productionOrder.ModifyUserID = productionOrderVM.ModifyUserID;
+            productionOrder.ModifyOn = productionOrderVM.ModifyOn;
+            productionOrder.DeleteUserID = productionOrderVM.DeleteUserID;
+            productionOrder.DeleteOn = productionOrderVM.DeleteOn;
         }
         public static void UpdateProductionOrderDetail(this ProductionOrderDetail productionOrderDetail, 
             ProductionOrderDetailViewModel productionOrderDetailVM)

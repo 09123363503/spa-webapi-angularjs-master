@@ -20,59 +20,59 @@ namespace HomeCinema.Web.Infrastructure.Extensions.WarehouseOperation
             mainArticle.PurchaseAccID = mainArticleVM.PurchaseAccID;
             mainArticle.SalesAccID = mainArticleVM.SalesAccID;
             mainArticle.InventoryAccID = mainArticleVM.InventoryAccID;
-            mainArticle.RegisterID = mainArticleVM.RegisterID;
-            mainArticle.EditionID = mainArticleVM.EditionID;
-            mainArticle.DeleteID = mainArticleVM.DeleteID;
-            mainArticle.RegisterDateTime = mainArticleVM.RegisterDateTime;
-            mainArticle.EditionDateTime = mainArticleVM.EditionDateTime;
-            mainArticle.DeleteDateTime = mainArticleVM.DeleteDateTime;
+            mainArticle.CreateUserID = mainArticleVM.CreateUserID;
+            mainArticle.ModifyUserID = mainArticleVM.ModifyUserID;
+            mainArticle.DeleteUserID = mainArticleVM.DeleteUserID;
+            mainArticle.CreateOn = mainArticleVM.CreateOn;
+            mainArticle.ModifyOn = mainArticleVM.ModifyOn;
+            mainArticle.DeleteOn = mainArticleVM.DeleteOn;
         }
         public static void UpdateArticle(this Article article, ArticleViewModel articleVM)
         {
             article.MainArticleID = articleVM.MainArticleID;
             article.Code = articleVM.Code;
             article.Name = articleVM.Name;
-            article.RegisterID = articleVM.RegisterID;
-            article.EditionID = articleVM.EditionID;
-            article.DeleteID = article.DeleteID;
-            article.RegisterDateTime = articleVM.RegisterDateTime;
-            article.EditionDateTime = articleVM.EditionDateTime;
-            article.DeleteDateTime = articleVM.DeleteDateTime;
+            article.CreateUserID = articleVM.CreateUserID;
+            article.ModifyUserID = articleVM.ModifyUserID;
+            article.DeleteUserID = article.DeleteUserID;
+            article.CreateOn = articleVM.CreateOn;
+            article.ModifyOn = articleVM.ModifyOn;
+            article.DeleteOn = articleVM.DeleteOn;
         }
         public static void UpdateUnit(this Unit unit, UnitViewModel unitVM)
         {
             unit.Code = unitVM.Code;
             unit.Name = unitVM.Name;
-            unit.RegisterID = unitVM.RegisterID;
-            unit.EditID = unitVM.EditionID;
-            unit.DeleteID = unitVM.DeleteID;
-            unit.RegisterDatetime = unitVM.RegisterDatetime;
-            unit.EditDateTime = unitVM.EditionDateTime;
-            unit.DeleteDateTime = unitVM.DeleteDateTime;
+            unit.CreateUserID = unitVM.CreateUserID;
+            unit.ModifyUserID = unitVM.ModifyUserID;
+            unit.DeleteUserID = unitVM.DeleteUserID;
+            unit.CreateOn = unitVM.CreateOn;
+            unit.ModifyOn = unitVM.ModifyOn;
+            unit.DeleteOn = unitVM.DeleteOn;
         }
         public static void UpdateComponent(this Component component, ComponentViewModel componentVM)
         {
             component.Code = componentVM.Code;
             component.Name = componentVM.Name;
             component.Lenght = componentVM.Lengtht;
-            component.RegisterID = componentVM.RegisterID;
-            component.EditionID = componentVM.EditionID;
-            component.DeleteID = componentVM.DeleteID;
-            component.RegisterDatetime = componentVM.RegisterDateTime;
-            component.EditionDateTime = componentVM.EditionDateTime;
-            component.DeleteDateTime = componentVM.DeleteDateTime;
+            component.CreateUserID = componentVM.CreateUserID;
+            component.ModifyUserID = componentVM.ModifyUserID;
+            component.DeleteUserID = componentVM.DeleteUserID;
+            component.CreateOn = componentVM.CreateOn;
+            component.ModifyOn = componentVM.ModifyOn;
+            component.DeleteOn = componentVM.DeleteOn;
         }
         public static void UpdateComponentItem(this ComponentItem componentItem, ComponentItemViewModel componentItemVM)
         {
             componentItem.ComponentID = componentItemVM.ComponentID;
             componentItem.Code = componentItemVM.Code;
             componentItem.Name = componentItemVM.Name;
-            componentItem.RegisterID = componentItemVM.RegisterID;
-            componentItem.EditionID = componentItemVM.EditionID;
-            componentItem.DeleteID = componentItemVM.DeleteID;
-            componentItem.RegisterDatetime = componentItemVM.RegisterDatetime;
-            componentItem.EditionDateTime = componentItemVM.EditionDateTime;
-            componentItem.DeleteDateTime = componentItemVM.DeleteDateTime;
+            componentItem.CreateUserID = componentItemVM.CreateUserID;
+            componentItem.ModifyUserID = componentItemVM.ModifyUserID;
+            componentItem.DeleteUserID = componentItemVM.DeleteUserID;
+            componentItem.CreateOn = componentItemVM.CreateOn;
+            componentItem.ModifyOn = componentItemVM.ModifyOn;
+            componentItem.DeleteOn = componentItemVM.DeleteOn;
         }
         public static void UpdateArticleItem(this ArticleItem articleItem, ArticleItemViewModel articleItemVM)
         {

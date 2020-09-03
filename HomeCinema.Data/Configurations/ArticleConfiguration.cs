@@ -18,12 +18,12 @@ namespace HomeCinema.Data.Configurations
             Property(p => p.InventoryAccID).IsRequired();
             Property(p => p.Code).IsRequired();
             Property(p => p.Name).IsRequired();
-            Property(p => p.RegisterID);
-            Property(p => p.EditionID);
-            Property(p => p.DeleteID);
-            Property(p => p.RegisterDateTime);
-            Property(p => p.EditionDateTime);
-            Property(p => p.DeleteDateTime);
+            Property(p => p.CreateUserID);
+            Property(p => p.ModifyUserID);
+            Property(p => p.DeleteUserID);
+            Property(p => p.CreateOn);
+            Property(p => p.ModifyOn);
+            Property(p => p.DeleteOn);
             HasMany(p => p.ArticleItems).WithRequired().HasForeignKey(s => s.ArticleID);
             HasMany(p => p.ProductionOrderDetails).WithRequired().HasForeignKey(s => s.ArticleID);
         }

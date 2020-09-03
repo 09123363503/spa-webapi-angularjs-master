@@ -19,11 +19,11 @@ namespace HomeCinema.Web.Models
         public decimal SumUnitValue1 { get; set; }
         public int SumunitID2 { get; set; }
         public decimal SumUnitValue2 { get; set; }
-        public int RegisterID { get; set; }
-        public Int64 RegisterDateTime { get; set; }
-        public int EditID { get; set; }
-        public Int64 EditDateTime { get; set; }
-        public int DeleteID { get; set; }
-        public Int64 DeleteDateTime { get; set; }
+        public int CreateUserID { get; set; }
+        public Int64 CreateOn { get; set; }
+        public int ModifyUserID { get; set; }
+        public Int64 ModifyOn { get; set; }
+        public int DeleteUserID { get; set; }
+        public Int64 DeleteOn { get; set; }
     }
 }

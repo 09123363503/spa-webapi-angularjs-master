@@ -23,17 +23,17 @@ namespace HomeCinema.Entities
         [Required]
         public string Name { get; set; }
         [DefaultValue(0)]
-        public int RegisterID { get; set; }
+        public int CreateUserID { get; set; }
         [DefaultValue(0)]
-        public int EditID { get; set; }
+        public int ModifyUserID { get; set; }
         [DefaultValue(0)]
-        public int DeleteID { get; set; }
+        public int DeleteUserID { get; set; }
         [DefaultValue(0)]
-        public Int64 RegisterDatetime { get; set; }
+        public Int64 CreateOn { get; set; }
         [DefaultValue(0)]
-        public Int64 EditDateTime { get; set; }
+        public Int64 ModifyOn { get; set; }
         [DefaultValue(0)]
-        public Int64 DeleteDateTime { get; set; }
+        public Int64 DeleteOn { get; set; }
         
         public virtual ICollection<MainArticle> MainArticles { get; set; }
         public virtual ICollection<Barcode> Barcodes { get; set; }

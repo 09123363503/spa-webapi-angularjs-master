@@ -17,11 +17,11 @@ namespace HomeCinema.Web.Models
         public int PurchaseAccID { get; set; }
         public int SalesAccID { get; set; }
         public int InventoryAccID { get; set; }
-        public int RegisterID { get; set; }
-        public int EditionID { get; set; }
-        public int DeleteID { get; set; }
-        public Int64 RegisterDateTime { get; set; }
-        public Int64 EditionDateTime { get; set; }
-        public Int64 DeleteDateTime { get; set; }
+        public int CreateUserID { get; set; }
+        public int ModifyUserID { get; set; }
+        public int DeleteUserID { get; set; }
+        public Int64 CreateOn { get; set; }
+        public Int64 ModifyOn { get; set; }
+        public Int64 DeleteOn { get; set; }
     }
 }

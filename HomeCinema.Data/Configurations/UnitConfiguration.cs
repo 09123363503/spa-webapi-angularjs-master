@@ -14,12 +14,12 @@ namespace HomeCinema.Data.Configurations
         {
             Property(p => p.Code).IsRequired().IsMaxLength();
             Property(p => p.Name).IsRequired().IsMaxLength();
-            Property(p => p.RegisterID);
-            Property(p => p.EditID);
-            Property(p => p.DeleteID);
-            Property(p => p.RegisterDatetime);
-            Property(p => p.EditDateTime);
-            Property(p => p.DeleteDateTime);
+            Property(p => p.CreateUserID);
+            Property(p => p.ModifyUserID);
+            Property(p => p.DeleteUserID);
+            Property(p => p.CreateOn);
+            Property(p => p.ModifyOn);
+            Property(p => p.DeleteOn);
             HasMany(p => p.MainArticles).WithRequired().HasForeignKey(s => s.Unit1ID);
             HasMany(p => p.MainArticles).WithRequired().HasForeignKey(s => s.Unit2ID);
             HasMany(p => p.MainArticles).WithRequired().HasForeignKey(s => s.Unit3ID);

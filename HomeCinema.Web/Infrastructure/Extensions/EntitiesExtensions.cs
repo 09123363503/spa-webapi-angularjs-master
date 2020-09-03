@@ -45,24 +45,24 @@ namespace HomeCinema.Web.Infrastructure.Extensions
         //    mainArticle.PurchaseAccID = mainArticleVM.PurchaseAccID;
         //    mainArticle.SalesAccID = mainArticleVM.SalesAccID;
         //    mainArticle.InventoryAccID = mainArticleVM.InventoryAccID;
-        //    mainArticle.RegisterID = mainArticleVM.RegisterID;
-        //    mainArticle.EditionID = mainArticleVM.EditionID;
-        //    mainArticle.DeleteID = mainArticleVM.DeleteID;
-        //    mainArticle.RegisterDateTime = mainArticleVM.RegisterDateTime;
-        //    mainArticle.EditionDateTime = mainArticleVM.EditionDateTime;
-        //    mainArticle.DeleteDateTime = mainArticleVM.DeleteDateTime;
+        //    mainArticle.CreateUserID = mainArticleVM.CreateUserID;
+        //    mainArticle.ModifyUserID = mainArticleVM.ModifyUserID;
+        //    mainArticle.DeleteUserID = mainArticleVM.DeleteUserID;
+        //    mainArticle.CreateOn = mainArticleVM.CreateOn;
+        //    mainArticle.ModifyOn = mainArticleVM.ModifyOn;
+        //    mainArticle.DeleteOn = mainArticleVM.DeleteOn;
         //}
         //public static void UpdateArticle(this Article article, ArticleViewModel articleVM)
         //{
         //    article.MainArticleID = articleVM.MainArticleID;
         //    article.Code = articleVM.Code;
         //    article.Name = articleVM.Name;
-        //    article.RegisterID = articleVM.RegisterID;
-        //    article.EditionID = articleVM.EditionID;
-        //    article.DeleteID = article.DeleteID;
-        //    article.RegisterDateTime = articleVM.RegisterDateTime;
-        //    article.EditionDateTime = articleVM.EditionDateTime;
-        //    article.DeleteDateTime = articleVM.DeleteDateTime;
+        //    article.CreateUserID = articleVM.CreateUserID;
+        //    article.ModifyUserID = articleVM.ModifyUserID;
+        //    article.DeleteUserID = article.DeleteUserID;
+        //    article.CreateOn = articleVM.CreateOn;
+        //    article.ModifyOn = articleVM.ModifyOn;
+        //    article.DeleteOn = articleVM.DeleteOn;
         //}
     }
 }

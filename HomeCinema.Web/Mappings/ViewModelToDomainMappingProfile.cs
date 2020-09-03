@@ -22,7 +22,7 @@ namespace HomeCinema.Web.Mappings
                 .ForMember(m => m.Genre, map => map.Ignore());
 
             Mapper.CreateMap<MainArticleViewModel, MainArticle>()
-                .ForMember(m => m.RegisterID, map => map.Ignore());
+                .ForMember(m => m.CreateUserID, map => map.Ignore());
 
             Mapper.CreateMap<ArticleViewModel, Article>()
                 .ForMember(p => p.Name, map => map.Ignore());
