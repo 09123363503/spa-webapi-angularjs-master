@@ -26,6 +26,9 @@ namespace HomeCinema.Web.Mappings
 
             Mapper.CreateMap<ArticleViewModel, Article>()
                 .ForMember(p => p.Name, map => map.Ignore());
+
+            Mapper.CreateMap<CargoViewModel, Cargo>()
+                .ForMember(p => p.ArticleID, map => map.Ignore());
         }
     }
 }

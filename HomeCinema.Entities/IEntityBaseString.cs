@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class IEntityBaseString
+    public interface IEntityBaseString
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

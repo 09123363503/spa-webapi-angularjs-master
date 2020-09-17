@@ -77,7 +77,6 @@ namespace HomeCinema.Data
             modelBuilder.Configurations.Add(new LotConfiguration());
             modelBuilder.Configurations.Add(new BarcodeConfiguration());
             modelBuilder.Configurations.Add(new CargoConfiguration());
-            modelBuilder.Configurations.Add(new CargoConfiguration());
             modelBuilder.Configurations.Add(new WareHouseConfiguration());
             modelBuilder.Configurations.Add(new LocationConfiguration());
             modelBuilder.Configurations.Add(new ProductionOrderConfiguration());

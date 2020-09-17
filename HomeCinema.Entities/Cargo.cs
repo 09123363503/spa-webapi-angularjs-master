@@ -24,6 +24,10 @@ namespace HomeCinema.Entities
         [DefaultValue(0)]
         public int SumUnitValue1 { get; set; }
         [DefaultValue(0)]
+        public int SumUnitID2 { get; set; }
+        [DefaultValue(0)]
+        public int SumunitValue2 { get; set; }
+        [DefaultValue(0)]
         public int CreateUserID { get; set; }
         [DefaultValue(0)]
         public DateTimeOffset CreateOn { get; set; }

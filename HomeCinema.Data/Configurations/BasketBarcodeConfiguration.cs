@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class EntityBaseConfigurationInt<T> : EntityTypeConfigurationInt<T> where T : class, IEntityBaseInteger//, IEntityBaseString
+    public class BasketBarcodeConfiguration : EntityBaseConfiguration<BasketBatcode>
     {
-        public EntityBaseConfigurationInt()
+        public BasketBarcodeConfiguration()
         {
-            HasKey(e => e.ID);
+            Property(p => p.Parent).IsRequired();
+            Property(p => p.Child).IsRequired();
         }
     }
-
-    public class EntityBaseConfigurationStr<T> : 
 }

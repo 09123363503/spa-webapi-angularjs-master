@@ -47,6 +47,8 @@
     <Compile Include="Article.cs" />
     <Compile Include="ArticleItem.cs" />
     <Compile Include="Barcode.cs" />
+    <Compile Include="BasketArticle.cs" />
+    <Compile Include="BasketBatcode.cs" />
     <Compile Include="Cargo.cs" />
     <Compile Include="ComponentItem.cs" />
     <Compile Include="Component.cs" />

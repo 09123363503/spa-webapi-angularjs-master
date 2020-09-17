@@ -271,6 +271,8 @@
     <Compile Include="Models\ArticleItemViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\BarcodeViewModel.cs" />
+    <Compile Include="Models\BasketArticleViewModel.cs" />
+    <Compile Include="Models\BasketBarcode.cs" />
     <Compile Include="Models\CargoViewModel.cs" />
     <Compile Include="Models\ComponentItemViewModel.cs" />
     <Compile Include="Models\ComponentViewModel.cs" />

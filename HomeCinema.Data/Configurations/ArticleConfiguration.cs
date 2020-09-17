@@ -26,6 +26,10 @@ namespace HomeCinema.Data.Configurations
             Property(p => p.DeleteOn);
             HasMany(p => p.ArticleItems).WithRequired().HasForeignKey(s => s.ArticleID);
             HasMany(p => p.ProductionOrderItems).WithRequired().HasForeignKey(s => s.ArticleID);
+            HasMany(p => p.BasketArticles).WithRequired().HasForeignKey(s => s.Parent);
+            HasMany(p => p.BasketArticles).WithRequired().HasForeignKey(s => s.Child);
+            HasMany(p => p.BasketBatcodes).WithRequired().HasForeignKey(s => s.Parent);
+            HasMany(p => p.BasketBatcodes).WithRequired().HasForeignKey(s => s.Child);
         }
     }
 }

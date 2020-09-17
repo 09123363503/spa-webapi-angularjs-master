@@ -36,6 +36,8 @@ namespace HomeCinema.Web.Mappings
             Mapper.CreateMap<MainArticle, MainArticleViewModel>();
 
             Mapper.CreateMap<Article, ArticleViewModel>();
+
+            Mapper.CreateMap<Cargo, CargoViewModel>();
         }
     }
 }

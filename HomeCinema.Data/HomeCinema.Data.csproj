@@ -58,6 +58,8 @@
     <Compile Include="Configurations\ArticleConfiguration.cs" />
     <Compile Include="Configurations\ArticleItemConfiguration.cs" />
     <Compile Include="Configurations\BarcodeConfiguration.cs" />
+    <Compile Include="Configurations\BasketArticleConfiguration.cs" />
+    <Compile Include="Configurations\BasketBarcodeConfiguration.cs" />
     <Compile Include="Configurations\CargoConfiguration.cs" />
     <Compile Include="Configurations\ComponentConfiguration.cs" />
     <Compile Include="Configurations\ComponentItemConfiguration.cs" />
