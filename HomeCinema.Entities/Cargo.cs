@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class Cargo : IEntityBaseInteger
+    public class Cargo : IEntityBaseString
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         [Required]
         public int BarcodeID { get; set; }
         [Required]
@@ -19,6 +19,10 @@ namespace HomeCinema.Entities
         public int Count { get; set; }
         [DefaultValue(0)]
         public int LocationID { get; set; }
+        [DefaultValue(0)]
+        public int SumUnitID1 { get; set; }
+        [DefaultValue(0)]
+        public int SumUnitValue1 { get; set; }
         [DefaultValue(0)]
         public int CreateUserID { get; set; }
         [DefaultValue(0)]
