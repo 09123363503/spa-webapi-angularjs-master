@@ -15,8 +15,6 @@ namespace HomeCinema.Data.Configurations
             Property(p => p.Code).IsRequired().IsMaxLength();
             Property(p => p.Name).IsRequired().IsMaxLength();
             Property(p => p.Unit1ID).IsRequired();
-            Property(p => p.Unit2ID).IsRequired();
-            Property(p => p.Unit3ID).IsRequired();
             Property(p => p.PurchaseAccID);
             Property(p => p.SalesAccID);
             Property(p => p.InventoryAccID).IsRequired();

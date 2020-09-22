@@ -32,8 +32,8 @@ namespace HomeCinema.Entities
         public DateTimeOffset CreateOn { get; set; }
         public DateTimeOffset ModifyOn { get; set; }
         public DateTimeOffset DeleteOn { get; set; }
-        public virtual ICollection<Article> Articles { get; set; }
         
+        public virtual ICollection<Article> Articles { get; set; }
         public virtual ICollection<MainArticleComponent> MainArticleComponents { get; set; }
     }
 }

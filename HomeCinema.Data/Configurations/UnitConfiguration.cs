@@ -20,15 +20,6 @@ namespace HomeCinema.Data.Configurations
             Property(p => p.CreateOn);
             Property(p => p.ModifyOn);
             Property(p => p.DeleteOn);
-            HasMany(p => p.MainArticles).WithRequired().HasForeignKey(s => s.Unit1ID);
-            HasMany(p => p.MainArticles).WithRequired().HasForeignKey(s => s.Unit2ID);
-            HasMany(p => p.MainArticles).WithRequired().HasForeignKey(s => s.Unit3ID);
-            HasMany(p => p.Barcodes).WithRequired().HasForeignKey(s => s.UnitID1);
-            HasMany(p => p.Barcodes).WithRequired().HasForeignKey(s => s.UnitID2);
-            HasMany(p => p.Barcodes).WithRequired().HasForeignKey(s => s.UnitID3);
-            HasMany(p => p.ProductionOrderItems).WithRequired().HasForeignKey(s => s.UnitID1);
-            HasMany(p => p.ProductionOrderItems).WithRequired().HasForeignKey(s => s.UnitID2);
-            HasMany(p => p.ProductionOrderItems).WithRequired().HasForeignKey(s => s.UnitID3);
         }
     }
 }

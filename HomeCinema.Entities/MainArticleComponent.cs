@@ -17,6 +17,7 @@ namespace HomeCinema.Entities
         public string Name { get; set; }
         public int MainAricleID { get; set; }
         public int ComponentID { get; set; }
+        
         public virtual ICollection<ArticleItem> ArticleItems { get; set; }
     }
 }
