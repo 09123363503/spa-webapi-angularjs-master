@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class CargoConfiguration : EntityBaseConfiguration<Cargo>
+    public class CargoConfiguration : EntityBaseConfigurationString<Cargo>
     {
         public CargoConfiguration()
         {

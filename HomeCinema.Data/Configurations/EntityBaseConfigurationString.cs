@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class ProductionOrderItemConfiguration : EntityBaseConfigurationInt<ProductionOrderItem>
+    public class EntityBaseConfigurationString<T> : EntityTypeConfiguration<T> where T : class, IEntityBaseString//, IEntityBaseString
     {
-        public ProductionOrderItemConfiguration()
+        public EntityBaseConfigurationString()
         {
-            Property(p => p.ProductionOrederID).IsRequired();
-            Property(p => p.ArticleID).IsRequired();
+            HasKey(f => f.ID);
         }
     }
 }

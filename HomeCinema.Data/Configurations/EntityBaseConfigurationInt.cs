@@ -8,13 +8,11 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class EntityBaseConfigurationInt<T> : EntityTypeConfigurationInt<T> where T : class, IEntityBaseInteger//, IEntityBaseString
+    public class EntityBaseConfigurationInt<T> : EntityTypeConfiguration<T> where T : class, IEntityBaseInteger//, IEntityBaseInteger
     {
         public EntityBaseConfigurationInt()
         {
             HasKey(e => e.ID);
         }
     }
-
-    public class EntityBaseConfigurationStr<T> : 
 }

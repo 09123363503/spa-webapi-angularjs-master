@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class BarcodeConfiguration : EntityBaseConfiguration<Barcode>
+    public class BarcodeConfiguration : EntityBaseConfigurationInt<Barcode>
     {
         public BarcodeConfiguration()
         {

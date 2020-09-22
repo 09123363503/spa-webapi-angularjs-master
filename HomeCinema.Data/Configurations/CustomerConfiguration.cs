@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class CustomerConfiguration : EntityBaseConfiguration<Customer>
+    public class CustomerConfiguration : EntityBaseConfigurationInt<Customer>
     {
         public CustomerConfiguration()
         {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class BasketArticleConfiguration : EntityBaseConfiguration<BasketArticle>
+    public class BasketArticleConfiguration : EntityBaseConfigurationInt<BasketArticle>
     {
         public BasketArticleConfiguration()
         {

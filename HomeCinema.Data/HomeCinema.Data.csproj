@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -63,7 +64,8 @@
     <Compile Include="Configurations\CargoConfiguration.cs" />
     <Compile Include="Configurations\ComponentConfiguration.cs" />
     <Compile Include="Configurations\ComponentItemConfiguration.cs" />
-    <Compile Include="Configurations\EntityBaseConfiguration.cs" />
+    <Compile Include="Configurations\EntityBaseConfigurationInt.cs" />
+    <Compile Include="Configurations\EntityBaseConfigurationString.cs" />
     <Compile Include="Configurations\FinancialPeriodConfiguration.cs" />
     <Compile Include="Configurations\GenreConfiguration.cs" />
     <Compile Include="Configurations\LocationConfiguration.cs" />

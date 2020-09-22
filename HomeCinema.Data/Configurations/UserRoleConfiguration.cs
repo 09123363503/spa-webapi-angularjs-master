@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class UserRoleConfiguration : EntityBaseConfiguration<UserRole>
+    public class UserRoleConfiguration : EntityBaseConfigurationInt<UserRole>
     {
         public UserRoleConfiguration()
         {

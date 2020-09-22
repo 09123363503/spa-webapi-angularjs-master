@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class FinancialPeriodConfiguration : EntityBaseConfiguration<FinancialPeriod>
+    public class FinancialPeriodConfiguration : EntityBaseConfigurationInt<FinancialPeriod>
     {
         public FinancialPeriodConfiguration()
         {

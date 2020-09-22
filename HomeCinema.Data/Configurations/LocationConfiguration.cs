@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class LocationConfiguration : EntityBaseConfiguration<Location>
+    public class LocationConfiguration : EntityBaseConfigurationInt<Location>
     {
         public LocationConfiguration()
         {

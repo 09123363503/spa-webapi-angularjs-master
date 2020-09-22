@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class GenreConfiguration : EntityBaseConfiguration<Genre>
+    public class GenreConfiguration : EntityBaseConfigurationInt<Genre>
     {
         public GenreConfiguration()
         {
