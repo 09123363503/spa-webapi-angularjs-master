@@ -42,17 +42,17 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             barcode.DeleteUserID = barcodeVM.DeleteUserID;
             barcode.DeleteOn = barcodeVM.DeleteOn;
         }
-        public static void UpdateCargo(this Cargo cargoDetail, CargoViewModel cargoVM)
+        public static void UpdateCargo(this Cargo cargoItem, CargoViewModel cargoVM)
         {
-            cargoDetail.BarcodeID = cargoVM.BarcodeID;
-            cargoDetail.Count = cargoVM.Count;
-            cargoDetail.LocationID = cargoVM.LocationID;
-            cargoDetail.CreateUserID = cargoVM.CreateUserID;
-            cargoDetail.CreateOn = cargoVM.CreateOn;
-            cargoDetail.ModifyUserID = cargoVM.ModifyUserID;
-            cargoDetail.ModifyOn = cargoVM.ModifyOn;
-            cargoDetail.DeleteUserID = cargoVM.DeleteUserID;
-            cargoDetail.DeleteOn = cargoVM.DeleteOn;
+            cargoItem.BarcodeID = cargoVM.BarcodeID;
+            cargoItem.Count = cargoVM.Count;
+            cargoItem.LocationID = cargoVM.LocationID;
+            cargoItem.CreateUserID = cargoVM.CreateUserID;
+            cargoItem.CreateOn = cargoVM.CreateOn;
+            cargoItem.ModifyUserID = cargoVM.ModifyUserID;
+            cargoItem.ModifyOn = cargoVM.ModifyOn;
+            cargoItem.DeleteUserID = cargoVM.DeleteUserID;
+            cargoItem.DeleteOn = cargoVM.DeleteOn;
         }
         public static void UpdateLocation(this Location location, LocationViewModel locationVM)
         {
@@ -100,17 +100,17 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             productionOrder.DeleteUserID = productionOrderVM.DeleteUserID;
             productionOrder.DeleteOn = productionOrderVM.DeleteOn;
         }
-        public static void UpdateProductionOrderDetail(this ProductionOrderItem productionOrderDetail, 
-            ProductionOrderItemViewModel productionOrderDetailVM)
+        public static void UpdateProductionOrderItem(this ProductionOrderItem productionOrderItem, 
+            ProductionOrderItemViewModel productionOrderItemVM)
         {
-            productionOrderDetail.ProductionOrederID = productionOrderDetailVM.ProductionOrederID;
-            productionOrderDetail.ArticleID = productionOrderDetailVM.ArticleID;
-            productionOrderDetail.UnitID1 = productionOrderDetailVM.UnitID1;
-            productionOrderDetail.UnitID2 = productionOrderDetailVM.UnitID2;
-            productionOrderDetail.UnitID3 = productionOrderDetailVM.UnitID3;
-            productionOrderDetail.UnitValue1 = productionOrderDetailVM.UnitValue1;
-            productionOrderDetail.UnitValue2 = productionOrderDetailVM.UnitValue2;
-            productionOrderDetail.UnitValue3 = productionOrderDetailVM.UnitValue3;
+            productionOrderItem.ProductionOrederID = productionOrderItemVM.ProductionOrederID;
+            productionOrderItem.ArticleID = productionOrderItemVM.ArticleID;
+            productionOrderItem.UnitID1 = productionOrderItemVM.UnitID1;
+            productionOrderItem.UnitID2 = productionOrderItemVM.UnitID2;
+            productionOrderItem.UnitID3 = productionOrderItemVM.UnitID3;
+            productionOrderItem.UnitValue1 = productionOrderItemVM.UnitValue1;
+            productionOrderItem.UnitValue2 = productionOrderItemVM.UnitValue2;
+            productionOrderItem.UnitValue3 = productionOrderItemVM.UnitValue3;
         }
         public static void UpdateProductionLine(this ProductionLine productionLine, ProductionLineViewModel productionLineVM)
         {

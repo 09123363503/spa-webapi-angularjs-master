@@ -44,7 +44,7 @@ namespace HomeCinema.Web.Controllers
             });
         }
 
-        [Route("details/{id:int}")]
+        [Route("Items/{id:int}")]
         public HttpResponseMessage Get(HttpRequestMessage request, int id)
         {
             _requiredRepositories = new List<Type>() { typeof(Movie) };

@@ -1,11 +1,11 @@
 ﻿(function (app) {
     'use strict';
 
-    app.controller('movieDetailsCtrl', movieDetailsCtrl);
+    app.controller('movieItemsCtrl', movieItemsCtrl);
 
-    movieDetailsCtrl.$inject = ['$scope', '$location', '$routeParams', '$modal', 'apiService', 'notificationService'];
+    movieItemsCtrl.$inject = ['$scope', '$location', '$routeParams', '$modal', 'apiService', 'notificationService'];
 
-    function movieDetailsCtrl($scope, $location, $routeParams, $modal, apiService, notificationService) {
+    function movieItemsCtrl($scope, $location, $routeParams, $modal, apiService, notificationService) {
         $scope.pageClass = 'page-movies';
         $scope.movie = {};
         $scope.loadingMovie = true;
@@ -22,7 +22,7 @@
 
             $scope.loadingMovie = true;
 
-            apiService.get('/api/movies/details/' + $routeParams.id, null,
+            apiService.get('/api/movies/Items/' + $routeParams.id, null,
             movieLoadCompleted,
             movieLoadFailed);
         }
@@ -35,7 +35,7 @@
             rentalHistoryLoadFailed);
         }
 
-        function loadMovieDetails() {
+        function loadMovieItems() {
             loadMovie();
             loadRentalHistory();
         }
@@ -85,7 +85,7 @@
 
         function returnMovieSucceeded(response) {
             notificationService.displaySuccess('Movie returned to HomeCinema succeesfully');
-            loadMovieDetails();
+            loadMovieItems();
         }
 
         function returnMovieFailed(response) {
@@ -98,12 +98,12 @@
                 controller: 'rentMovieCtrl',
                 scope: $scope
             }).result.then(function ($scope) {
-                loadMovieDetails();
+                loadMovieItems();
             }, function () {
             });
         }
 
-        loadMovieDetails();
+        loadMovieItems();
     }
 
 })(angular.module('homeCinema'));

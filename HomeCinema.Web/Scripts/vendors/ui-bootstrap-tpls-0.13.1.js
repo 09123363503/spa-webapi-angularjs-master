@@ -2240,7 +2240,7 @@ angular.module('ui.bootstrap.modal', [])
 
         // This property is only added to the scope for the purpose of detecting when this directive is rendered.
         // We can detect that by using this property in the template associated with this directive and then use
-        // {@link Attribute#$observe} on it. For more details please see {@link TableColumnResize}.
+        // {@link Attribute#$observe} on it. For more Items please see {@link TableColumnResize}.
         scope.$isRendered = true;
 
         // Deferred object that will be resolved when this modal is render.
@@ -4011,7 +4011,7 @@ angular.module('ui.bootstrap.timepicker', [])
       }
       //pick correct delta variable depending on event
       var delta = (e.wheelDelta) ? e.wheelDelta : -e.deltaY;
-      return (e.detail || delta > 0);
+      return (e.Item || delta > 0);
     };
 
     hoursInputEl.bind('mousewheel wheel', function(e) {

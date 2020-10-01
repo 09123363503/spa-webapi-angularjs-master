@@ -27,7 +27,7 @@
 
             $scope.loadingMovie = true;
 
-            apiService.get('/api/movies/details/' + $routeParams.id, null,
+            apiService.get('/api/movies/Items/' + $routeParams.id, null,
             movieLoadCompleted,
             movieLoadFailed);
         }

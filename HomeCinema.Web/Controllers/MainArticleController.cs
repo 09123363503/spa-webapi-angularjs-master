@@ -47,7 +47,7 @@ namespace HomeCinema.Web.Controllers
             });
         }
 
-        [Route("mainarticledetails/{id:int}")]
+        [Route("mainarticleItems/{id:int}")]
         public HttpResponseMessage Get(HttpRequestMessage request, int id)
         {
             return CreateHttpResponse(request, () =>

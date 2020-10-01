@@ -1275,7 +1275,7 @@ function getNgAttribute(element, ngAttr) {
 
            <p>This renders because the controller does not fail to
               instantiate, by using explicit annotation style (see
-              script.js for details)
+              script.js for Items)
            </p>
        </div>
 
@@ -1285,7 +1285,7 @@ function getNgAttribute(element, ngAttr) {
 
            <p>This renders because the controller does not fail to
               instantiate, by using explicit annotation style
-              (see script.js for details)
+              (see script.js for Items)
            </p>
        </div>
 
@@ -2810,7 +2810,7 @@ forEach('multiple,selected,checked,disabled,readOnly,required,open'.split(','), 
   BOOLEAN_ATTR[lowercase(value)] = value;
 });
 var BOOLEAN_ELEMENTS = {};
-forEach('input,select,option,textarea,button,form,details'.split(','), function(value) {
+forEach('input,select,option,textarea,button,form,Items'.split(','), function(value) {
   BOOLEAN_ELEMENTS[value] = true;
 });
 var ALIASED_ATTR = {
@@ -4349,7 +4349,7 @@ function $AnchorScrollProvider() {
    *
    * <hr />
    * The example below illustrates the use of a vertical scroll-offset (specified as a fixed value).
-   * See {@link ng.$anchorScroll#yOffset $anchorScroll.yOffset} for more details.
+   * See {@link ng.$anchorScroll#yOffset $anchorScroll.yOffset} for more Items.
    *
    * @example
      <example module="anchorScrollOffsetExample">
@@ -6168,7 +6168,7 @@ function $TemplateCacheProvider() {
  *
  *   * `transcludeFn` - A transclude linking function pre-bound to the correct transclusion scope.
  *     This is the same as the `$transclude`
- *     parameter of directive controllers, see there for details.
+ *     parameter of directive controllers, see there for Items.
  *     `function([scope], cloneLinkingFn, futureParentElement)`.
  *
  * #### Pre-linking function
@@ -8840,7 +8840,7 @@ function $HttpProvider() {
    * These service factories are ordered by request, i.e. they are applied in the same order as the
    * array, on request, but reverse order, on response.
    *
-   * {@link ng.$http#interceptors Interceptors detailed info}
+   * {@link ng.$http#interceptors Interceptors Itemed info}
    **/
   var interceptorFactories = this.interceptors = [];
 
@@ -8922,7 +8922,7 @@ function $HttpProvider() {
      * Since the returned value of calling the $http function is a `promise`, you can also use
      * the `then` method to register callbacks, and these callbacks will receive a single argument –
      * an object representing the response. See the API signature and type info below for more
-     * details.
+     * Items.
      *
      * A response status code between 200 and 299 is considered a success status and
      * will result in the success callback being called. Note that if the response is a redirect,
@@ -10137,7 +10137,7 @@ function $InterpolateProvider() {
      * @param {string=} trustedContext when provided, the returned function passes the interpolated
      *    result through {@link ng.$sce#getTrusted $sce.getTrusted(interpolatedResult,
      *    trustedContext)} before returning it.  Refer to the {@link ng.$sce $sce} service that
-     *    provides Strict Contextual Escaping for details.
+     *    provides Strict Contextual Escaping for Items.
      * @param {boolean=} allOrNothing if `true`, then the returned function returns undefined
      *    unless all embedded expressions evaluate to a value other than `undefined`.
      * @returns {function(context)} an interpolation function which is used to compute the
@@ -10339,7 +10339,7 @@ function $IntervalProvider() {
       * with them.  In particular they are not automatically destroyed when a controller's scope or a
       * directive's element are destroyed.
       * You should take this into consideration and make sure to always cancel the interval at the
-      * appropriate moment.  See the example below for more details on how and when to do this.
+      * appropriate moment.  See the example below for more Items on how and when to do this.
       * </div>
       *
       * @param {function()} fn A function that should be called repeatedly.
@@ -11349,7 +11349,7 @@ function $LocationProvider() {
    *
    * This change can be prevented by calling
    * `preventDefault` method of the event. See {@link ng.$rootScope.Scope#$on} for more
-   * details about event object. Upon successful change
+   * Items about event object. Upon successful change
    * {@link ng.$location#$locationChangeSuccess $locationChangeSuccess} is fired.
    *
    * The `newState` and `oldState` parameters may be defined only in HTML5 mode and when
@@ -13752,7 +13752,7 @@ function $RootScopeProvider() {
      *
      * When interacting with `Scope` in tests, additional helper methods are available on the
      * instances of `Scope` type. See {@link ngMock.$rootScope.Scope ngMock Scope} for additional
-     * details.
+     * Items.
      *
      *
      * @param {Object.<string, function()>=} providers Map of service factory which need to be
@@ -14515,7 +14515,7 @@ function $RootScopeProvider() {
         // and inline caches.
         //
         // see:
-        // - https://code.google.com/p/v8/issues/detail?id=2073#c26
+        // - https://code.google.com/p/v8/issues/Item?id=2073#c26
         // - https://github.com/angular/angular.js/issues/6794#issuecomment-38648909
         // - https://github.com/angular/angular.js/issues/1313#issuecomment-10378451
 
@@ -15126,7 +15126,7 @@ function adjustMatchers(matchers) {
  * ng.$sceDelegateProvider#resourceUrlWhitelist $sceDelegateProvider.resourceUrlWhitelist} and
  * {@link ng.$sceDelegateProvider#resourceUrlBlacklist $sceDelegateProvider.resourceUrlBlacklist}
  *
- * For the general details about this service in Angular, read the main page for {@link ng.$sce
+ * For the general Items about this service in Angular, read the main page for {@link ng.$sce
  * Strict Contextual Escaping (SCE)}.
  *
  * **Example**:  Consider the following case. <a name="example"></a>
@@ -15729,7 +15729,7 @@ function $SceProvider() {
    *     contextEnum or throw and exception otherwise.
    *
    * NOTE: This contract deliberately does NOT state that values returned by trustAs() must be
-   * opaque or wrapped in some holder object.  That happens to be an implementation detail.  For
+   * opaque or wrapped in some holder object.  That happens to be an implementation Item.  For
    * instance, an implementation could maintain a registry of all trusted objects by context.  In
    * such a case, trustAs() would return the same object that was passed in.  getTrusted() would
    * return the same object passed in if it was found in the registry under a compatible context or
@@ -15741,7 +15741,7 @@ function $SceProvider() {
    * A note on the inheritance model for SCE contexts
    * ------------------------------------------------
    * I've used inheritance and made RESOURCE_URL wrapped types a subtype of URL wrapped types.  This
-   * is purely an implementation details.
+   * is purely an implementation Items.
    *
    * The contract is simply this:
    *
@@ -15750,7 +15750,7 @@ function $SceProvider() {
    *
    * Inheritance happens to capture this in a natural way.  In some future, we
    * may not use inheritance anymore.  That is OK because no code outside of
-   * sce.js and sceSpecs.js would need to be aware of this detail.
+   * sce.js and sceSpecs.js would need to be aware of this Item.
    */
 
   this.$get = ['$parse', '$sceDelegate', function(
@@ -16137,7 +16137,7 @@ function $SnifferProvider() {
     return {
       // Android has history.pushState, but it does not update location correctly
       // so let's not use the history API at all.
-      // http://code.google.com/p/android/issues/detail?id=17471
+      // http://code.google.com/p/android/issues/Item?id=17471
       // https://github.com/angular/angular.js/issues/904
 
       // older webkit browser (533.9) on Boxee box has exactly the same problem as Android has
@@ -18273,20 +18273,20 @@ var htmlAnchorDirective = valueFn({
      <example>
        <file name="index.html">
          Check me check multiple: <input type="checkbox" ng-model="open"><br/>
-         <details id="details" ng-open="open">
+         <Items id="Items" ng-open="open">
             <summary>Show/Hide me</summary>
-         </details>
+         </Items>
        </file>
        <file name="protractor.js" type="protractor">
          it('should toggle open', function() {
-           expect(element(by.id('details')).getAttribute('open')).toBeFalsy();
+           expect(element(by.id('Items')).getAttribute('open')).toBeFalsy();
            element(by.model('open')).click();
-           expect(element(by.id('details')).getAttribute('open')).toBeTruthy();
+           expect(element(by.id('Items')).getAttribute('open')).toBeTruthy();
          });
        </file>
      </example>
  *
- * @element DETAILS
+ * @element ItemS
  * @param {expression} ngOpen If the {@link guide/expression expression} is truthy,
  *     then special attribute "open" will be set on the element
  */
@@ -21060,7 +21060,7 @@ function classDirective(name, selector) {
    The ngClass directive still supports CSS3 Transitions/Animations even if they do not follow the ngAnimate CSS naming structure.
    Upon animation ngAnimate will apply supplementary CSS classes to track the start and end of an animation, but this will not hinder
    any pre-existing CSS transitions already on the element. To get an idea of what happens during a class-based animation, be sure
-   to view the step by step details of {@link ng.$animate#addClass $animate.addClass} and
+   to view the step by step Items of {@link ng.$animate#addClass $animate.addClass} and
    {@link ng.$animate#removeClass $animate.removeClass}.
  */
 var ngClassDirective = classDirective('', true);
@@ -21957,7 +21957,7 @@ forEach(
  * **Warning:** Be careful not to cause "double-submission" by using both the `ngClick` and
  * `ngSubmit` handlers together. See the
  * {@link form#submitting-a-form-and-preventing-the-default-action `form` directive documentation}
- * for a detailed discussion of when `ngSubmit` may be triggered.
+ * for a Itemed discussion of when `ngSubmit` may be triggered.
  * </div>
  *
  * @element form
@@ -24337,7 +24337,7 @@ var ngPluralizeDirective = ['$locale', '$interpolate', function($locale, $interp
  *
  * Special properties are exposed on the local scope of each template instance, including:
  *
- * | Variable  | Type            | Details                                                                     |
+ * | Variable  | Type            | Items                                                                     |
  * |-----------|-----------------|-----------------------------------------------------------------------------|
  * | `$index`  | {@type number}  | iterator offset of the repeated element (0..length-1)                       |
  * | `$first`  | {@type boolean} | true if the repeated element is first in the iterator.                      |
@@ -25778,7 +25778,7 @@ var selectDirective = ['$compile', '$parse', function($compile,   $parse) {
           $element.val(value);
           if (unknownOption.parent()) unknownOption.remove();
         }
-        // Workaround for https://code.google.com/p/chromium/issues/detail?id=381459
+        // Workaround for https://code.google.com/p/chromium/issues/Item?id=381459
         // Adding an <option selected="selected"> element to a <select required="required"> should
         // automatically select the new element
         if (element && element[0].hasAttribute('selected')) {

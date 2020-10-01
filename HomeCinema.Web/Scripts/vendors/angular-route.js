@@ -400,7 +400,7 @@ function $RouteProvider() {
      *
      * The route change (and the `$location` change that triggered it) can be prevented
      * by calling `preventDefault` method of the event. See {@link ng.$rootScope.Scope#$on}
-     * for more details about event object.
+     * for more Items about event object.
      *
      * @param {Object} angularEvent Synthetic event object.
      * @param {Route} next Future route information.

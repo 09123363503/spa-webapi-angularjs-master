@@ -39,8 +39,8 @@
                 resolve: { isAuthenticated: isAuthenticated }
             })
             .when("/movies/:id", {
-                templateUrl: "scripts/spa/movies/details.html",
-                controller: "movieDetailsCtrl",
+                templateUrl: "scripts/spa/movies/Items.html",
+                controller: "movieItemsCtrl",
                 resolve: { isAuthenticated: isAuthenticated }
             })
             .when("/movies/edit/:id", {
