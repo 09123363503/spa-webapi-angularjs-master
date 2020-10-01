@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
-    public class BasketBatcode : IEntityBaseInteger
+    public class BasketBarcode : IEntityBaseInteger
     {
         public int ID { get; set; }
         [DefaultValue(0)]

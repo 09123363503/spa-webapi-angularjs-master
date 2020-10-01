@@ -9,7 +9,6 @@ namespace HomeCinema.Web.Models
     {
         public string ID { get; set; }
         public int BarcodeID { get; set; }
-        public int ArticleID { get; set; }
         public int Count { get; set; }
         public int LocationID { get; set; }
         public int SumUnitID1 { get; set; }

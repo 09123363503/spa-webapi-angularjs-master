@@ -13,7 +13,6 @@ namespace HomeCinema.Data.Configurations
         public CargoConfiguration()
         {
             Property(p => p.BarcodeID).IsRequired();
-            Property(p => p.LocationID).IsRequired();
         }
     }
 }
