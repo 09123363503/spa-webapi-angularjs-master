@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace HomeCinema.Web.Models
+{
+    public class MyCompanyViewModel
+    {
+        public int ID { get; set; }
+        public string CompanyName { get; set; }
+        public string EconomicCode { get; set; }
+        public string PhoneNumber1 { get; set; }
+        public string PhoneNumber2 { get; set; }
+        public string FaxNumber { get; set; }
+        public string Address { get; set; }
+        public string Slogan { get; set; }
+        public string Warning { get; set; }
+    }
+}

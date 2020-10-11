@@ -47,6 +47,7 @@
     <Compile Include="Article.cs" />
     <Compile Include="ArticleItem.cs" />
     <Compile Include="Barcode.cs" />
+    <Compile Include="BaseInvoiceType.cs" />
     <Compile Include="BasketArticle.cs" />
     <Compile Include="BasketBarcode.cs" />
     <Compile Include="Cargo.cs" />
@@ -58,11 +59,13 @@
     <Compile Include="Genre.cs" />
     <Compile Include="IEntityBaseInteger.cs" />
     <Compile Include="IEntityBaseString.cs" />
+    <Compile Include="InvoiceType.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Lot.cs" />
     <Compile Include="MainArticle.cs" />
     <Compile Include="MainArticleComponent.cs" />
     <Compile Include="Movie.cs" />
+    <Compile Include="MyCompany.cs" />
     <Compile Include="ProductionLine.cs" />
     <Compile Include="ProductionOrder.cs" />
     <Compile Include="ProductionOrderItem.cs" />
