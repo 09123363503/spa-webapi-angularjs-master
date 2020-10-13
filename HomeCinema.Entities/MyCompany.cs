@@ -10,6 +10,10 @@ namespace HomeCinema.Entities
 {
     public class MyCompany : IEntityBaseInteger
     {
+        public MyCompany()
+        {
+            Invoices = new List<Invoice>();
+        }
         public int ID { get; set; }
         [Required]
         public string CompanyName { get; set; }
@@ -20,5 +24,7 @@ namespace HomeCinema.Entities
         public string Address { get; set; }
         public string Slogan { get; set; }
         public string Warning { get; set; }
+
+        public virtual ICollection<Invoice> Invoices { get; set; }
     }
 }

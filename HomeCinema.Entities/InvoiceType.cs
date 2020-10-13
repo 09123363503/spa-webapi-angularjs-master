@@ -10,6 +10,10 @@ namespace HomeCinema.Entities
 {
     public class InvoiceType : IEntityBaseInteger
     {
+        public InvoiceType()
+        {
+            Invoices = new List<Invoice>();
+        }
         public int ID { get; set; }
         [Required]
         public int BaseInvoiceTypeID { get; set; }
@@ -18,5 +22,7 @@ namespace HomeCinema.Entities
         [Required]
         public string Name { get; set; }
         public string Abbreviation { get; set; }
+
+        public virtual ICollection<Invoice> Invoices { get; set; }
     }
 }

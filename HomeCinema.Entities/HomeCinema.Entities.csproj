@@ -59,6 +59,8 @@
     <Compile Include="Genre.cs" />
     <Compile Include="IEntityBaseInteger.cs" />
     <Compile Include="IEntityBaseString.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="InvoiceItem.cs" />
     <Compile Include="InvoiceType.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Lot.cs" />

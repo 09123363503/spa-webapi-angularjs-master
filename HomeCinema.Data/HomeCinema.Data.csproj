@@ -69,6 +69,8 @@
     <Compile Include="Configurations\EntityBaseConfigurationString.cs" />
     <Compile Include="Configurations\FinancialPeriodConfiguration.cs" />
     <Compile Include="Configurations\GenreConfiguration.cs" />
+    <Compile Include="Configurations\InvoiceConfiguration.cs" />
+    <Compile Include="Configurations\InvoiceItemConfiguration.cs" />
     <Compile Include="Configurations\InvoiceTypeConfiguration.cs" />
     <Compile Include="Configurations\LocationConfiguration.cs" />
     <Compile Include="Configurations\LotConfiguration.cs" />
