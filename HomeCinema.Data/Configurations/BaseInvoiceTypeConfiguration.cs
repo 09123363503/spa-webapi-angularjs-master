@@ -14,6 +14,7 @@ namespace HomeCinema.Data.Configurations
         {
             Property(p => p.Code).IsRequired();
             Property(p => p.Name).IsRequired();
+            HasMany(p => p.InvoiceTypes).WithRequired().HasForeignKey(s => s.BaseInvoiceTypeID);
         }
     }
 }

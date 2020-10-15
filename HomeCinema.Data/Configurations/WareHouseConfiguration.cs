@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Configurations
 {
-    public class WareHouseConfiguration : EntityBaseConfigurationInt<Warehouse>
+    public class WarehouseConfiguration : EntityBaseConfigurationInt<Warehouse>
     {
-        public WareHouseConfiguration()
+        public WarehouseConfiguration()
         {
             Property(p => p.Code).IsRequired();
             Property(p => p.Name).IsRequired();

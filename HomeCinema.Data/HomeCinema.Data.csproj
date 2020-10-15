@@ -89,7 +89,7 @@
     <Compile Include="Configurations\UnitConfiguration.cs" />
     <Compile Include="Configurations\UserRoleConfiguration.cs" />
     <Compile Include="Configurations\UserConfiguration.cs" />
-    <Compile Include="Configurations\WareHouseConfiguration.cs" />
+    <Compile Include="Configurations\WarehouseConfiguration.cs" />
     <Compile Include="Extensions\RentalExtensions.cs" />
     <Compile Include="Extensions\StockExtensions.cs" />
     <Compile Include="Extensions\CustomerExtensions.cs" />
@@ -99,9 +99,9 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\DbFactory.cs" />
     <Compile Include="Infrastructure\IDbFactory.cs" />
-    <Compile Include="Migrations\202009221542456_initial_migration.cs" />
-    <Compile Include="Migrations\202009221542456_initial_migration.Designer.cs">
-      <DependentUpon>202009221542456_initial_migration.cs</DependentUpon>
+    <Compile Include="Migrations\202010151457043_initial_migration.cs" />
+    <Compile Include="Migrations\202010151457043_initial_migration.Designer.cs">
+      <DependentUpon>202010151457043_initial_migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -124,8 +124,8 @@
     <Content Include="uk\MockData.resources.dll" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202009221542456_initial_migration.resx">
-      <DependentUpon>202009221542456_initial_migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202010151457043_initial_migration.resx">
+      <DependentUpon>202010151457043_initial_migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -38,6 +38,10 @@ namespace HomeCinema.Web.Mappings
             Mapper.CreateMap<Article, ArticleViewModel>();
 
             Mapper.CreateMap<Cargo, CargoViewModel>();
+
+            Mapper.CreateMap<Invoice, InvoiceViewModel>();
+
+            Mapper.CreateMap<InvoiceItem, InvoiceItemViewModel>();
         }
     }
 }

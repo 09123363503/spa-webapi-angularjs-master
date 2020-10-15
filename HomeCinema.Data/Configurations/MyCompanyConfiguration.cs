@@ -13,6 +13,7 @@ namespace HomeCinema.Data.Configurations
         public MyCompanyConfiguration()
         {
             Property(p => p.CompanyName).IsRequired();
+            HasMany(p => p.Invoices).WithRequired().HasForeignKey(s => s.MyCompanyID);
         }
     }
 }

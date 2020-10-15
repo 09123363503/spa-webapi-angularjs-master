@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,8 @@ namespace HomeCinema.Entities
         public string ID { get; set; }
         [Required]
         public string InvoiceID { get; set; }
+        [ForeignKey("InvoiceID")]
+        public virtual Invoice Invoice { get; set; }
         [Required]
         public int WarehouseID { get; set; }
         [Required]
@@ -46,5 +49,6 @@ namespace HomeCinema.Entities
         public DateTimeOffset DeleteOn { get; set; }
 
         public virtual ICollection<Cargo> Cargos { get; set; }
+        
     }
 }

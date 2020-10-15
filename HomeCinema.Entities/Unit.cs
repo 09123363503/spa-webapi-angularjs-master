@@ -10,13 +10,16 @@ namespace HomeCinema.Entities
 {
     public class Unit : IEntityBaseInteger
     {
+        #region Relation list
         public Unit()
         {
             MainArticles = new List<MainArticle>();
             Barcodes = new List<Barcode>();
             Cargos = new List<Cargo>();
             ProductionOrderItems = new List<ProductionOrderItem>();
+            InvoiceItems = new List<InvoiceItem>();
         }
+        #endregion Relation list
         public int ID { get; set; }
         [Required]
         public string Code { get; set; }
@@ -34,10 +37,13 @@ namespace HomeCinema.Entities
         public DateTimeOffset ModifyOn { get; set; }
         [DefaultValue(0)]
         public DateTimeOffset DeleteOn { get; set; }
-        
+
+        #region Collections
         public virtual ICollection<MainArticle> MainArticles { get; set; }
         public virtual ICollection<Barcode> Barcodes { get; set; }
         public virtual ICollection<Cargo> Cargos { get; set; }
         public virtual ICollection<ProductionOrderItem> ProductionOrderItems { get; set; }
+        public virtual ICollection<InvoiceItem> InvoiceItems { get; set; }
+        #endregion Collection
     }
 }

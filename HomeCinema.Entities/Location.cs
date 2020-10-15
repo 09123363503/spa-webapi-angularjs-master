@@ -15,7 +15,6 @@ namespace HomeCinema.Entities
             Cargos = new List<Cargo>();
         }
         public int ID { get; set; }
-        [Required]
         public int WarehouseID { get; set; }
         [Required]
         public string Name { get; set; }

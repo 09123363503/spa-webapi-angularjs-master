@@ -18,6 +18,93 @@ namespace HomeCinema.Data.Migrations
                 .PrimaryKey(t => t.ID);
             
             CreateTable(
+                "dbo.Invoice",
+                c => new
+                    {
+                        ID = c.String(nullable: false, maxLength: 128),
+                        AccountID = c.Int(nullable: false),
+                        InvoiceTypeID = c.Int(nullable: false),
+                        MyCompanyID = c.Int(nullable: false),
+                        Date = c.DateTimeOffset(nullable: false, precision: 7),
+                        Number = c.Int(nullable: false),
+                        Description = c.String(),
+                        CreateUserID = c.Int(nullable: false),
+                        CreateOn = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifyUserID = c.Int(nullable: false),
+                        ModifyOn = c.DateTimeOffset(nullable: false, precision: 7),
+                        DeleteUserID = c.Int(nullable: false),
+                        DeleteOn = c.DateTimeOffset(nullable: false, precision: 7),
+                    })
+                .PrimaryKey(t => t.ID)
+                .ForeignKey("dbo.Account", t => t.AccountID, cascadeDelete: true)
+                .ForeignKey("dbo.InvoiceType", t => t.InvoiceTypeID, cascadeDelete: true)
+                .ForeignKey("dbo.MyCompany", t => t.MyCompanyID, cascadeDelete: true)
+                .Index(t => t.AccountID)
+                .Index(t => t.InvoiceTypeID)
+                .Index(t => t.MyCompanyID);
+            
+            CreateTable(
+                "dbo.InvoiceItem",
+                c => new
+                    {
+                        ID = c.String(nullable: false, maxLength: 128),
+                        InvoiceID = c.String(nullable: false, maxLength: 128),
+                        WarehouseID = c.Int(nullable: false),
+                        Count = c.Int(nullable: false),
+                        UnitID1 = c.Int(nullable: false),
+                        UnitValue1 = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        UnitID2 = c.Int(nullable: false),
+                        UnitValue2 = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        UnitID3 = c.Int(nullable: false),
+                        UnitValue3 = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        UnitPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        CreateUserID = c.Int(nullable: false),
+                        CreateOn = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifyUserID = c.Int(nullable: false),
+                        ModifyOn = c.DateTimeOffset(nullable: false, precision: 7),
+                        DeleteUserID = c.Int(nullable: false),
+                        DeleteOn = c.DateTimeOffset(nullable: false, precision: 7),
+                        Unit_ID = c.Int(),
+                    })
+                .PrimaryKey(t => t.ID)
+                .ForeignKey("dbo.Invoice", t => t.InvoiceID, cascadeDelete: true)
+                .ForeignKey("dbo.Unit", t => t.Unit_ID)
+                .Index(t => t.InvoiceID)
+                .Index(t => t.Unit_ID);
+            
+            CreateTable(
+                "dbo.Cargo",
+                c => new
+                    {
+                        ID = c.String(nullable: false, maxLength: 128),
+                        BarcodeID = c.Int(nullable: false),
+                        InvoiceItemID = c.String(nullable: false, maxLength: 128),
+                        ArticleID = c.Int(nullable: false),
+                        Count = c.Int(nullable: false),
+                        LocationID = c.Int(nullable: false),
+                        SumUnitID1 = c.Int(nullable: false),
+                        SumUnitValue1 = c.Int(nullable: false),
+                        SumUnitID2 = c.Int(nullable: false),
+                        SumunitValue2 = c.Int(nullable: false),
+                        CreateUserID = c.Int(nullable: false),
+                        CreateOn = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifyUserID = c.Int(nullable: false),
+                        ModifyOn = c.DateTimeOffset(nullable: false, precision: 7),
+                        DeleteUserID = c.Int(nullable: false),
+                        DeleteOn = c.DateTimeOffset(nullable: false, precision: 7),
+                        Unit_ID = c.Int(),
+                    })
+                .PrimaryKey(t => t.ID)
+                .ForeignKey("dbo.InvoiceItem", t => t.InvoiceItemID, cascadeDelete: true)
+                .ForeignKey("dbo.Barcode", t => t.BarcodeID, cascadeDelete: true)
+                .ForeignKey("dbo.Location", t => t.LocationID, cascadeDelete: true)
+                .ForeignKey("dbo.Unit", t => t.Unit_ID)
+                .Index(t => t.BarcodeID)
+                .Index(t => t.InvoiceItemID)
+                .Index(t => t.LocationID)
+                .Index(t => t.Unit_ID);
+            
+            CreateTable(
                 "dbo.Lot",
                 c => new
                     {
@@ -93,7 +180,7 @@ namespace HomeCinema.Data.Migrations
                 .Index(t => t.Child);
             
             CreateTable(
-                "dbo.BasketBatcode",
+                "dbo.BasketBarcode",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
@@ -155,33 +242,28 @@ namespace HomeCinema.Data.Migrations
                 .Index(t => t.Unit_ID);
             
             CreateTable(
-                "dbo.Cargo",
+                "dbo.BaseInvoiceType",
                 c => new
                     {
-                        ID = c.String(nullable: false, maxLength: 128),
-                        BarcodeID = c.Int(nullable: false),
-                        ArticleID = c.Int(nullable: false),
-                        Count = c.Int(nullable: false),
-                        LocationID = c.Int(nullable: false),
-                        SumUnitID1 = c.Int(nullable: false),
-                        SumUnitValue1 = c.Int(nullable: false),
-                        SumUnitID2 = c.Int(nullable: false),
-                        SumunitValue2 = c.Int(nullable: false),
-                        CreateUserID = c.Int(nullable: false),
-                        CreateOn = c.DateTimeOffset(nullable: false, precision: 7),
-                        ModifyUserID = c.Int(nullable: false),
-                        ModifyOn = c.DateTimeOffset(nullable: false, precision: 7),
-                        DeleteUserID = c.Int(nullable: false),
-                        DeleteOn = c.DateTimeOffset(nullable: false, precision: 7),
-                        Unit_ID = c.Int(),
+                        ID = c.Int(nullable: false, identity: true),
+                        Code = c.String(nullable: false),
+                        Name = c.String(nullable: false),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.InvoiceType",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        BaseInvoiceTypeID = c.Int(nullable: false),
+                        Code = c.String(nullable: false),
+                        Name = c.String(nullable: false),
+                        Abbreviation = c.String(),
                     })
                 .PrimaryKey(t => t.ID)
-                .ForeignKey("dbo.Barcode", t => t.BarcodeID, cascadeDelete: true)
-                .ForeignKey("dbo.Location", t => t.LocationID, cascadeDelete: true)
-                .ForeignKey("dbo.Unit", t => t.Unit_ID)
-                .Index(t => t.BarcodeID)
-                .Index(t => t.LocationID)
-                .Index(t => t.Unit_ID);
+                .ForeignKey("dbo.BaseInvoiceType", t => t.BaseInvoiceTypeID, cascadeDelete: true)
+                .Index(t => t.BaseInvoiceTypeID);
             
             CreateTable(
                 "dbo.ComponentItem",
@@ -408,6 +490,22 @@ namespace HomeCinema.Data.Migrations
                 .Index(t => t.Unit_ID);
             
             CreateTable(
+                "dbo.MyCompany",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        CompanyName = c.String(nullable: false),
+                        EconomicCode = c.String(),
+                        PhoneNumber1 = c.String(),
+                        PhoneNumber2 = c.String(),
+                        FaxNumber = c.String(),
+                        Address = c.String(),
+                        Slogan = c.String(),
+                        Warning = c.String(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
                 "dbo.ProductType",
                 c => new
                     {
@@ -499,26 +597,24 @@ namespace HomeCinema.Data.Migrations
                         ModifyOn = c.DateTimeOffset(nullable: false, precision: 7),
                         DeleteUserID = c.Int(nullable: false),
                         DeleteOn = c.DateTimeOffset(nullable: false, precision: 7),
-                        Warehouse_ID = c.Int(),
                     })
-                .PrimaryKey(t => t.ID)
-                .ForeignKey("dbo.Warehouse", t => t.Warehouse_ID)
-                .Index(t => t.Warehouse_ID);
+                .PrimaryKey(t => t.ID);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Warehouse", "Warehouse_ID", "dbo.Warehouse");
             DropForeignKey("dbo.Location", "WarehouseID", "dbo.Warehouse");
             DropForeignKey("dbo.UserRole", "UserId", "dbo.User");
             DropForeignKey("dbo.UserRole", "RoleId", "dbo.Role");
             DropForeignKey("dbo.ProductionOrderItem", "Unit_ID", "dbo.Unit");
             DropForeignKey("dbo.MainArticle", "Unit_ID", "dbo.Unit");
+            DropForeignKey("dbo.InvoiceItem", "Unit_ID", "dbo.Unit");
             DropForeignKey("dbo.Cargo", "Unit_ID", "dbo.Unit");
             DropForeignKey("dbo.Barcode", "Unit_ID", "dbo.Unit");
             DropForeignKey("dbo.ProductionOrder", "ProductionLineID", "dbo.ProductionLine");
             DropForeignKey("dbo.ProductionOrder", "ProductTypeID", "dbo.ProductType");
+            DropForeignKey("dbo.Invoice", "MyCompanyID", "dbo.MyCompany");
             DropForeignKey("dbo.MainArticleComponent", "MainAricleID", "dbo.MainArticle");
             DropForeignKey("dbo.Article", "MainArticleID", "dbo.MainArticle");
             DropForeignKey("dbo.Cargo", "LocationID", "dbo.Location");
@@ -532,13 +628,17 @@ namespace HomeCinema.Data.Migrations
             DropForeignKey("dbo.ArticleItem", "MainArticleComponentID", "dbo.MainArticleComponent");
             DropForeignKey("dbo.ComponentItem", "ComponentID", "dbo.Component");
             DropForeignKey("dbo.ArticleItem", "ComponentItemID", "dbo.ComponentItem");
+            DropForeignKey("dbo.InvoiceType", "BaseInvoiceTypeID", "dbo.BaseInvoiceType");
+            DropForeignKey("dbo.Invoice", "InvoiceTypeID", "dbo.InvoiceType");
             DropForeignKey("dbo.Cargo", "BarcodeID", "dbo.Barcode");
             DropForeignKey("dbo.ProductionOrderItem", "ArticleID", "dbo.Article");
-            DropForeignKey("dbo.BasketBatcode", "Child", "dbo.Article");
+            DropForeignKey("dbo.BasketBarcode", "Child", "dbo.Article");
             DropForeignKey("dbo.BasketArticle", "Child", "dbo.Article");
             DropForeignKey("dbo.ArticleItem", "ArticleID", "dbo.Article");
             DropForeignKey("dbo.Lot", "AccountID", "dbo.Account");
-            DropIndex("dbo.Warehouse", new[] { "Warehouse_ID" });
+            DropForeignKey("dbo.Invoice", "AccountID", "dbo.Account");
+            DropForeignKey("dbo.InvoiceItem", "InvoiceID", "dbo.Invoice");
+            DropForeignKey("dbo.Cargo", "InvoiceItemID", "dbo.InvoiceItem");
             DropIndex("dbo.UserRole", new[] { "RoleId" });
             DropIndex("dbo.UserRole", new[] { "UserId" });
             DropIndex("dbo.MainArticle", new[] { "Unit_ID" });
@@ -552,14 +652,12 @@ namespace HomeCinema.Data.Migrations
             DropIndex("dbo.MainArticleComponent", new[] { "ComponentID" });
             DropIndex("dbo.MainArticleComponent", new[] { "MainAricleID" });
             DropIndex("dbo.ComponentItem", new[] { "ComponentID" });
-            DropIndex("dbo.Cargo", new[] { "Unit_ID" });
-            DropIndex("dbo.Cargo", new[] { "LocationID" });
-            DropIndex("dbo.Cargo", new[] { "BarcodeID" });
+            DropIndex("dbo.InvoiceType", new[] { "BaseInvoiceTypeID" });
             DropIndex("dbo.Barcode", new[] { "Unit_ID" });
             DropIndex("dbo.ProductionOrderItem", new[] { "Unit_ID" });
             DropIndex("dbo.ProductionOrderItem", new[] { "ArticleID" });
             DropIndex("dbo.ProductionOrderItem", new[] { "ProductionOrederID" });
-            DropIndex("dbo.BasketBatcode", new[] { "Child" });
+            DropIndex("dbo.BasketBarcode", new[] { "Child" });
             DropIndex("dbo.BasketArticle", new[] { "Child" });
             DropIndex("dbo.Article", new[] { "MainArticleID" });
             DropIndex("dbo.ArticleItem", new[] { "MainArticleComponentID" });
@@ -567,6 +665,15 @@ namespace HomeCinema.Data.Migrations
             DropIndex("dbo.ArticleItem", new[] { "ArticleID" });
             DropIndex("dbo.Lot", new[] { "ProductionOrderID" });
             DropIndex("dbo.Lot", new[] { "AccountID" });
+            DropIndex("dbo.Cargo", new[] { "Unit_ID" });
+            DropIndex("dbo.Cargo", new[] { "LocationID" });
+            DropIndex("dbo.Cargo", new[] { "InvoiceItemID" });
+            DropIndex("dbo.Cargo", new[] { "BarcodeID" });
+            DropIndex("dbo.InvoiceItem", new[] { "Unit_ID" });
+            DropIndex("dbo.InvoiceItem", new[] { "InvoiceID" });
+            DropIndex("dbo.Invoice", new[] { "MyCompanyID" });
+            DropIndex("dbo.Invoice", new[] { "InvoiceTypeID" });
+            DropIndex("dbo.Invoice", new[] { "AccountID" });
             DropTable("dbo.Warehouse");
             DropTable("dbo.User");
             DropTable("dbo.UserRole");
@@ -574,6 +681,7 @@ namespace HomeCinema.Data.Migrations
             DropTable("dbo.Role");
             DropTable("dbo.ProductionLine");
             DropTable("dbo.ProductType");
+            DropTable("dbo.MyCompany");
             DropTable("dbo.MainArticle");
             DropTable("dbo.Location");
             DropTable("dbo.Rental");
@@ -587,14 +695,18 @@ namespace HomeCinema.Data.Migrations
             DropTable("dbo.MainArticleComponent");
             DropTable("dbo.Component");
             DropTable("dbo.ComponentItem");
-            DropTable("dbo.Cargo");
+            DropTable("dbo.InvoiceType");
+            DropTable("dbo.BaseInvoiceType");
             DropTable("dbo.Barcode");
             DropTable("dbo.ProductionOrderItem");
-            DropTable("dbo.BasketBatcode");
+            DropTable("dbo.BasketBarcode");
             DropTable("dbo.BasketArticle");
             DropTable("dbo.Article");
             DropTable("dbo.ArticleItem");
             DropTable("dbo.Lot");
+            DropTable("dbo.Cargo");
+            DropTable("dbo.InvoiceItem");
+            DropTable("dbo.Invoice");
             DropTable("dbo.Account");
         }
     }

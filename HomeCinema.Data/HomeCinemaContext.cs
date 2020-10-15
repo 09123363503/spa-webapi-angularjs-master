@@ -47,6 +47,11 @@ namespace HomeCinema.Data
         public IDbSet<FinancialPeriod> FinancialPeridSet { get; set; }
         public IDbSet<ProductionLine> ProdutionLineSet { get; set; }
         public IDbSet<ProductType> ProductTypeSet { get; set; }
+        public IDbSet<Invoice> InvoiceSet { get; set; }
+        public IDbSet<InvoiceItem> InvoiceItemSet { get; set; }
+        public IDbSet<MyCompany> MyCompanySet { get; set; }
+        public IDbSet<BaseInvoiceType> BaseInvoiceTypeSet { get; set; }
+        public IDbSet<InvoiceType> InvoiceTypeSet { get; set; }
         #endregion
 
         public virtual void Commit()
@@ -77,7 +82,7 @@ namespace HomeCinema.Data
             modelBuilder.Configurations.Add(new LotConfiguration());
             modelBuilder.Configurations.Add(new BarcodeConfiguration());
             modelBuilder.Configurations.Add(new CargoConfiguration());
-            modelBuilder.Configurations.Add(new WareHouseConfiguration());
+            modelBuilder.Configurations.Add(new WarehouseConfiguration());
             modelBuilder.Configurations.Add(new LocationConfiguration());
             modelBuilder.Configurations.Add(new ProductionOrderConfiguration());
             modelBuilder.Configurations.Add(new ProductionOrderItemConfiguration());
@@ -85,6 +90,11 @@ namespace HomeCinema.Data
             modelBuilder.Configurations.Add(new FinancialPeriodConfiguration());
             modelBuilder.Configurations.Add(new ProductionLineConfiguration());
             modelBuilder.Configurations.Add(new ProductTypeConfiguration());
+            modelBuilder.Configurations.Add(new InvoiceConfiguration());
+            modelBuilder.Configurations.Add(new InvoiceItemConfiguration());
+            modelBuilder.Configurations.Add(new MyCompanyConfiguration());
+            modelBuilder.Configurations.Add(new BaseInvoiceTypeConfiguration());
+            modelBuilder.Configurations.Add(new InvoiceTypeConfiguration());
 
             #region Relation Constraint
             modelBuilder.Entity<Component>().HasMany(p => p.MainArticleComponents)
@@ -92,6 +102,11 @@ namespace HomeCinema.Data
 
             modelBuilder.Entity<MainArticle>().HasMany(p => p.MainArticleComponents)
                 .WithRequired().HasForeignKey(p => p.MainAricleID).WillCascadeOnDelete(false);
+
+            //modelBuilder.Entity<Invoice>()
+            //    .HasMany(p => p.InvoiceItems)
+            //    .WithRequired(s => s.ID)
+            //    .Map(m => m.MapKey("InvoiceID"));
             #endregion Relation Constraint
         }
         #endregion Model Builder

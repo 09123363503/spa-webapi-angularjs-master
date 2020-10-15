@@ -13,6 +13,10 @@ namespace HomeCinema.Entities
         public string ID { get; set; }
         [Required]
         public int BarcodeID { get; set; }
+        [Required]
+        [DefaultValue(0)]
+        public string InvoiceItemID { get; set; }
+        public int ArticleID { get; set; }
         [DefaultValue(1)]
         public int Count { get; set; }
         [DefaultValue(0)]

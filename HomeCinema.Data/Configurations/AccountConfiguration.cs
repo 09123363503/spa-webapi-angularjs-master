@@ -15,6 +15,7 @@ namespace HomeCinema.Data.Configurations
             Property(p => p.Code).IsRequired();
             Property(p => p.Name).IsRequired();
             HasMany(p => p.Lots).WithRequired().HasForeignKey(s => s.AccountID);
+            HasMany(p => p.Invoices).WithRequired().HasForeignKey(s => s.AccountID);
         }
     }
 }

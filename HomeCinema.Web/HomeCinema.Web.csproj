@@ -279,7 +279,7 @@
     <Compile Include="Models\ComponentViewModel.cs" />
     <Compile Include="Models\FinancialPeriodViewModel.cs" />
     <Compile Include="Models\GenreViewModel.cs" />
-    <Compile Include="Models\InvoiceIitemViewModel.cs" />
+    <Compile Include="Models\InvoiceItemViewModel.cs" />
     <Compile Include="Models\InvoiceTypeViewModel.cs" />
     <Compile Include="Models\InvoiceViewModel.cs" />
     <Compile Include="Models\LocationViewModel.cs" />

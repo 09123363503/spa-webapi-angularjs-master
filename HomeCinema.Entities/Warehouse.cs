@@ -12,7 +12,6 @@ namespace HomeCinema.Entities
     {
         public Warehouse()
         {
-            Warehouses = new List<Warehouse>();
             Locations = new List<Location>();
         }
         public int ID { get; set; }
@@ -43,7 +42,6 @@ namespace HomeCinema.Entities
         [DefaultValue(0)]
         public DateTimeOffset DeleteOn { get; set; }
 
-        public virtual ICollection<Warehouse> Warehouses { get; set; }
         public virtual ICollection<Location> Locations { get; set; }
     }
 }

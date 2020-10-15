@@ -13,6 +13,7 @@ namespace HomeCinema.Entities
         public Account()
         {
             Lots = new List<Lot>();
+            Invoices = new List<Invoice>();
         }
         public int ID { get; set; }
         [Required]
@@ -21,5 +22,6 @@ namespace HomeCinema.Entities
         public string Name { get; set; }
 
         public virtual ICollection<Lot> Lots { get; set; }
+        public virtual ICollection<Invoice> Invoices { get; set; }
     }
 }

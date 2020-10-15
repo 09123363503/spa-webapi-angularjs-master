@@ -29,6 +29,9 @@ namespace HomeCinema.Web.Mappings
 
             Mapper.CreateMap<CargoViewModel, Cargo>()
                 .ForMember(p => p.ArticleID, map => map.Ignore());
+
+            Mapper.CreateMap<InvoiceItemViewModel, InvoiceItem>()
+                .ForMember(p => p.InvoiceID, map => map.Ignore());
         }
     }
 }
