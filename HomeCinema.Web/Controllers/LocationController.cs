@@ -17,33 +17,32 @@ using System.Web.Http;
 using HomeCinema.Web.Infrastructure.Extensions;
 using HomeCinema.Data.Extensions;
 
-
 namespace HomeCinema.Web.Controllers
 {
     [Authorize(Roles = "Admin")]
-    [RoutePrefix("api/barcodes")]
-    public class BarcodeController : ApiControllerBase
+    [RoutePrefix("api/locations")]
+    public class LocationController : ApiControllerBase
     {
-        private readonly IEntityBaseRepositoryInetger<Barcode> _barcodesRepository;
+        private readonly IEntityBaseRepositoryInetger<Location> _locationsRepository;
 
-        public BarcodeController(IEntityBaseRepositoryInetger<Barcode> barcodesRepository,
+        public LocationController(IEntityBaseRepositoryInetger<Location> locationsRepository,
             IEntityBaseRepositoryInetger<Error> _errorsRepository, IUnitOfWork _unitOfWork)
             : base(_errorsRepository, _unitOfWork)
         {
-            _barcodesRepository = barcodesRepository;
+            _locationsRepository = locationsRepository;
         }
 
-        [Route("barcodes/{id:int}")]
+        [Route("locations/{id:int}")]
         public HttpResponseMessage Get(HttpRequestMessage request, int id)
         {
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
-                var barcode = _barcodesRepository.GetSingle(id);
+                var location = _locationsRepository.GetSingle(id);
 
-                BarcodeViewModel barcodeVM = Mapper.Map<Barcode, BarcodeViewModel>(barcode);
+                LocationViewModel locationVM = Mapper.Map<Location, LocationViewModel>(location);
 
-                response = request.CreateResponse<BarcodeViewModel>(HttpStatusCode.OK, barcodeVM);
+                response = request.CreateResponse<LocationViewModel>(HttpStatusCode.OK, locationVM);
 
                 return response;
             });
@@ -59,47 +58,47 @@ namespace HomeCinema.Web.Controllers
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
-                List<Barcode> barcodes = null;
-                int totalBarcodes = new int();
+                List<Location> locations = null;
+                int totalLocations = new int();
 
                 if (!string.IsNullOrEmpty(filter))
                 {
-                    barcodes = _barcodesRepository
-                        .FindBy(m => m.BarcodeString.ToLower()
+                    locations = _locationsRepository
+                        .FindBy(m => m.Name.ToLower()
                         .Contains(filter.ToLower().Trim()))
                         .OrderBy(m => m.ID)
                         .Skip(currentPage * currentPageSize)
                         .Take(currentPageSize)
                         .ToList();
 
-                    totalBarcodes = _barcodesRepository
-                        .FindBy(m => m.BarcodeString.ToLower()
+                    totalLocations = _locationsRepository
+                        .FindBy(m => m.Name.ToLower()
                         .Contains(filter.ToLower().Trim()))
                         .Count();
                 }
                 else
                 {
-                    barcodes = _barcodesRepository
+                    locations = _locationsRepository
                         .GetAll()
                         .OrderBy(m => m.ID)
                         .Skip(currentPage * currentPageSize)
                         .Take(currentPageSize)
                         .ToList();
 
-                    totalBarcodes = _barcodesRepository.GetAll().Count();
+                    totalLocations = _locationsRepository.GetAll().Count();
                 }
 
-                IEnumerable<BarcodeViewModel> barcodesVM = Mapper.Map<IEnumerable<Barcode>, IEnumerable<BarcodeViewModel>>(barcodes);
+                IEnumerable<LocationViewModel> locationVM = Mapper.Map<IEnumerable<Location>, IEnumerable<LocationViewModel>>(locations);
 
-                PaginationSet<BarcodeViewModel> pagedSet = new PaginationSet<BarcodeViewModel>()
+                PaginationSet<LocationViewModel> pagedSet = new PaginationSet<LocationViewModel>()
                 {
                     Page = currentPage,
-                    TotalCount = totalBarcodes,
-                    TotalPages = (int)Math.Ceiling((decimal)totalBarcodes / currentPageSize),
-                    Items = barcodesVM
+                    TotalCount = totalLocations,
+                    TotalPages = (int)Math.Ceiling((decimal)totalLocations / currentPageSize),
+                    Items = locationVM
                 };
 
-                response = request.CreateResponse<PaginationSet<BarcodeViewModel>>(HttpStatusCode.OK, pagedSet);
+                response = request.CreateResponse<PaginationSet<LocationViewModel>>(HttpStatusCode.OK, pagedSet);
 
                 return response;
             });
@@ -107,7 +106,7 @@ namespace HomeCinema.Web.Controllers
 
         [HttpPost]
         [Route("add")]
-        public HttpResponseMessage Add(HttpRequestMessage request, BarcodeViewModel barcode)
+        public HttpResponseMessage Add(HttpRequestMessage request, LocationViewModel location)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -119,15 +118,15 @@ namespace HomeCinema.Web.Controllers
                 }
                 else
                 {
-                    Barcode newBarcode = new Barcode();
-                    newBarcode.UpdateBarcode(barcode);
-                    _barcodesRepository.Add(newBarcode);
+                    Location newLocation = new Location();
+                    newLocation.UpdateLocation(location);
+                    _locationsRepository.Add(newLocation);
 
                     _unitOfWork.Commit();
 
                     // Update view model
-                    barcode = Mapper.Map<Barcode, BarcodeViewModel>(newBarcode);
-                    response = request.CreateResponse<BarcodeViewModel>(HttpStatusCode.Created, barcode);
+                    location = Mapper.Map<Location, LocationViewModel>(newLocation);
+                    response = request.CreateResponse<LocationViewModel>(HttpStatusCode.Created, location);
                 }
 
                 return response;
@@ -136,7 +135,7 @@ namespace HomeCinema.Web.Controllers
 
         [HttpPost]
         [Route("update")]
-        public HttpResponseMessage Update(HttpRequestMessage request, BarcodeViewModel barcode)
+        public HttpResponseMessage Update(HttpRequestMessage request, LocationViewModel location)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -148,16 +147,16 @@ namespace HomeCinema.Web.Controllers
                 }
                 else
                 {
-                    var barcodeDb = _barcodesRepository.GetSingle(barcode.ID);
-                    if (barcodeDb == null)
-                        response = request.CreateErrorResponse(HttpStatusCode.NotFound, "بارکد نا معتبر است");
+                    var locationDb = _locationsRepository.GetSingle(location.ID);
+                    if (locationDb == null)
+                        response = request.CreateErrorResponse(HttpStatusCode.NotFound, "موقعیت انتخاب شده در انبار نا معتبر است");
                     else
                     {
-                        barcodeDb.UpdateBarcode(barcode);
-                        _barcodesRepository.Edit(barcodeDb);
+                        locationDb.UpdateLocation(location);
+                        _locationsRepository.Edit(locationDb);
 
                         _unitOfWork.Commit();
-                        response = request.CreateResponse<BarcodeViewModel>(HttpStatusCode.OK, barcode);
+                        response = request.CreateResponse<LocationViewModel>(HttpStatusCode.OK, location);
                     }
                 }
 

@@ -237,6 +237,7 @@
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\MainArticleController.cs" />
     <Compile Include="Controllers\MainArticleComponentController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />

@@ -18,15 +18,15 @@ namespace HomeCinema.Web.Controllers
     [RoutePrefix("api/rentals")]
     public class RentalsController : ApiControllerBase
     {
-        private readonly IEntityBaseRepository<Rental> _rentalsRepository;
-        private readonly IEntityBaseRepository<Customer> _customersRepository;
-        private readonly IEntityBaseRepository<Stock> _stocksRepository;
-        private readonly IEntityBaseRepository<Movie> _moviesRepository;
+        private readonly IEntityBaseRepositoryInetger<Rental> _rentalsRepository;
+        private readonly IEntityBaseRepositoryInetger<Customer> _customersRepository;
+        private readonly IEntityBaseRepositoryInetger<Stock> _stocksRepository;
+        private readonly IEntityBaseRepositoryInetger<Movie> _moviesRepository;
 
-        public RentalsController(IEntityBaseRepository<Rental> rentalsRepository,
-            IEntityBaseRepository<Customer> customersRepository, IEntityBaseRepository<Movie> moviesRepository,
-            IEntityBaseRepository<Stock> stocksRepository,
-            IEntityBaseRepository<Error> _errorsRepository, IUnitOfWork _unitOfWork)
+        public RentalsController(IEntityBaseRepositoryInetger<Rental> rentalsRepository,
+            IEntityBaseRepositoryInetger<Customer> customersRepository, IEntityBaseRepositoryInetger<Movie> moviesRepository,
+            IEntityBaseRepositoryInetger<Stock> stocksRepository,
+            IEntityBaseRepositoryInetger<Error> _errorsRepository, IUnitOfWork _unitOfWork)
             : base(_errorsRepository, _unitOfWork)
         {
             _rentalsRepository = rentalsRepository;

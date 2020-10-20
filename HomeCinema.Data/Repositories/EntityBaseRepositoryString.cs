@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Repositories
 {
-    public class EntityBaseRepository<T> : IEntityBaseRepository<T>
-            where T : class, IEntityBaseInteger, new()
+    public class EntityBaseRepositoryString<T> : IEntityBaseRepositoryString<T>
+            where T : class, IEntityBaseString, new()
     {
 
         private HomeCinemaContext dataContext;
@@ -28,7 +28,7 @@ namespace HomeCinema.Data.Repositories
         {
             get { return dataContext ?? (dataContext = DbFactory.Init()); }
         }
-        public EntityBaseRepository(IDbFactory dbFactory)
+        public EntityBaseRepositoryString(IDbFactory dbFactory)
         {
             DbFactory = dbFactory;
         }
@@ -53,7 +53,7 @@ namespace HomeCinema.Data.Repositories
             }
             return query;
         }
-        public T GetSingle(int id)
+        public T GetSingle(string id)
         {
             return GetAll().FirstOrDefault(x => x.ID == id);
         }

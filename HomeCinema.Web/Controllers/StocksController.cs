@@ -18,9 +18,9 @@ namespace HomeCinema.Web.Controllers
     [RoutePrefix("api/stocks")]
     public class StocksController : ApiControllerBase
     {
-        private readonly IEntityBaseRepository<Stock> _stocksRepository;
-        public StocksController(IEntityBaseRepository<Stock> stocksRepository, 
-            IEntityBaseRepository<Error> _errorsRepository, IUnitOfWork _unitOfWork)
+        private readonly IEntityBaseRepositoryInetger<Stock> _stocksRepository;
+        public StocksController(IEntityBaseRepositoryInetger<Stock> stocksRepository, 
+            IEntityBaseRepositoryInetger<Error> _errorsRepository, IUnitOfWork _unitOfWork)
             : base(_errorsRepository, _unitOfWork)
         {
             _stocksRepository = stocksRepository;

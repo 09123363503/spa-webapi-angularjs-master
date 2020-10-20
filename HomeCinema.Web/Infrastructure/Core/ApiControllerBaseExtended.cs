@@ -18,11 +18,11 @@ namespace HomeCinema.Web.Infrastructure.Core
         protected List<Type> _requiredRepositories;
 
         protected readonly IDataRepositoryFactory _dataRepositoryFactory;
-        protected IEntityBaseRepository<Error> _errorsRepository;
-        protected IEntityBaseRepository<Movie> _moviesRepository;
-        protected IEntityBaseRepository<Rental> _rentalsRepository;
-        protected IEntityBaseRepository<Stock> _stocksRepository;
-        protected IEntityBaseRepository<Customer> _customersRepository;
+        protected IEntityBaseRepositoryInetger<Error> _errorsRepository;
+        protected IEntityBaseRepositoryInetger<Movie> _moviesRepository;
+        protected IEntityBaseRepositoryInetger<Rental> _rentalsRepository;
+        protected IEntityBaseRepositoryInetger<Stock> _stocksRepository;
+        protected IEntityBaseRepositoryInetger<Customer> _customersRepository;
         protected IUnitOfWork _unitOfWork;
 
         private HttpRequestMessage RequestMessage;

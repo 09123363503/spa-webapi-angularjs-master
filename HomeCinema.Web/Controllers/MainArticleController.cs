@@ -21,10 +21,10 @@ namespace HomeCinema.Web.Controllers
     [RoutePrefix("api/mainarticle")]
     public class MainArticleController : ApiControllerBase
     {
-        private readonly IEntityBaseRepository<MainArticle> _mainArticleRepository;
+        private readonly IEntityBaseRepositoryInetger<MainArticle> _mainArticleRepository;
 
-        public MainArticleController(IEntityBaseRepository<MainArticle> mainArticleRepository,
-            IEntityBaseRepository<Error> _errorsRepository, IUnitOfWork _unitOfWork)
+        public MainArticleController(IEntityBaseRepositoryInetger<MainArticle> mainArticleRepository,
+            IEntityBaseRepositoryInetger<Error> _errorsRepository, IUnitOfWork _unitOfWork)
             : base(_errorsRepository, _unitOfWork)
         {
             _mainArticleRepository = mainArticleRepository;

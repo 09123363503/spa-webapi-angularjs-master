@@ -48,7 +48,7 @@ namespace HomeCinema.Web.App_Start
                 .InstancePerRequest();
 
             builder.RegisterGeneric(typeof(EntityBaseRepository<>))
-                   .As(typeof(IEntityBaseRepository<>))
+                   .As(typeof(IEntityBaseRepositoryInetger<>))
                    .InstancePerRequest();
 
             // Services

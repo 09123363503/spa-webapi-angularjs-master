@@ -21,10 +21,10 @@ namespace HomeCinema.Web.Controllers
     [RoutePrefix("api/units")]
     public class UnitsController : ApiControllerBase
     {
-        private readonly IEntityBaseRepository<Unit> _unitsRepository;
+        private readonly IEntityBaseRepositoryInetger<Unit> _unitsRepository;
 
-        public UnitsController(IEntityBaseRepository<Unit> unitsRepository,
-            IEntityBaseRepository<Error> _errorsRepository, IUnitOfWork _unitOfWork)
+        public UnitsController(IEntityBaseRepositoryInetger<Unit> unitsRepository,
+            IEntityBaseRepositoryInetger<Error> _errorsRepository, IUnitOfWork _unitOfWork)
             : base(_errorsRepository, _unitOfWork)
         {
             _unitsRepository = unitsRepository;

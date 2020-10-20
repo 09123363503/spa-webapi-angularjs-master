@@ -15,16 +15,16 @@ namespace HomeCinema.Web.Infrastructure.Core
 {
     public class ApiControllerBase : ApiController
     {
-        protected readonly IEntityBaseRepository<Error> _errorsRepository;
+        protected readonly IEntityBaseRepositoryInetger<Error> _errorsRepository;
         protected readonly IUnitOfWork _unitOfWork;
 
-        public ApiControllerBase(IEntityBaseRepository<Error> errorsRepository, IUnitOfWork unitOfWork)
+        public ApiControllerBase(IEntityBaseRepositoryInetger<Error> errorsRepository, IUnitOfWork unitOfWork)
         {
             _errorsRepository = errorsRepository;
             _unitOfWork = unitOfWork;
         }
 
-        public ApiControllerBase(IDataRepositoryFactory dataRepositoryFactory, IEntityBaseRepository<Error> errorsRepository, IUnitOfWork unitOfWork)
+        public ApiControllerBase(IDataRepositoryFactory dataRepositoryFactory, IEntityBaseRepositoryInetger<Error> errorsRepository, IUnitOfWork unitOfWork)
         {
             _errorsRepository = errorsRepository;
             _unitOfWork = unitOfWork;

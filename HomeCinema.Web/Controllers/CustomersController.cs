@@ -19,10 +19,10 @@ namespace HomeCinema.Web.Controllers
     [RoutePrefix("api/customers")]
     public class CustomersController : ApiControllerBase
     {
-        private readonly IEntityBaseRepository<Customer> _customersRepository;
+        private readonly IEntityBaseRepositoryInetger<Customer> _customersRepository;
 
-        public CustomersController(IEntityBaseRepository<Customer> customersRepository, 
-            IEntityBaseRepository<Error> _errorsRepository, IUnitOfWork _unitOfWork)
+        public CustomersController(IEntityBaseRepositoryInetger<Customer> customersRepository, 
+            IEntityBaseRepositoryInetger<Error> _errorsRepository, IUnitOfWork _unitOfWork)
             : base(_errorsRepository, _unitOfWork)
         {
             _customersRepository = customersRepository;

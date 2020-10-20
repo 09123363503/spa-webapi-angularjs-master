@@ -21,7 +21,7 @@ namespace HomeCinema.Web.Controllers
         private readonly IMembershipService _membershipService;
 
         public AccountController(IMembershipService membershipService,
-            IEntityBaseRepository<Error> _errorsRepository, IUnitOfWork _unitOfWork)
+            IEntityBaseRepositoryInetger<Error> _errorsRepository, IUnitOfWork _unitOfWork)
             : base(_errorsRepository, _unitOfWork)
         {
             _membershipService = membershipService;

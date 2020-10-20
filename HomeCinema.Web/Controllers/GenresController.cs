@@ -17,10 +17,10 @@ namespace HomeCinema.Web.Controllers
     [RoutePrefix("api/genres")]
     public class GenresController : ApiControllerBase
     {
-        private readonly IEntityBaseRepository<Genre> _genresRepository;
+        private readonly IEntityBaseRepositoryInetger<Genre> _genresRepository;
 
-        public GenresController(IEntityBaseRepository<Genre> genresRepository,
-             IEntityBaseRepository<Error> _errorsRepository, IUnitOfWork _unitOfWork)
+        public GenresController(IEntityBaseRepositoryInetger<Genre> genresRepository,
+             IEntityBaseRepositoryInetger<Error> _errorsRepository, IUnitOfWork _unitOfWork)
             : base(_errorsRepository, _unitOfWork)
         {
             _genresRepository = genresRepository;

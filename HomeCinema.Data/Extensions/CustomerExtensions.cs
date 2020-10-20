@@ -10,7 +10,7 @@ namespace HomeCinema.Data.Extensions
 {
     public static class CustomerExtensions
     {
-        public static bool UserExists(this IEntityBaseRepository<Customer> customersRepository, string email, string identityCard)
+        public static bool UserExists(this IEntityBaseRepositoryInetger<Customer> customersRepository, string email, string identityCard)
         {
             bool _userExists = false;
 
@@ -21,7 +21,7 @@ namespace HomeCinema.Data.Extensions
             return _userExists;
         }
 
-        public static string GetCustomerFullName(this IEntityBaseRepository<Customer> customersRepository, int customerId)
+        public static string GetCustomerFullName(this IEntityBaseRepositoryInetger<Customer> customersRepository, int customerId)
         {
             string _customerName = string.Empty;
 

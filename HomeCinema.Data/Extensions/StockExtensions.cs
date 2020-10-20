@@ -10,7 +10,7 @@ namespace HomeCinema.Data.Extensions
 {
     public static class StockExtensions
     {
-        public static IEnumerable<Stock> GetAvailableItems(this IEntityBaseRepository<Stock> stocksRepository, int movieId)
+        public static IEnumerable<Stock> GetAvailableItems(this IEntityBaseRepositoryInetger<Stock> stocksRepository, int movieId)
         {
             IEnumerable<Stock> _availableItems;
 

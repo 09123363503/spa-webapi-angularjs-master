@@ -14,7 +14,7 @@ namespace HomeCinema.Web.Infrastructure.Core
 {
     public class DataRepositoryFactory : IDataRepositoryFactory
     {
-        public IEntityBaseRepository<T> GetDataRepository<T>(HttpRequestMessage request) where T : class, IEntityBaseInteger, new()
+        public IEntityBaseRepositoryInetger<T> GetDataRepository<T>(HttpRequestMessage request) where T : class, IEntityBaseInteger, new()
         {
             return request.GetDataRepository<T>();
         }
@@ -22,6 +22,6 @@ namespace HomeCinema.Web.Infrastructure.Core
 
     public interface IDataRepositoryFactory
     {
-        IEntityBaseRepository<T> GetDataRepository<T>(HttpRequestMessage request) where T : class, IEntityBaseInteger, new();
+        IEntityBaseRepositoryInetger<T> GetDataRepository<T>(HttpRequestMessage request) where T : class, IEntityBaseInteger, new();
     }
 }

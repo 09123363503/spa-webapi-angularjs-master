@@ -17,9 +17,9 @@ namespace HomeCinema.Web.Infrastructure.Extensions
             return request.GetService<IMembershipService>();
         }
 
-        internal static IEntityBaseRepository<T> GetDataRepository<T>(this HttpRequestMessage request) where T : class, IEntityBaseInteger, new()
+        internal static IEntityBaseRepositoryInetger<T> GetDataRepository<T>(this HttpRequestMessage request) where T : class, IEntityBaseInteger, new()
         {
-            return request.GetService<IEntityBaseRepository<T>>();
+            return request.GetService<IEntityBaseRepositoryInetger<T>>();
         }
 
         private static TService GetService<TService>(this HttpRequestMessage request)

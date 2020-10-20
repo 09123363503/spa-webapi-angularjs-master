@@ -22,10 +22,10 @@ namespace HomeCinema.Web.Controllers
     [RoutePrefix("api/movies")]
     public class MoviesController : ApiControllerBase
     {
-        private readonly IEntityBaseRepository<Movie> _moviesRepository;
+        private readonly IEntityBaseRepositoryInetger<Movie> _moviesRepository;
 
-        public MoviesController(IEntityBaseRepository<Movie> moviesRepository,
-            IEntityBaseRepository<Error> _errorsRepository, IUnitOfWork _unitOfWork)
+        public MoviesController(IEntityBaseRepositoryInetger<Movie> moviesRepository,
+            IEntityBaseRepositoryInetger<Error> _errorsRepository, IUnitOfWork _unitOfWork)
             : base(_errorsRepository, _unitOfWork)
         {
             _moviesRepository = moviesRepository;
