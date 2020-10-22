@@ -242,10 +242,14 @@
     <Compile Include="Controllers\MainArticleComponentController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\MoviesExtendedController.cs" />
+    <Compile Include="Controllers\ProductionOrderController.cs" />
+    <Compile Include="Controllers\ProductionOrderItemController.cs" />
+    <Compile Include="Controllers\ProductTypeController.cs" />
     <Compile Include="Controllers\RentalsExtendedController.cs" />
     <Compile Include="Controllers\RentalsController.cs" />
     <Compile Include="Controllers\StocksController.cs" />
     <Compile Include="Controllers\UnitController.cs" />
+    <Compile Include="Controllers\WarehouseController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -258,6 +262,7 @@
     <Compile Include="Infrastructure\Core\UploadMultipartFormProvider.cs" />
     <Compile Include="Infrastructure\Extensions\AccountingOperation\AccountingStructureEntitiesExtensions.cs" />
     <Compile Include="Infrastructure\Extensions\BarcodeStructureOperation\BarcodeStructureEntitiesExtensions.cs" />
+    <Compile Include="Infrastructure\Extensions\DocumentOperation\DocumentEntitiesExtensions.cs" />
     <Compile Include="Infrastructure\Extensions\EntitiesExtensions.cs" />
     <Compile Include="Infrastructure\Extensions\RequestMessageExtensions.cs" />
     <Compile Include="Infrastructure\Extensions\WarehouseOperation\WarehouseEntitiesExtensions.cs" />
@@ -274,7 +279,7 @@
     <Compile Include="Models\ArticleItemViewModel.cs" />
     <Compile Include="Models\ArticleViewModel.cs" />
     <Compile Include="Models\BarcodeViewModel.cs" />
-    <Compile Include="Models\BaseInvoiceTypeViewMode.cs" />
+    <Compile Include="Models\BaseInvoiceTypeViewModel.cs" />
     <Compile Include="Models\BasketArticleViewModel.cs" />
     <Compile Include="Models\BasketBarcodeViewModel.cs" />
     <Compile Include="Models\CargoViewModel.cs" />
