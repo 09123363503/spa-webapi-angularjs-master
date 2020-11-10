@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfArrayOfString>
+    <ArrayOfString>
+      <string>E:\SPA\SPA_MasterService\HomeCinema.Data\Migrations\202011051007193_initial_migration.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\SPA\SPA_MasterService\HomeCinema.Web\Controllers\ProductionOrderController.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\SPA\SPA_MasterService\HomeCinema.Web\Controllers\ComponentController.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\SPA\SPA_MasterService\HomeCinema.Web\App_Start\WebApiConfig.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>E:\SPA\SPA_MasterService\HomeCinema.Web\Controllers\LocationController.cs</string>
+    </ArrayOfString>
+  </ArrayOfArrayOfString>
+</ArrayOfArrayOfArrayOfString>

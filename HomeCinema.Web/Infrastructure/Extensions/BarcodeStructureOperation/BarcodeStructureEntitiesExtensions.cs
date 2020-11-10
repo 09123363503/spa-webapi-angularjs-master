@@ -1,9 +1,5 @@
 ﻿using HomeCinema.Entities;
 using HomeCinema.Web.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
 {
@@ -100,7 +96,7 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             productionOrder.DeleteUserID = productionOrderVM.DeleteUserID;
             productionOrder.DeleteOn = productionOrderVM.DeleteOn;
         }
-        public static void UpdateProductionOrderItem(this ProductionOrderItem productionOrderItem, 
+        public static void UpdateProductionOrderItem(this ProductionOrderItem productionOrderItem,
             ProductionOrderItemViewModel productionOrderItemVM)
         {
             productionOrderItem.ProductionOrederID = productionOrderItemVM.ProductionOrederID;

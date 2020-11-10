@@ -1,25 +1,23 @@
-﻿using HomeCinema.Data.Infrastructure;
+﻿using AutoMapper;
+using HomeCinema.Data.Extensions;
+using HomeCinema.Data.Infrastructure;
 using HomeCinema.Data.Repositories;
 using HomeCinema.Entities;
 using HomeCinema.Web.Infrastructure.Core;
-using System;
+using HomeCinema.Web.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using HomeCinema.Data.Extensions;
-using HomeCinema.Web.Models;
-using AutoMapper;
 
 namespace HomeCinema.Web.Controllers
 {
-    [Authorize(Roles="Admin")]
+    [Authorize(Roles = "Admin")]
     [RoutePrefix("api/stocks")]
     public class StocksController : ApiControllerBase
     {
         private readonly IEntityBaseRepositoryInetger<Stock> _stocksRepository;
-        public StocksController(IEntityBaseRepositoryInetger<Stock> stocksRepository, 
+        public StocksController(IEntityBaseRepositoryInetger<Stock> stocksRepository,
             IEntityBaseRepositoryInetger<Error> _errorsRepository, IUnitOfWork _unitOfWork)
             : base(_errorsRepository, _unitOfWork)
         {
@@ -34,7 +32,7 @@ namespace HomeCinema.Web.Controllers
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
-                
+
                 stocks = _stocksRepository.GetAvailableItems(id);
 
                 IEnumerable<StockViewModel> stocksVM = Mapper.Map<IEnumerable<Stock>, IEnumerable<StockViewModel>>(stocks);

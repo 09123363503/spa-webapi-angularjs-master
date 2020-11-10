@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HomeCinema.Data.Extensions;
 using HomeCinema.Data.Infrastructure;
 using HomeCinema.Data.Repositories;
 using HomeCinema.Entities;
@@ -10,7 +11,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using HomeCinema.Data.Extensions;
 
 namespace HomeCinema.Web.Controllers
 {

@@ -1,16 +1,13 @@
 ﻿using HomeCinema.Entities;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HomeCinema.Data.Repositories
 {
     //public interface IEntityBaseRepository { }
 
-    public interface IEntityBaseRepositoryInetger<T>  where T : class, IEntityBaseInteger, new()
+    public interface IEntityBaseRepositoryInetger<T> where T : class, IEntityBaseInteger, new()
     {
         IQueryable<T> AllIncluding(params Expression<Func<T, object>>[] includeProperties);
         IQueryable<T> All { get; }

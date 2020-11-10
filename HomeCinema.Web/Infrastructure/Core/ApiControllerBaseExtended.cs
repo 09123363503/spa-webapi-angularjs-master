@@ -7,9 +7,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web;
 using System.Web.Http;
-using HomeCinema.Web.Infrastructure.Extensions;
 
 namespace HomeCinema.Web.Infrastructure.Core
 {
@@ -56,7 +54,7 @@ namespace HomeCinema.Web.Infrastructure.Core
 
             return response;
         }
-        
+
         private void InitRepositories(List<Type> entities)
         {
             _errorsRepository = _dataRepositoryFactory.GetDataRepository<Error>(RequestMessage);

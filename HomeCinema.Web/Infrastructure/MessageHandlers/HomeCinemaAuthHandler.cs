@@ -1,14 +1,14 @@
-﻿using System;
+﻿using HomeCinema.Web.Infrastructure.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Security.Principal;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
-using HomeCinema.Web.Infrastructure.Extensions;
-using System.Text;
-using System.Net;
 
 namespace HomeCinema.Web.MessageHandlers
 {
@@ -19,12 +19,12 @@ namespace HomeCinema.Web.MessageHandlers
         {
             try
             {
-                request.Headers.TryGetValues("Authorization",out authHeaderValues);
-                if(authHeaderValues == null)
+                request.Headers.TryGetValues("Authorization", out authHeaderValues);
+                if (authHeaderValues == null)
                     return base.SendAsync(request, cancellationToken); // cross fingers
 
                 var tokens = authHeaderValues.FirstOrDefault();
-                tokens = tokens.Replace("Basic","").Trim();
+                tokens = tokens.Replace("Basic", "").Trim();
                 if (!string.IsNullOrEmpty(tokens))
                 {
                     byte[] data = Convert.FromBase64String(tokens);

@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HomeCinema.Entities
 {
@@ -35,7 +30,7 @@ namespace HomeCinema.Entities
         public DateTimeOffset CreateOn { get; set; }
         public DateTimeOffset ModifyOn { get; set; }
         public DateTimeOffset DeleteOn { get; set; }
-        
+
         public virtual ICollection<ArticleItem> ArticleItems { get; set; }
         public virtual ICollection<ProductionOrderItem> ProductionOrderItems { get; set; }
         public virtual ICollection<BasketArticle> BasketArticles { get; set; }

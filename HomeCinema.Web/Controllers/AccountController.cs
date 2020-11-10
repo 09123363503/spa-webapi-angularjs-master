@@ -5,16 +5,13 @@ using HomeCinema.Services;
 using HomeCinema.Services.Utilities;
 using HomeCinema.Web.Infrastructure.Core;
 using HomeCinema.Web.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
 namespace HomeCinema.Web.Controllers
 {
-    [Authorize(Roles="Admin")]
+    [Authorize(Roles = "Admin")]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiControllerBase
     {

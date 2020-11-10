@@ -3,6 +3,7 @@ using HomeCinema.Data.Infrastructure;
 using HomeCinema.Data.Repositories;
 using HomeCinema.Entities;
 using HomeCinema.Web.Infrastructure.Core;
+using HomeCinema.Web.Infrastructure.Extensions;
 using HomeCinema.Web.Models;
 using System;
 using System.Collections.Generic;
@@ -13,8 +14,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-using HomeCinema.Web.Infrastructure.Extensions;
-using HomeCinema.Data.Extensions;
 
 namespace HomeCinema.Web.Controllers
 {

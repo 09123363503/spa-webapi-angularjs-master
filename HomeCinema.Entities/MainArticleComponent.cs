@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace HomeCinema.Entities
 {
@@ -17,7 +13,7 @@ namespace HomeCinema.Entities
         public string Name { get; set; }
         public int MainAricleID { get; set; }
         public int ComponentID { get; set; }
-        
+
         public virtual ICollection<ArticleItem> ArticleItems { get; set; }
     }
 }

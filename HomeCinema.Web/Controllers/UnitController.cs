@@ -8,12 +8,9 @@ using HomeCinema.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.Http;
-using HomeCinema.Web.Infrastructure.Extensions;
-using HomeCinema.Data.Extensions;
-using System.Net.Http;
 using System.Net;
+using System.Net.Http;
+using System.Web.Http;
 
 namespace HomeCinema.Web.Controllers
 {

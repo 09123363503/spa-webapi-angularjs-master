@@ -1,4 +1,5 @@
-﻿using HomeCinema.Data.Infrastructure;
+﻿using HomeCinema.Data.Extensions;
+using HomeCinema.Data.Infrastructure;
 using HomeCinema.Data.Repositories;
 using HomeCinema.Entities;
 using HomeCinema.Services.Utilities;
@@ -6,9 +7,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
-using HomeCinema.Data.Extensions;
 
 namespace HomeCinema.Services
 {
@@ -42,7 +40,7 @@ namespace HomeCinema.Services
             {
                 var userRoles = GetUserRoles(user.Username);
                 membershipCtx.User = user;
-                
+
                 var identity = new GenericIdentity(user.Username);
                 membershipCtx.Principal = new GenericPrincipal(
                     identity,

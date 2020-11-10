@@ -2,14 +2,10 @@
 using HomeCinema.Data.Repositories;
 using HomeCinema.Entities;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web;
 using System.Web.Http;
-using HomeCinema.Web.Infrastructure.Extensions;
 
 namespace HomeCinema.Web.Infrastructure.Core
 {

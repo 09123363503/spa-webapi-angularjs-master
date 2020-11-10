@@ -1,18 +1,12 @@
 ﻿using Autofac;
-using Autofac.Core;
 using Autofac.Integration.WebApi;
 using HomeCinema.Data;
 using HomeCinema.Data.Infrastructure;
 using HomeCinema.Data.Repositories;
 using HomeCinema.Services;
 using HomeCinema.Web.Infrastructure.Core;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Net.Http;
 using System.Reflection;
-using System.Web;
 using System.Web.Http;
 
 namespace HomeCinema.Web.App_Start
