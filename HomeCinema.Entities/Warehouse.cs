@@ -19,8 +19,6 @@ namespace HomeCinema.Entities
         [Required]
         public string Name { get; set; }
         public string AreaLocation { get; set; }
-        [Required]
-        public int WHKeeperID { get; set; }
         [DefaultValue(0)]
         public bool Leased { get; set; }
         [DefaultValue(0)]

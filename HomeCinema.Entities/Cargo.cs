@@ -12,7 +12,6 @@ namespace HomeCinema.Entities
         [Required]
         [DefaultValue(0)]
         public string InvoiceItemID { get; set; }
-        public int ArticleID { get; set; }
         [DefaultValue(1)]
         public int Count { get; set; }
         [DefaultValue(0)]

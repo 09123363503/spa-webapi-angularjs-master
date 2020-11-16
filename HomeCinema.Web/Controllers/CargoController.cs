@@ -59,7 +59,7 @@ namespace HomeCinema.Web.Controllers
                 if (!string.IsNullOrEmpty(filter))
                 {
                     cargos = _cargosRepository
-                        .FindBy(m => m.ArticleID.ToString().ToLower()
+                        .FindBy(m => m.BarcodeID.ToString().ToLower()
                         .Contains(filter.ToLower().Trim()))
                         .OrderBy(m => m.ID)
                         .Skip(currentPage * currentPageSize)

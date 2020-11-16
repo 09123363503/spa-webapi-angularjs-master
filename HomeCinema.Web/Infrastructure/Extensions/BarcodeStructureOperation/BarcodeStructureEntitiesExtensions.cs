@@ -65,7 +65,6 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             warehouse.Code = warehouseVM.Code;
             warehouse.Name = warehouseVM.Name;
             warehouse.AreaLocation = warehouseVM.AreaLocation;
-            warehouse.WHKeeperID = warehouseVM.WHKeeperID;
             warehouse.Leased = warehouseVM.Leased;
             warehouse.IsGroup = warehouseVM.IsGroup;
             warehouse.Description = warehouseVM.Description;

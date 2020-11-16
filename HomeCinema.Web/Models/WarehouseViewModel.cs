@@ -9,7 +9,6 @@ namespace HomeCinema.Web.Models
         public int Code { get; set; }
         public string Name { get; set; }
         public string AreaLocation { get; set; }
-        public int WHKeeperID { get; set; }
         public bool Leased { get; set; }
         public bool IsGroup { get; set; }
         public string Description { get; set; }
