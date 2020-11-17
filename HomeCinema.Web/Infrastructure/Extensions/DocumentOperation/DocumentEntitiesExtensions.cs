@@ -22,11 +22,8 @@ namespace HomeCinema.Web.Infrastructure.Extensions.DocumentOperation
             invoiceItem.InvoiceID = invoiceItemVM.InvoiceID;
             invoiceItem.WarehouseID = invoiceItemVM.WarehouseID;
             invoiceItem.Count = invoiceItemVM.Count;
-            invoiceItem.UnitID1 = invoiceItemVM.UnitID1;
             invoiceItem.UnitValue1 = invoiceItemVM.UnitValue1;
-            invoiceItem.UnitID2 = invoiceItemVM.UnitID2;
             invoiceItem.UnitValue2 = invoiceItemVM.UnitValue2;
-            invoiceItem.UnitID3 = invoiceItemVM.UnitID3;
             invoiceItem.UnitValue3 = invoiceItemVM.UnitValue3;
             invoiceItem.UnitPrice = invoiceItemVM.UnitPrice;
         }

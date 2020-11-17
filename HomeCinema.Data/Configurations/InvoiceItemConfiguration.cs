@@ -8,6 +8,7 @@ namespace HomeCinema.Data.Configurations
         {
             Property(p => p.InvoiceID).IsRequired();
             Property(p => p.UnitPrice).IsRequired();
+           
             HasMany(p => p.Cargos).WithRequired().HasForeignKey(s => s.InvoiceItemID);
         }
     }

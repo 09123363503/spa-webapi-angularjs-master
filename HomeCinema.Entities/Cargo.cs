@@ -17,13 +17,9 @@ namespace HomeCinema.Entities
         [DefaultValue(0)]
         public int LocationID { get; set; }
         [DefaultValue(0)]
-        public int SumUnitID1 { get; set; }
+        public decimal UnitValue1 { get; set; }
         [DefaultValue(0)]
-        public int SumUnitValue1 { get; set; }
-        [DefaultValue(0)]
-        public int SumUnitID2 { get; set; }
-        [DefaultValue(0)]
-        public int SumunitValue2 { get; set; }
+        public decimal UnitValue2 { get; set; }
         [DefaultValue(0)]
         public int CreateUserID { get; set; }
         [DefaultValue(0)]

@@ -24,9 +24,6 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             barcode.BarcodeString = barcodeVM.BarcodeString;
             barcode.ArticleID = barcodeVM.ArticleID;
             barcode.Grade = barcodeVM.Grade;
-            barcode.UnitID1 = barcodeVM.UnitID1;
-            barcode.UnitID2 = barcodeVM.UnitID2;
-            barcode.UnitID3 = barcodeVM.UnitID3;
             barcode.UnitValue1 = barcodeVM.UnitValue1;
             barcode.UnitValue2 = barcodeVM.UnitValue2;
             barcode.UnitValue3 = barcodeVM.UnitValue3;

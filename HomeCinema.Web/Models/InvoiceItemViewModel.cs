@@ -8,11 +8,8 @@ namespace HomeCinema.Web.Models
         public string InvoiceID { get; set; }
         public int WarehouseID { get; set; }
         public int Count { get; set; }
-        public int UnitID1 { get; set; }
         public decimal UnitValue1 { get; set; }
-        public int UnitID2 { get; set; }
         public decimal UnitValue2 { get; set; }
-        public int UnitID3 { get; set; }
         public decimal UnitValue3 { get; set; }
         public decimal UnitPrice { get; set; }
         public int CreateUserID { get; set; }
