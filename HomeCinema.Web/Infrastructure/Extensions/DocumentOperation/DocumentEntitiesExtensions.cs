@@ -20,7 +20,6 @@ namespace HomeCinema.Web.Infrastructure.Extensions.DocumentOperation
         public static void UpdateInvoiceItem(this InvoiceItem invoiceItem, InvoiceItemViewModel invoiceItemVM)
         {
             invoiceItem.InvoiceID = invoiceItemVM.InvoiceID;
-            invoiceItem.WarehouseID = invoiceItemVM.WarehouseID;
             invoiceItem.Count = invoiceItemVM.Count;
             invoiceItem.UnitValue1 = invoiceItemVM.UnitValue1;
             invoiceItem.UnitValue2 = invoiceItemVM.UnitValue2;
