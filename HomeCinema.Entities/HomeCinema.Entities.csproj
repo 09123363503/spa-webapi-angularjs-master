@@ -67,7 +67,7 @@
     <Compile Include="MainArticle.cs" />
     <Compile Include="MainArticleComponent.cs" />
     <Compile Include="Movie.cs" />
-    <Compile Include="MyCompany.cs" />
+    <Compile Include="Company.cs" />
     <Compile Include="ProductionLine.cs" />
     <Compile Include="ProductionOrder.cs" />
     <Compile Include="ProductionOrderItem.cs" />

@@ -17,7 +17,7 @@ namespace HomeCinema.Entities
         [Required]
         public int InvoiceTypeID { get; set; }
         [Required]
-        public int MyCompanyID { get; set; }
+        public int CompanyID { get; set; }
         [Required]
         public DateTimeOffset Date { get; set; }
         [Required]

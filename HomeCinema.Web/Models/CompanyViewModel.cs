@@ -1,6 +1,6 @@
 ﻿namespace HomeCinema.Web.Models
 {
-    public class MyCompanyViewModel
+    public class CompanyViewModel
     {
         public int ID { get; set; }
         public string CompanyName { get; set; }

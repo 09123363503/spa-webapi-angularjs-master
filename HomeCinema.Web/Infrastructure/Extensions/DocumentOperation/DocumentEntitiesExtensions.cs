@@ -30,7 +30,7 @@ namespace HomeCinema.Web.Infrastructure.Extensions.DocumentOperation
         {
             invoice.AccountID = invoiceVM.AccountID;
             invoice.InvoiceTypeID = invoiceVM.InvoiceTypeID;
-            invoice.MyCompanyID = invoiceVM.MyCompanyID;
+            invoice.CompanyID = invoiceVM.CompanyID;
             invoice.Date = invoiceVM.Date;
             invoice.Number = invoiceVM.Number;
             invoice.CreateUserID = invoiceVM.CreateUserID;

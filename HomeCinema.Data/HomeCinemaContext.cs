@@ -43,7 +43,7 @@ namespace HomeCinema.Data
         public IDbSet<ProductType> ProductTypeSet { get; set; }
         public IDbSet<Invoice> InvoiceSet { get; set; }
         public IDbSet<InvoiceItem> InvoiceItemSet { get; set; }
-        public IDbSet<MyCompany> MyCompanySet { get; set; }
+        public IDbSet<Company> CompanySet { get; set; }
         public IDbSet<BaseInvoiceType> BaseInvoiceTypeSet { get; set; }
         public IDbSet<InvoiceType> InvoiceTypeSet { get; set; }
         #endregion
@@ -86,7 +86,7 @@ namespace HomeCinema.Data
             modelBuilder.Configurations.Add(new ProductTypeConfiguration());
             modelBuilder.Configurations.Add(new InvoiceConfiguration());
             modelBuilder.Configurations.Add(new InvoiceItemConfiguration());
-            modelBuilder.Configurations.Add(new MyCompanyConfiguration());
+            modelBuilder.Configurations.Add(new CompanyConfiguration());
             modelBuilder.Configurations.Add(new BaseInvoiceTypeConfiguration());
             modelBuilder.Configurations.Add(new InvoiceTypeConfiguration());
 

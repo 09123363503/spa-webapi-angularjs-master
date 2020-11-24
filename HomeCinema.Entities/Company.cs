@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HomeCinema.Entities
 {
-    public class MyCompany : IEntityBaseInteger
+    public class Company : IEntityBaseInteger
     {
-        public MyCompany()
+        public Company()
         {
             Invoices = new List<Invoice>();
         }

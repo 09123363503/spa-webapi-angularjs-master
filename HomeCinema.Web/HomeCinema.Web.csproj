@@ -298,7 +298,7 @@
     <Compile Include="Models\LotViewModel.cs" />
     <Compile Include="Models\MainArticleComponentViewModel.cs" />
     <Compile Include="Models\MainArticleViewModel.cs" />
-    <Compile Include="Models\MyCompanyViewModel.cs" />
+    <Compile Include="Models\CompanyViewModel.cs" />
     <Compile Include="Models\ProductionLineViewModel.cs" />
     <Compile Include="Models\ProductionOrderItemViewModel.cs" />
     <Compile Include="Models\ProductionOrderViewModel.cs" />

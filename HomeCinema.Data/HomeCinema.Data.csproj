@@ -76,7 +76,7 @@
     <Compile Include="Configurations\LotConfiguration.cs" />
     <Compile Include="Configurations\MainArticleComponentConfiguration.cs" />
     <Compile Include="Configurations\MainArticleConfiguration.cs" />
-    <Compile Include="Configurations\MyCompanyConfiguration.cs" />
+    <Compile Include="Configurations\CompanyConfiguration.cs" />
     <Compile Include="Configurations\ProductionLineConfiguration.cs" />
     <Compile Include="Configurations\ProductionOrderConfiguration.cs" />
     <Compile Include="Configurations\ProductionOrderItemConfiguration.cs" />

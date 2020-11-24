@@ -7,7 +7,7 @@ namespace HomeCinema.Web.Models
         public string ID { get; set; }
         public int AccountID { get; set; }
         public int InvoiceTypeID { get; set; }
-        public int MyCompanyID { get; set; }
+        public int CompanyID { get; set; }
         public DateTimeOffset Date { get; set; }
         public int Number { get; set; }
         public string Description { get; set; }
