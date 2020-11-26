@@ -8,12 +8,6 @@ namespace HomeCinema.Entities
         public int ProductionOrederID { get; set; }
         public int ArticleID { get; set; }
         [DefaultValue(0)]
-        public int UnitID1 { get; set; }
-        [DefaultValue(0)]
-        public int UnitID2 { get; set; }
-        [DefaultValue(0)]
-        public int UnitID3 { get; set; }
-        [DefaultValue(0)]
         public decimal UnitValue1 { get; set; }
         [DefaultValue(0)]
         public decimal UnitValue2 { get; set; }

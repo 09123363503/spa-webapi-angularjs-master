@@ -11,10 +11,6 @@ namespace HomeCinema.Entities
         public Unit()
         {
             MainArticles = new List<MainArticle>();
-            Barcodes = new List<Barcode>();
-            Cargos = new List<Cargo>();
-            ProductionOrderItems = new List<ProductionOrderItem>();
-            InvoiceItems = new List<InvoiceItem>();
         }
         #endregion Relation list
         public int ID { get; set; }
@@ -37,10 +33,6 @@ namespace HomeCinema.Entities
 
         #region Collections
         public virtual ICollection<MainArticle> MainArticles { get; set; }
-        public virtual ICollection<Barcode> Barcodes { get; set; }
-        public virtual ICollection<Cargo> Cargos { get; set; }
-        public virtual ICollection<ProductionOrderItem> ProductionOrderItems { get; set; }
-        public virtual ICollection<InvoiceItem> InvoiceItems { get; set; }
         #endregion Collection
     }
 }

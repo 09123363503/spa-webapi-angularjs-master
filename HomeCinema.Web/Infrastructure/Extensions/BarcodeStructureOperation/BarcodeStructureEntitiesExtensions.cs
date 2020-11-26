@@ -97,9 +97,6 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
         {
             productionOrderItem.ProductionOrederID = productionOrderItemVM.ProductionOrederID;
             productionOrderItem.ArticleID = productionOrderItemVM.ArticleID;
-            productionOrderItem.UnitID1 = productionOrderItemVM.UnitID1;
-            productionOrderItem.UnitID2 = productionOrderItemVM.UnitID2;
-            productionOrderItem.UnitID3 = productionOrderItemVM.UnitID3;
             productionOrderItem.UnitValue1 = productionOrderItemVM.UnitValue1;
             productionOrderItem.UnitValue2 = productionOrderItemVM.UnitValue2;
             productionOrderItem.UnitValue3 = productionOrderItemVM.UnitValue3;
