@@ -38,7 +38,7 @@ namespace HomeCinema.Data
         public IDbSet<ProductionOrder> ProdutionOrderSet { get; set; }
         public IDbSet<ProductionOrderItem> ProdutionOrderItemSet { get; set; }
         public IDbSet<Account> AccountSet { get; set; }
-        public IDbSet<FinancialPeriod> FinancialPeridSet { get; set; }
+        public IDbSet<Period> PeriodSet { get; set; }
         public IDbSet<ProductionLine> ProdutionLineSet { get; set; }
         public IDbSet<ProductType> ProductTypeSet { get; set; }
         public IDbSet<Invoice> InvoiceSet { get; set; }
@@ -81,7 +81,7 @@ namespace HomeCinema.Data
             modelBuilder.Configurations.Add(new ProductionOrderConfiguration());
             modelBuilder.Configurations.Add(new ProductionOrderItemConfiguration());
             modelBuilder.Configurations.Add(new AccountConfiguration());
-            modelBuilder.Configurations.Add(new FinancialPeriodConfiguration());
+            modelBuilder.Configurations.Add(new PeriodConfiguration());
             modelBuilder.Configurations.Add(new ProductionLineConfiguration());
             modelBuilder.Configurations.Add(new ProductTypeConfiguration());
             modelBuilder.Configurations.Add(new InvoiceConfiguration());

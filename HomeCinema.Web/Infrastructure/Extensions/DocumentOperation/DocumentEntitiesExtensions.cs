@@ -25,7 +25,8 @@ namespace HomeCinema.Web.Infrastructure.Extensions.DocumentOperation
             invoiceItem.UnitValue2 = invoiceItemVM.UnitValue2;
             invoiceItem.UnitValue3 = invoiceItemVM.UnitValue3;
             invoiceItem.UnitPrice = invoiceItemVM.UnitPrice;
-            invoiceItem.CheckoutDate = invoiceItemVM.CheckoutDate;
+            invoiceItem.UsanceDate = invoiceItemVM.UsanceDate;
+            invoiceItem.SaleMethod = invoiceItemVM.SaleMethod;
             invoiceItem.CreateUserID = invoiceItem.CreateUserID;
             invoiceItem.CreateOn = invoiceItemVM.CreateOn;
             invoiceItem.ModifyUserID = invoiceItemVM.ModifyUserID;
@@ -43,7 +44,7 @@ namespace HomeCinema.Web.Infrastructure.Extensions.DocumentOperation
             invoice.Number = invoiceVM.Number;
             invoice.Description = invoiceVM.Description;
             invoice.TotalPrice = invoiceVM.TotalPrice;
-            invoice.CheckoutDate = invoiceVM.CheckOutDate;
+            invoice.UsanceDate = invoiceVM.UsanceDate;
             invoice.CreateUserID = invoiceVM.CreateUserID;
             invoice.CreateOn = invoiceVM.CreateOn;
             invoice.ModifyUserID = invoiceVM.ModifyUserID;

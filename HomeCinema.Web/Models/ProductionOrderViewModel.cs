@@ -6,7 +6,7 @@ namespace HomeCinema.Web.Models
     {
         public int ID { get; set; }
         public int ProductionLineID { get; set; }
-        public int FinancialPeriodID { get; set; }
+        public int PeriodID { get; set; }
         public int Number { get; set; }
         public int Date { get; set; }
         public int ProductTypeID { get; set; }

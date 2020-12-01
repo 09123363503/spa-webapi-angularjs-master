@@ -26,7 +26,7 @@ namespace HomeCinema.Entities
         public int Number { get; set; }
         public string Description { get; set; }
         public decimal TotalPrice { get; set; }
-        public DateTimeOffset CheckoutDate { get; set; }
+        public int UsanceDate { get; set; }
         [DefaultValue(0)]
         public int CreateUserID { get; set; }
         public DateTimeOffset CreateOn { get; set; }

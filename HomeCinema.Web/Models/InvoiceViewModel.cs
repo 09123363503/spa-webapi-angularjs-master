@@ -13,7 +13,7 @@ namespace HomeCinema.Web.Models
         public int Number { get; set; }
         public string Description { get; set; }
         public decimal TotalPrice { get; set; }
-        public DateTimeOffset CheckOutDate { get; set; }
+        public int UsanceDate { get; set; }
         public int CreateUserID { get; set; }
         public DateTimeOffset CreateOn { get; set; }
         public int ModifyUserID { get; set; }

@@ -287,7 +287,7 @@
     <Compile Include="Models\CargoViewModel.cs" />
     <Compile Include="Models\ComponentItemViewModel.cs" />
     <Compile Include="Models\ComponentViewModel.cs" />
-    <Compile Include="Models\FinancialPeriodViewModel.cs" />
+    <Compile Include="Models\PeriodViewModel.cs" />
     <Compile Include="Models\GenreViewModel.cs" />
     <Compile Include="Models\InvoiceItemViewModel.cs" />
     <Compile Include="Models\InvoiceTypeViewModel.cs" />

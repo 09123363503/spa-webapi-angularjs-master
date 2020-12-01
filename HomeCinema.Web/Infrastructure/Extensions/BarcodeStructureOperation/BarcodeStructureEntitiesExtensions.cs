@@ -35,17 +35,20 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             barcode.DeleteUserID = barcodeVM.DeleteUserID;
             barcode.DeleteOn = barcodeVM.DeleteOn;
         }
-        public static void UpdateCargo(this Cargo cargoItem, CargoViewModel cargoVM)
+        public static void UpdateCargo(this Cargo cargo, CargoViewModel cargoVM)
         {
-            cargoItem.BarcodeID = cargoVM.BarcodeID;
-            cargoItem.Count = cargoVM.Count;
-            cargoItem.LocationID = cargoVM.LocationID;
-            cargoItem.CreateUserID = cargoVM.CreateUserID;
-            cargoItem.CreateOn = cargoVM.CreateOn;
-            cargoItem.ModifyUserID = cargoVM.ModifyUserID;
-            cargoItem.ModifyOn = cargoVM.ModifyOn;
-            cargoItem.DeleteUserID = cargoVM.DeleteUserID;
-            cargoItem.DeleteOn = cargoVM.DeleteOn;
+            cargo.BarcodeID = cargoVM.BarcodeID;
+            cargo.Count = cargoVM.Count;
+            cargo.UnitValue1 = cargoVM.UnitValue1;
+            cargo.UnitValue2 = cargoVM.UnitValue2;
+            cargo.UnitValue3 = cargoVM.UnitValue3;
+            cargo.LocationID = cargoVM.LocationID;
+            cargo.CreateUserID = cargoVM.CreateUserID;
+            cargo.CreateOn = cargoVM.CreateOn;
+            cargo.ModifyUserID = cargoVM.ModifyUserID;
+            cargo.ModifyOn = cargoVM.ModifyOn;
+            cargo.DeleteUserID = cargoVM.DeleteUserID;
+            cargo.DeleteOn = cargoVM.DeleteOn;
         }
         public static void UpdateLocation(this Location location, LocationViewModel locationVM)
         {
@@ -82,7 +85,7 @@ namespace HomeCinema.Web.Infrastructure.Extensions.BarcodeStructureOperation
             productionOrder.StartDateTime = productionOrderVM.StartDateTime;
             productionOrder.FinishDateTime = productionOrderVM.FinishDateTime;
             productionOrder.State = productionOrderVM.State;
-            productionOrderVM.FinancialPeriodID = productionOrderVM.FinancialPeriodID;
+            productionOrderVM.PeriodID = productionOrderVM.PeriodID;
             productionOrder.ConfirmID = productionOrderVM.ConfirmID;
             productionOrder.DeliveryDateTime = productionOrderVM.DeliveryDateTime;
             productionOrder.CreateUserID = productionOrderVM.CreateUserID;

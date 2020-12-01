@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HomeCinema.Entities
 {
-    public class FinancialPeriod : IEntityBaseInteger
+    public class Period : IEntityBaseInteger
     {
-        public FinancialPeriod()
+        public Period()
         {
             ProductionOrders = new List<ProductionOrder>();
         }
@@ -20,7 +20,7 @@ namespace HomeCinema.Entities
         [Required]
         public int EndDate { get; set; }
         [DefaultValue(0)]
-        public bool FinanciaPeriodTransfered { get; set; }
+        public bool PeriodTransfered { get; set; }
         [DefaultValue(0)]
         public bool TemporaryClose { get; set; }
         [DefaultValue(0)]

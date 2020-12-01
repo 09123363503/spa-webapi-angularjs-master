@@ -11,7 +11,8 @@ namespace HomeCinema.Web.Models
         public decimal UnitValue2 { get; set; }
         public decimal UnitValue3 { get; set; }
         public decimal UnitPrice { get; set; }
-        public DateTimeOffset CheckoutDate { get; set; }
+        public string UsanceDate { get; set; }
+        public string SaleMethod { get; set; }
         public int CreateUserID { get; set; }
         public DateTimeOffset CreateOn { get; set; }
         public int ModifyUserID { get; set; }

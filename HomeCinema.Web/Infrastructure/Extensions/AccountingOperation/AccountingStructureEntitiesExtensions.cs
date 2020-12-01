@@ -10,15 +10,15 @@ namespace HomeCinema.Web.Infrastructure.Extensions.AccountingOperation
             account.Code = accountVM.Code;
             account.Name = accountVM.Name;
         }
-        public static void UpdateFinancialPeriod(this FinancialPeriod financialPeriod, FinancialPeriodViewModel financailPeridVM)
+        public static void UpdatePeriod(this Period Period, PeriodViewModel financailPeridVM)
         {
-            financialPeriod.Number = financailPeridVM.Number;
-            financialPeriod.Name = financailPeridVM.Name;
-            financialPeriod.StartDate = financailPeridVM.StartDate;
-            financialPeriod.EndDate = financailPeridVM.EndDate;
-            financialPeriod.FinanciaPeriodTransfered = financailPeridVM.FinanciaPeriodTransfered;
-            financialPeriod.TemporaryClose = financailPeridVM.TemporaryClose;
-            financialPeriod.PermanentClose = financailPeridVM.PermanentClose;
+            Period.Number = financailPeridVM.Number;
+            Period.Name = financailPeridVM.Name;
+            Period.StartDate = financailPeridVM.StartDate;
+            Period.EndDate = financailPeridVM.EndDate;
+            Period.PeriodTransfered = financailPeridVM.PeriodTransfered;
+            Period.TemporaryClose = financailPeridVM.TemporaryClose;
+            Period.PermanentClose = financailPeridVM.PermanentClose;
         }
     }
 }

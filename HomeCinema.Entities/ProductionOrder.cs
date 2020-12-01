@@ -15,7 +15,7 @@ namespace HomeCinema.Entities
         public int ID { get; set; }
         [DefaultValue(0)]
         public int ProductionLineID { get; set; }
-        public int FinancialPeriodID { get; set; }
+        public int PeriodID { get; set; }
         [Required]
         public int Number { get; set; }
         [Required]

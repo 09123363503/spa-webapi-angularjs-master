@@ -2,15 +2,15 @@
 
 namespace HomeCinema.Data.Configurations
 {
-    public class FinancialPeriodConfiguration : EntityBaseConfigurationInt<FinancialPeriod>
+    public class PeriodConfiguration : EntityBaseConfigurationInt<Period>
     {
-        public FinancialPeriodConfiguration()
+        public PeriodConfiguration()
         {
             Property(p => p.Number).IsRequired();
             Property(p => p.Name).IsRequired();
             Property(p => p.StartDate).IsRequired();
             Property(p => p.EndDate).IsRequired();
-            HasMany(p => p.ProductionOrders).WithRequired().HasForeignKey(s => s.FinancialPeriodID);
+            HasMany(p => p.ProductionOrders).WithRequired().HasForeignKey(s => s.PeriodID);
         }
     }
 }

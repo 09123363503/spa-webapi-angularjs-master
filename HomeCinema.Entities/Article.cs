@@ -15,6 +15,7 @@ namespace HomeCinema.Entities
             ProductionOrderItems = new List<ProductionOrderItem>();
             BasketArticles = new List<BasketArticle>();
             BasketBatcodes = new List<BasketBarcode>();
+            Barcodes = new List<Barcode>();
         }
         public int ID { get; set; }
         [Required]
@@ -35,5 +36,6 @@ namespace HomeCinema.Entities
         public virtual ICollection<ProductionOrderItem> ProductionOrderItems { get; set; }
         public virtual ICollection<BasketArticle> BasketArticles { get; set; }
         public virtual ICollection<BasketBarcode> BasketBatcodes { get; set; }
+        public virtual ICollection<Barcode> Barcodes { get; set; }
     }
 }

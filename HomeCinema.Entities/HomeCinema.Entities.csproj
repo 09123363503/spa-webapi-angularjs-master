@@ -55,7 +55,7 @@
     <Compile Include="Component.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Error.cs" />
-    <Compile Include="FinancialPeriod.cs" />
+    <Compile Include="Period.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="IEntityBaseInteger.cs" />
     <Compile Include="IEntityBaseString.cs" />

@@ -67,7 +67,7 @@
     <Compile Include="Configurations\ComponentItemConfiguration.cs" />
     <Compile Include="Configurations\EntityBaseConfigurationInt.cs" />
     <Compile Include="Configurations\EntityBaseConfigurationString.cs" />
-    <Compile Include="Configurations\FinancialPeriodConfiguration.cs" />
+    <Compile Include="Configurations\PeriodConfiguration.cs" />
     <Compile Include="Configurations\GenreConfiguration.cs" />
     <Compile Include="Configurations\InvoiceConfiguration.cs" />
     <Compile Include="Configurations\InvoiceItemConfiguration.cs" />
