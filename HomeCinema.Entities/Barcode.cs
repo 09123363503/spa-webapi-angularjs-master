@@ -15,6 +15,8 @@ namespace HomeCinema.Entities
         public string BarcodeString { get; set; }
         [DefaultValue(0)]
         public int ArticleID { get; set; }
+        [DefaultValue(0)]
+        public int LotID { get; set; }
         [DefaultValue(1)]
         public int Grade { get; set; }
         [DefaultValue(0)]

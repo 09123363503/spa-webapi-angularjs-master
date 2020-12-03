@@ -15,8 +15,10 @@ namespace HomeCinema.Entities
         public string ID { get; set; }
         [Required]
         public string InvoiceID { get; set; }
-        [ForeignKey("InvoiceID")]
-        public virtual Invoice Invoice { get; set; }
+        //[ForeignKey("InvoiceID")]
+        //public virtual Invoice Invoice { get; set; }
+        [Required]
+        public int ArticleID { get; set; }
         [Required]
         public int Count { get; set; }
         [DefaultValue(0)]

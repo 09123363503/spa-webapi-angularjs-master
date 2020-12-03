@@ -24,6 +24,7 @@ namespace HomeCinema.Data.Configurations
             HasMany(p => p.BasketArticles).WithRequired().HasForeignKey(s => s.Parent);
             HasMany(p => p.BasketBatcodes).WithRequired().HasForeignKey(s => s.Parent);
             HasMany(p => p.Barcodes).WithRequired().HasForeignKey(s => s.ArticleID);
+            HasMany(p => p.InvoiceItems).WithRequired().HasForeignKey(s => s.ArticleID);
         }
     }
 }
